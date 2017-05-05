@@ -1,0 +1,46 @@
+.arrow-button
+	display: inline-block;
+	border-radius: 50%;
+
+	&__arrow
+
+		&_left 
+			display: inline-block;
+			width: 4em;
+			height: 4em;
+			border: #eee;
+			border-radius: 50%;
+
+			&:after 
+				content: '';
+				display: inline-block;
+				margin-top: 1.05em;
+				margin-left: 1.3em;
+				width: 1.4em;
+				height: 1.4em;
+				border-top: 0.5em solid color;
+				border-right: 0.5em solid color;
+				-moz-transform: rotate(-135deg);
+				-webkit-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+
+		&_right 
+			display: inline-block;
+			width: 4em;
+			height: 4em;
+			border: #eee;
+			border-radius: 50%;
+
+
+			&:after 
+					content: '';
+					display: inline-block;
+					margin-top: 1.05em;
+					margin-left: 0.7em;
+					width: 1.4em;
+					height: 1.4em;
+					border-top: 0.5em solid #333;
+					border-right: 0.5em solid #333;
+					-moz-transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					transform: rotate(45deg);
