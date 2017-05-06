@@ -1,10 +1,11 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin"); 
 var path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/app.js'
+        app: './src/app.js',
     },
     output: {
         path: 'dist',
@@ -30,13 +31,18 @@ module.exports = {
 
         {test: /\.(jpe?g|png|gif|svg)$/i, exclude: [/fonts/], use: "file-loader?outputPath=images/"},
 
-        {test: /\.js$/, use: 'babel-loader', exclude: [/node_modules/]}
+        {test: /\.js$/, use: 'babel-loader', exclude: [/node_modules/,
+         /src\/vendor\/.*\.js$/]}
 ]},
 
     plugins: [new HtmlWebpackPlugin({
         template: "./src/index.pug"
     }), new ExtractTextPlugin({
         filename: 'app.css'
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+  jQuery: 'jquery'
     })]
 
 

@@ -1,5 +1,3 @@
-mixin arrow-button(style, direction)
-	a(href="#")
-		span(class="arrow-button_" +direction + " arrow-button_" +style)
-
-+arrow-button('disabled','left')
+mixin arrow-button(direction, state)
+	a(class= 'arrow-button arrow-button_' + state)
+		span(class= 'arrow-button__arrow arrow-button__arrow_' + direction)

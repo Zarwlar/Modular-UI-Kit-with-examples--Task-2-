@@ -1,46 +1,40 @@
 .arrow-button
 	display: inline-block;
+	cursor: pointer;
 	border-radius: 50%;
+	border: 0.2rem solid #e5e5e5;
+	font-size: 2.5rem;
+	text-align: center;
+	width: 2.75rem;
+	height: 2.75rem;
+
+	&_disabled
+		background-color: #e5e5e5;
+		border-color: #e5e5e5;
+		color: #fff;
+
+	&_inactive
+		background-color: #fff;
+		border-color: #4eb7a8;
+		color: #4eb7a8;
+
+	&_enabled
+		background-color: #4eb7a8;
+		border-color: #4eb7a8;
+		color: #fff;
 
 	&__arrow
+		font-family FontAwesome
 
-		&_left 
-			display: inline-block;
-			width: 4em;
-			height: 4em;
-			border: #eee;
-			border-radius: 50%;
-
-			&:after 
-				content: '';
-				display: inline-block;
-				margin-top: 1.05em;
-				margin-left: 1.3em;
-				width: 1.4em;
-				height: 1.4em;
-				border-top: 0.5em solid color;
-				border-right: 0.5em solid color;
-				-moz-transform: rotate(-135deg);
-				-webkit-transform: rotate(-135deg);
-				transform: rotate(-135deg);
-
-		&_right 
-			display: inline-block;
-			width: 4em;
-			height: 4em;
-			border: #eee;
-			border-radius: 50%;
+		&_left::after
+			display block
+			content '\f104'
+			margin-right 0.3rem;
+			margin-top 0.1rem;
 
 
-			&:after 
-					content: '';
-					display: inline-block;
-					margin-top: 1.05em;
-					margin-left: 0.7em;
-					width: 1.4em;
-					height: 1.4em;
-					border-top: 0.5em solid #333;
-					border-right: 0.5em solid #333;
-					-moz-transform: rotate(45deg);
-					-webkit-transform: rotate(45deg);
-					transform: rotate(45deg);
+		&_right::after
+			display block
+			content '\f105'
+			margin-left 0.2rem;
+			margin-top 0.1rem;
