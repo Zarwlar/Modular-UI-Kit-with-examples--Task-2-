@@ -58,6 +58,9 @@
   color: #b1b1b1;
   font-family: LatoWebLight;
 }
+.pie-chart {
+  display: inline-block;
+}
 @font-face {
   font-family: 'FontAwesome';
   src: url(fonts/fontawesome-webfont.eot);
