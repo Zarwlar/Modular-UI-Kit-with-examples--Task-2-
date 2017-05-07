@@ -16,6 +16,7 @@ $(function () {
 			}]
 		},
 		options: {
+			hover: {mode: null},
 			cutoutPercentage: 65,
 			responsive: false,
 			segmentShowStroke: false,

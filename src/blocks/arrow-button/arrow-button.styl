@@ -1,3 +1,12 @@
+$disabled-button-color = #e5e5e5;
+$disabled-button-background = #fff;
+
+$inactive-button-color = #4eb7a8;
+$inactive-button-background = #fff;
+
+$enabled-button-color = #fff;
+$enabled-background-color = #4eb7a8;
+
 .arrow-button
 	display: inline-block;
 	cursor: pointer;
@@ -9,19 +18,27 @@
 	height: 2.75rem;
 
 	&_disabled
-		background-color: #e5e5e5;
-		border-color: #e5e5e5;
-		color: #fff;
+		background-color: $disabled-button-color;
+		border-color: $disabled-button-color;
+		color: $disabled-button-background;
 
 	&_inactive
-		background-color: #fff;
-		border-color: #4eb7a8;
-		color: #4eb7a8;
+		background-color: $inactive-button-background;
+		border-color: $inactive-button-color;
+		color: $inactive-button-color;
+
+		&:hover
+			border-color: darken($inactive-button-color, 15%);
+			color: darken($inactive-button-color, 15%);
 
 	&_enabled
-		background-color: #4eb7a8;
-		border-color: #4eb7a8;
-		color: #fff;
+		background-color: $enabled-background-color;
+		border-color: $enabled-background-color;
+		color: $enabled-button-color;
+
+		&:hover
+			background-color: darken($enabled-background-color, 15%);
+			border-color: darken($enabled-background-color, 15%);
 
 	&__arrow
 		font-family FontAwesome
@@ -31,7 +48,6 @@
 			content '\f104'
 			margin-right 0.3rem;
 			margin-top 0.1rem;
-
 
 		&_right::after
 			display block

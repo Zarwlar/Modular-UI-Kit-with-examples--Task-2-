@@ -1,8 +1,8 @@
 	$(function() {
-		$('.chart').easyPieChart({
+		$('.percentages').easyPieChart({
 			easing: 'easeOutBounce',
 			onStep: function(from, to, percent) {
-				$(this.el).find('.percent').text(Math.round(percent));
+				$(this.el).find('.percentages__percent').text(Math.round(percent));
 			}
 		});
 	});
