@@ -1,6 +1,9 @@
 $standart-button-color = #4eb7a8;
 $standart-button-shadow-color = #28a290
 
+$standart-button-error-color = #e75735
+$standart-button-error-shadow-color = #bf3e1f
+
 .standart-button
 	position: relative;
 	display: inline-block;
@@ -14,9 +17,23 @@ $standart-button-shadow-color = #28a290
 		cursor: pointer;
 		outline: none;
 		width: 100%;
-		padding: 1rem 2rem 1rem 2rem;
 		background-color: $standart-button-color;
 		border-radius: 0.25rem;
 		border: 0.1rem solid $standart-button-color;
 		box-shadow: 0 0.25rem 0 0 $standart-button-shadow-color;
 		font-family: LatoWebBlack, 'Arial';
+
+	&_size-normal &__button
+		padding: 1rem 2rem 1rem 2rem;
+
+	&_size-small &__button
+		min-width: 6.5rem;
+		padding: 0.4rem 1rem 0.2rem;
+
+	&_type-error
+		color: $standart-button-error-color;
+
+	&_type-error &__button
+		background-color: $standart-button-error-color;
+		border-color: $standart-button-error-color;
+		box-shadow: 0 0.25rem 0 0 $standart-button-error-shadow-color;
