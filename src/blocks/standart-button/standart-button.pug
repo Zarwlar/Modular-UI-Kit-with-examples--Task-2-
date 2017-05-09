@@ -1,3 +1,3 @@
-mixin standart-button(type, size)
+mixin standart-button(type, size, text)
 	div(class='standart-button ' + 'standart-button_type-'+type +' '+ 'standart-button_size-' + size) 
-		button.standart-button__button Button
+		button.standart-button__button= text

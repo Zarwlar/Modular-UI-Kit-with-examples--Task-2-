@@ -10,6 +10,7 @@ html(lang="en")
   include blocks/arrow-button/arrow-button.pug
   include blocks/percentages/percentages.pug
   include blocks/pie-chart/pie-chart.pug
+
   +arrow-button('left', 'inactive')
   +arrow-button('right', 'inactive')
   +arrow-button('left', 'disabled')
@@ -19,7 +20,7 @@ html(lang="en")
 
   include blocks/standart-button/standart-button.pug
 
-  +standart-button('normal','small')
-  +standart-button('normal','normal')
-  +standart-button('error','normal')
-  +standart-button('error','small')
+  +standart-button('normal','small','button')
+  +standart-button('normal','normal','button')
+  +standart-button('error','normal','button')
+  +standart-button('error','small','button')
