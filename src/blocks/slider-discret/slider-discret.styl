@@ -1,0 +1,57 @@
+$max-width = 260px;
+
+.rangeslider-discret 
+	display: block;
+	-moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #4eb7a8;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	bottom: 0;
+	width: 100%;
+
+
+	&__handle 
+		background: #4eb7a8;
+		cursor: pointer;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background-size: 100%;
+		border-radius: 50%;
+		top: -7px;
+		touch-action: pan-y;
+		-ms-touch-action: pan-y;
+
+
+	&_horizontal 
+		max-width: $max-width;
+		height: 5px;
+		width: 100%;
+		touch-action: pan-y;
+		-ms-touch-action: pan-y;
+
+
+	&__scale
+		cursor: pointer;
+		font-size: .7em;
+		position: absolute;
+		top: 100%;
+		text-align: justify;
+		font-family: LatoWebBlack;
+		color: #E6E6E6;
+		padding-top: 0.7rem;
+		width: $max-width + 10px;
+
+
+		&:after
+			content: "";
+			display: inline-block;
+			width: 100%;
+

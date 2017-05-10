@@ -69,6 +69,94 @@
 .pie-chart {
   display: inline-block;
 }
+.rangeslider__value-bubble {
+  border: 1px solid #ccc;
+  display: block;
+  padding: 5px;
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 25px;
+  width: 100px;
+  margin-left: -50px;
+  text-align: center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.rangeslider__value-bubble:before,
+.rangeslider__value-bubble:after {
+  border-width: 11px;
+  border-style: solid;
+  border-color: transparent;
+  content: "";
+  display: block;
+  margin: auto;
+  width: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.rangeslider__value-bubble:before {
+  border-top-color: #ccc;
+  border-bottom-width: 0;
+  bottom: -11px;
+}
+.rangeslider__value-bubble:after {
+  border-top-color: #fff;
+  border-bottom-width: 0;
+  bottom: -10px;
+}
+.rangeslider-discret {
+  display: block;
+  -moz-box-shadow: inset 0px 1px 3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 1px 3px rgba(0,0,0,0.3);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #4eb7a8;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  bottom: 0;
+  width: 100%;
+}
+.rangeslider-discret__handle {
+  background: #4eb7a8;
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-size: 100%;
+  border-radius: 50%;
+  top: -7px;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+}
+.rangeslider-discret_horizontal {
+  max-width: 260px;
+  height: 5px;
+  width: 100%;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+}
+.rangeslider-discret__scale {
+  cursor: pointer;
+  font-size: 0.7em;
+  position: absolute;
+  top: 100%;
+  text-align: justify;
+  font-family: LatoWebBlack;
+  color: #e6e6e6;
+  padding-top: 0.7rem;
+  width: 270px;
+}
+.rangeslider-discret__scale:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
 .standart-button {
   position: relative;
   display: inline-block;
