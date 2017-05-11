@@ -1,0 +1,68 @@
+.stages {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	color: #a4a4a4;
+}
+
+.stages > li {
+	position: relative;
+	display: table-cell;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.stages > li:before {
+	content: attr(data-step);
+	display: block;
+	margin: 0 auto;
+	background: #e5e5e5;
+	width: 2.5em;
+	height: 2.5em;
+	text-align: center;
+	margin-bottom: 0.25em;
+	line-height: 2.5em;
+	border-radius: 100%;
+	position: relative;
+	z-index: 1000;
+	font-family: LatoWebBlack;
+}
+
+.stages > li:after {
+	content: '';
+	position: absolute;
+	display: block;
+	background: #e5e5e5;
+	width: 100%;
+	height: 0.5em;
+	top: 1em;
+	left: 50%;
+	margin-left: 1.5em\9;
+	z-index: -1;
+}
+
+.stages > li:last-child:after {
+	display: none;
+}
+
+.stages > li.stages_complete {
+	color: #e75735;
+}
+
+.stages > li.stages_complete:before, .stages > li.stages_complete:after {
+	color: #FFF;
+	background: #e75735;
+}
+
+.stages > li.stages_active {
+	color: #e75735;
+}
+
+.stages > li.stages_active:before {
+	color: #FFF;
+	background: #e75735;
+}
+

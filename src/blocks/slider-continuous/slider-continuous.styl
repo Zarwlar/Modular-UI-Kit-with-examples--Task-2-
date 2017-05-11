@@ -1,36 +1,69 @@
+$max-width = 260px;
+
+.rangeslider-continuous
+	display: block;
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	bottom: 0;
+	width: 100%;
+
+	&__handle 
+		background: #e75735;
+		cursor: pointer;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background-size: 100%;
+		border-radius: 50%;
+		top: -7px;
+		touch-action: pan-y;
+		-ms-touch-action: pan-y;
+
+
+	&_horizontal 
+		max-width: $max-width;
+		height: 5px;
+		width: 100%;
+		touch-action: pan-y;
+		-ms-touch-action: pan-y;
+
+
 .rangeslider__value-bubble {
-  border: 1px solid #ccc;
-  display: block;
-  padding: 5px;
-  position: absolute;
-  bottom: 100%;
-  margin-bottom: 25px;
-  width: 100px;
-  margin-left: -50px;
-  text-align: center;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+	position: absolute;
+	top: auto;
+	left: 50%;
+	bottom: 1.2rem;
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	text-align: center;
+	border-radius: 20%;
+	background-color: #e75735;
+	padding: 0.3rem 0.65rem;
+	color: #fff;
+	width: auto;
+	margin: 0;
+	white-space: nowrap;
+	font-family: LatoWebBlack;
+	font-size: 0.8rem;
 }
-.rangeslider__value-bubble:before, .rangeslider__value-bubble:after {
-  border-width: 11px;
-  border-style: solid;
-  border-color: transparent;
-  content: "";
-  display: block;
-  margin: auto;
-  width: 10px;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-.rangeslider__value-bubble:before {
-  border-top-color: #ccc;
-  border-bottom-width: 0;
-  bottom: -11px;
-}
-.rangeslider__value-bubble:after {
-  border-top-color: #fff;
-  border-bottom-width: 0;
-  bottom: -10px;
+
+.rangeslider__value-bubble::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 0.9rem solid transparent;
+	border-right: 0.9rem solid transparent;
+	border-top: 1rem solid #e75735;
+	position: absolute;
+	top: auto;
+	left: 50%;
+	bottom: -0.75rem;
+	transform: translate(-50%, -45%);
+	-webkit-transform: translate(-50%, -45%);
+	-ms-transform: translate(-50%, -45%);
+	z-index: -1;
 }
