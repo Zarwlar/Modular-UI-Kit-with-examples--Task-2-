@@ -1,14 +1,10 @@
+mixin stages(count, completed)
+	-var stages = 0;
+	ol.stages
+		-for (var i = 0; i < completed-1; i++, stages++)
+			li(class='stages_complete' data-step=stages+1)
 
-<ol class="stages">
-	<li class="stages_complete" data-step="1">
-	</li>
-	<li class="stages_complete" data-step="2">
-	</li>
-	<li class="stages_active" data-step="3">
-	</li>
-	<li data-step="4">
-	</li>
-	<li data-step="5">
-	</li>
-</ol>
+		li(class='stages_active' data-step=stages=stages+1)
 
+		-for (var i = 0; i < count-completed; i++, stages++)
+			li(data-step=stages+1)

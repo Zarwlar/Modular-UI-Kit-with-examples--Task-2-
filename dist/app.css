@@ -321,6 +321,105 @@
     opacity: 0;
   }
 }
+.tick-box {
+  margin-right: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #e5e5e5;
+  color: #c0c0c0;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+  transition: background 0.15s ease-in, color 0.15s ease-in;
+  font-family: FontAwesome;
+}
+.tick-box:after {
+  content: '\F00C';
+}
+.tick-box__mark-active {
+  background: #4eb7a8;
+  color: #fff;
+  transition: background 0.15s ease-in, color 0.15s ease-in;
+}
+.tick-box__mark-active:after {
+  content: '\F00C';
+}
+.toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 3.7rem;
+  height: 1.5rem;
+  padding: 0.18rem;
+  background-color: #fff;
+  border-radius: 11px;
+  cursor: pointer;
+}
+.toggle__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.toggle__label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+.toggle__handle {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+.toggle__label:before,
+.toggle__label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.5em;
+  line-height: 1;
+  font-family: LatoWebBlack;
+}
+.toggle__label:before {
+  content: attr(data-off);
+  right: 0.6rem;
+  color: #aaa;
+}
+.toggle__label:after {
+  content: attr(data-on);
+  left: 0.75rem;
+  color: #fff;
+  opacity: 0;
+}
+.toggle__input:checked ~ .toggle__label {
+  background: #4eb7a8;
+}
+.toggle__input:checked ~ .toggle__label:before {
+  opacity: 0;
+}
+.toggle__input:checked ~ .toggle__label:after {
+  opacity: 1;
+}
+.toggle__input:checked ~ .toggle__handle {
+  left: 2.5rem;
+}
 @font-face {
   font-family: 'FontAwesome';
   src: url(fonts/fontawesome-webfont.eot);

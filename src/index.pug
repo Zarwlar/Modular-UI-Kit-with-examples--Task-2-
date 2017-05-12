@@ -29,9 +29,15 @@ html(lang="en")
   +slider-discret()
   br
   br
-  br
-  br
   include blocks/slider-continuous/slider-continuous.pug
   +slider-continuous()
-
   include blocks/stages/stages.pug
+  +stages(5,3)
+  br
+  br
+  include blocks/toggle/toggle.pug
+  +toggle('on','off')
+  br
+  br
+  include blocks/tick-box/tick-box.pug
+  +tick-box()
