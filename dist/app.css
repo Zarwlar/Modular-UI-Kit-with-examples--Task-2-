@@ -46,6 +46,18 @@
   margin-left: 0.2rem;
   margin-top: 0.1rem;
 }
+.flat-input {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  color: #888;
+  border-radius: 4px;
+  font-family: SourceSansPro-Regular, 'Arial';
+  background-color: #e5e5e5;
+  padding: 0.5rem 1rem;
+  border: none;
+  resize: none;
+}
 .percentages {
   position: relative;
   display: inline-block;
