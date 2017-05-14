@@ -1,0 +1,17 @@
+include ../standart-button/standart-button.pug
+
+mixin feedback()
+	.feedback
+		form(action="feedback", class="feedback__form")
+			.feedback__name
+				input(type="text", placeholder="Your Name").feedback__input
+				+validation("error","error")
+			.feedback__email
+				input(type="text", placeholder="Your Email").feedback__input
+				+validation("ok","thanks!")
+			textarea(placeholder="Your Message").feedback__textarea
+			.feedback__submit
+				+standart-button('normal','normal','button')
+
+mixin validation(value, text)
+	div(class="feedback__validation feedback__validation_"+value)=text

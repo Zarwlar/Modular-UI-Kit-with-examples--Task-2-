@@ -1,0 +1,59 @@
+.feedback
+	background-color: gray;
+	max-width: 20rem;
+	padding: 1rem;
+	&__name, &__email
+		display: flex;	
+		min-width: 10rem;
+	&__email
+		margin-top: 1rem;
+	&__validation
+		position: relative;
+		border-radius: 11px;
+		margin-left: 1rem;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 6rem;
+		&_ok
+			background-color: green;
+			&:after
+								border-top: 1rem solid green;
+		&_error
+			background-color: red;
+			&:after
+								border-top: 1rem solid red;
+		&:after
+			position: absolute;
+			display: block;
+			content: "";
+			width: 0;
+			height: 0;
+			border-left: 0.9rem solid transparent;
+			border-right: 0.9rem solid transparent;
+			transform: rotate(90deg) translateX(-1rem);
+			right: 5rem;
+
+	&__submit
+		margin-top: 1rem;
+		text-align: right;
+
+	&__input, &__textarea
+		display: block;
+		width: 100%;
+		color: #888888;
+		border-radius: 4px;
+		font-family: SourceSansPro-Regular, 'Arial';
+		background-color: #e5e5e5;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		border: none;
+		resize: none;
+
+	&__textarea
+		width 100%;
+		padding-top: 1rem;
+		margin-top: 1rem;
+		min-height: 5rem;
+
