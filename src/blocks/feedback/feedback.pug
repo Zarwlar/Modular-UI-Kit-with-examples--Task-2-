@@ -5,13 +5,13 @@ mixin feedback()
 		form(action="feedback", class="feedback__form")
 			.feedback__name
 				input(type="text", placeholder="Your Name").feedback__input
-				+validation("error","error")
+				+validation()
 			.feedback__email
 				input(type="text", placeholder="Your Email").feedback__input
-				+validation("ok","thanks!")
+				+validation()
 			textarea(placeholder="Your Message").feedback__textarea
 			.feedback__submit
-				+standart-button('normal','normal','button')
+				+standart-button('normal','normal','submit')
 
-mixin validation(value, text)
-	div(class="feedback__validation feedback__validation_"+value)=text
+mixin validation()
+	div(class="feedback__validation")

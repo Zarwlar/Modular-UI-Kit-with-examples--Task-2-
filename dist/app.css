@@ -47,39 +47,44 @@
   margin-top: 0.1rem;
 }
 .feedback {
-  background-color: #808080;
-  max-width: 20rem;
-  padding: 1rem;
+  max-width: 18rem;
 }
 .feedback__name,
 .feedback__email {
   display: flex;
-  min-width: 10rem;
 }
 .feedback__email {
-  margin-top: 1rem;
+  margin-top: 0.9rem;
 }
 .feedback__validation {
   position: relative;
-  border-radius: 11px;
-  margin-left: 1rem;
+  font-family: LatoWebBlack, 'Arial';
+  font-size: 0.7rem;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 0.5rem;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 6rem;
+  min-width: 4.5rem;
+  display: none;
+}
+.feedback__validation_ok,
+.feedback__validation_error {
+  display: flex;
 }
 .feedback__validation_ok {
-  background-color: #008000;
+  background-color: #4eb7a8;
 }
 .feedback__validation_ok:after {
-  border-top: 1rem solid #008000;
+  border-top: 1rem solid #4eb7a8;
 }
 .feedback__validation_error {
-  background-color: #f00;
+  background-color: #e75735;
 }
 .feedback__validation_error:after {
-  border-top: 1rem solid #f00;
+  border-top: 1rem solid #e75735;
 }
 .feedback__validation:after {
   position: absolute;
@@ -87,13 +92,13 @@
   content: "";
   width: 0;
   height: 0;
-  border-left: 0.9rem solid transparent;
-  border-right: 0.9rem solid transparent;
-  transform: rotate(90deg) translateX(-1rem);
-  right: 5rem;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  transform: rotate(90deg) translateX(-0.85rem);
+  right: 3.5rem;
 }
 .feedback__submit {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   text-align: right;
 }
 .feedback__input,
@@ -104,16 +109,16 @@
   border-radius: 4px;
   font-family: SourceSansPro-Regular, 'Arial';
   background-color: #e5e5e5;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.31rem 1rem;
   border: none;
   resize: none;
 }
 .feedback__textarea {
   width: 100%;
-  padding-top: 1rem;
-  margin-top: 1rem;
-  min-height: 5rem;
+  padding-top: 0.6rem;
+  margin-top: 0.8rem;
+  min-height: 5.4rem;
+  box-sizing: border-box;
 }
 .percentages {
   position: relative;
