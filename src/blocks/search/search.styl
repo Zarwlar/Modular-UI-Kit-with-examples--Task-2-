@@ -1,0 +1,43 @@
+.search
+	max-width: 18rem;
+
+	&__form
+		display: flex;
+
+	&__input
+		width: 100%;
+		color: #888888;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		font-family: SourceSansPro-Regular, 'Arial';
+		background-color: #e5e5e5;
+		transition: background-color 0.1s ease;	
+		padding: 0.35rem 0.85rem;
+		border: none;
+		outline: none;
+
+		&_not-found
+			background-color: #e75735;
+
+			&::placeholder
+				color: white;
+			&::-moz-placeholder
+				color: white;
+			&:-moz-placeholder
+				color: white;
+			&:-ms-input-placeholder
+				color: white;
+
+	&__submit
+		font-family: FontAwesome;
+		background-color: #e75735;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		width: 2.45rem;
+		border: none;
+		outline: none;
+
+		&:after
+			content '\f002'
+			color: white;
+
