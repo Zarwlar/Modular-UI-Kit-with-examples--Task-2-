@@ -1,6 +1,6 @@
-mixin drop-down()
-	<select>
-		<option></option>
-		<option></option>
-		<option></option>
-	</select>
+mixin drop-down(elements)
+	div.drop-down
+		select.drop-down__select
+				option(value="" disabled selected) Choose an option
+				each element in elements
+					option.drop-down__option #{element}
