@@ -578,6 +578,96 @@
 .toggle__input:checked ~ .toggle__handle {
   left: 2.5rem;
 }
+.user-profile {
+  display: flex;
+}
+.user-profile__avatar {
+  width: 88px;
+  height: 88px;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #e5e5e5;
+  border-radius: 50%;
+}
+.user-profile__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: LatoWeb;
+  text-align: center;
+  font-size: 1.15rem;
+}
+.user-profile__proffesion {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: LatoWebBlack;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.78rem;
+}
+.user-profile__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 9.4rem;
+  max-width: 6rem;
+  background-color: #4eb7a8;
+  color: #fff;
+  margin-left: 0.7rem;
+  position: relative;
+  border-radius: 9px;
+  padding: 0.4rem;
+}
+.user-profile__info_active {
+  background-color: #e5e5e5;
+  color: #757575;
+}
+.user-profile__info_active .user-profile__name {
+  color: #e75735;
+}
+.user-profile__info:before {
+  content: " ";
+  height: 0.7rem;
+  width: 0.7rem;
+  position: absolute;
+  background-color: inherit;
+  left: -5px;
+  top: 45%;
+  transform: rotate(45deg);
+}
+.user-profile__links {
+  font-family: FontAwesome;
+  font-size: 1.65rem;
+  display: flex;
+  padding-top: 0.2rem;
+  color: #fff;
+}
+.user-profile__links a {
+  text-decoration: none;
+}
+.user-profile__links > *:nth-child(2n) {
+  margin: 0 1rem;
+}
+.user-profile__links > *:first-child {
+  margin-left: auto;
+}
+.user-profile__links > *:last-child {
+  margin-right: auto;
+}
+.user-profile__links_facebook:after {
+  content: "\F09A";
+}
+.user-profile__links_twitter:after {
+  content: "\F099";
+}
+.user-profile__links_dribbble:after {
+  content: "\F17D";
+}
+.user-profile__links_active {
+  color: #757575;
+}
+.user-profile__links_active:hover {
+  color: #e75735;
+}
 @font-face {
   font-family: 'FontAwesome';
   src: url(fonts/fontawesome-webfont.eot);

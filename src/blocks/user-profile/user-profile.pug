@@ -1,0 +1,21 @@
+mixin user-profile(options)
+	if !options
+		- options = {}
+	.user-profile
+		if options.imgsrc
+			img(class= 'user-profile__avatar' src= options.imgsrc ? options.imgsrc : '')
+		else
+			div.user-profile__avatar
+		.user-profile__info(class= options.imgsrc ? 'user-profile__info_active' : '')
+			.user-profile__name= options.name ? options.name : 'Anonymous'
+			.user-profile__proffesion= options.proffesion ? options.proffesion : 'Unknown'
+			.user-profile__links
+				a.user-profile__links_facebook(
+					href=options['facebook'] ? options['facebook'] : '#', 
+					class=options['facebook'] ? 'user-profile__links_active' : '')
+				a.user-profile__links_twitter(
+					href=options['twitter'] ? options['twitter'] : '#', 
+					class=options['twitter'] ? 'user-profile__links_active' : '')
+				a.user-profile__links_dribbble(
+					href=options['dribbble'] ? options['dribbble'] : '#', 
+					class=options['dribbble'] ? 'user-profile__links_active' : '')

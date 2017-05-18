@@ -1,0 +1,89 @@
+.user-profile
+	display: flex;
+
+	&__avatar
+		width: 88px;
+		height: 88px;
+		background-size: cover;
+		background-position: center;
+		border: 3px solid #E5E5E5;
+		border-radius: 50%;
+
+	&__name
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-family: LatoWeb;
+		text-align: center;
+		font-size: 1.15rem;
+
+	&__proffesion
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-family: LatoWebBlack;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 0.78rem;
+
+	&__info
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-width: 9.4rem;
+		max-width: 6rem;
+		background-color: #4eb7a8;
+		color: white;
+		margin-left: 0.7rem;
+		position: relative;
+		border-radius: 9px;
+		padding: 0.4rem;
+
+		&_active
+			background-color: #e5e5e5;
+			color: #757575;
+
+			& .user-profile__name
+				color: #e75735;
+
+		&:before
+			content: " ";
+			height: 0.7rem;
+			width: 0.7rem;
+			position: absolute;
+			background-color: inherit;
+			left: -5px;
+			top: 45%;
+			transform: rotate(45deg);
+
+	&__links
+		font-family: FontAwesome;
+		font-size: 1.65rem;
+		display: flex;
+		padding-top: 0.2rem;
+		color: white;
+
+		& a
+			text-decoration: none;
+
+		& > *:nth-child(2n)
+			margin: 0 1rem;
+
+		& > *:first-child
+			margin-left: auto;
+
+		& > *:last-child
+			margin-right: auto;
+
+		&_facebook:after
+			content: "\f09a";
+
+		&_twitter:after
+			content: "\f099";
+
+		&_dribbble:after
+			content: "\f17d";
+
+		&_active
+			color: #757575;
+
+			&:hover
+				color: #e75735;

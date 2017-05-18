@@ -55,11 +55,16 @@ html(lang="en")
   +drop-down(['Orange','Apple','Pear'])
   br
   br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
-  br
+  include blocks/user-profile/user-profile.pug
+
+
+  +user-profile({
+  imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
+  name: 'John Smith',
+  proffesion: 'developer',
+  'facebook':'123',
+  'twitter':'321',
+  'dribbble':'hah'
+  })
+
+  +user-profile()
