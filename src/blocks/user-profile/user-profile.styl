@@ -59,10 +59,6 @@
 		font-size: 1.65rem;
 		display: flex;
 		padding-top: 0.2rem;
-		color: white;
-
-		& a
-			text-decoration: none;
 
 		& > *:nth-child(2n)
 			margin: 0 1rem;
@@ -73,6 +69,16 @@
 		& > *:last-child
 			margin-right: auto;
 
+	&__link
+		color: white;
+		text-decoration: none;
+
+		&.user-profile__links_active
+			color: #757575;
+
+		&.user-profile__links_active:hover
+			color: #e75735;
+
 		&_facebook:after
 			content: "\f09a";
 
@@ -81,9 +87,3 @@
 
 		&_dribbble:after
 			content: "\f17d";
-
-		&_active
-			color: #757575;
-
-			&:hover
-				color: #e75735;

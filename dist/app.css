@@ -639,10 +639,6 @@
   font-size: 1.65rem;
   display: flex;
   padding-top: 0.2rem;
-  color: #fff;
-}
-.user-profile__links a {
-  text-decoration: none;
 }
 .user-profile__links > *:nth-child(2n) {
   margin: 0 1rem;
@@ -653,20 +649,24 @@
 .user-profile__links > *:last-child {
   margin-right: auto;
 }
-.user-profile__links_facebook:after {
-  content: "\F09A";
+.user-profile__link {
+  color: #fff;
+  text-decoration: none;
 }
-.user-profile__links_twitter:after {
-  content: "\F099";
-}
-.user-profile__links_dribbble:after {
-  content: "\F17D";
-}
-.user-profile__links_active {
+.user-profile__link.user-profile__links_active {
   color: #757575;
 }
-.user-profile__links_active:hover {
+.user-profile__link.user-profile__links_active:hover {
   color: #e75735;
+}
+.user-profile__link_facebook:after {
+  content: "\F09A";
+}
+.user-profile__link_twitter:after {
+  content: "\F099";
+}
+.user-profile__link_dribbble:after {
+  content: "\F17D";
 }
 @font-face {
   font-family: 'FontAwesome';
