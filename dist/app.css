@@ -83,6 +83,48 @@
   color: #fff;
   font-size: 1.6rem;
 }
+.event {
+  display: flex;
+  height: 13.3rem;
+  max-width: 18rem;
+}
+.event__photo {
+  background: #e75735;
+  width: 33%;
+  object-fit: cover;
+}
+.event__text {
+  display: flex;
+  flex-direction: column;
+  padding: 7.5%;
+  background-color: #e75735;
+  color: #fff;
+}
+.event__text > *:not(:first-child) {
+  margin-top: 6.5%;
+}
+.event__date {
+  display: inline-flex;
+}
+.event__button {
+  padding: none;
+  font-size: 0.75rem;
+}
+.event__title {
+  font-family: LatoWebLight, 'Arial';
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+.event__date {
+  text-transform: uppercase;
+  font-family: LatoWebBlack, 'Arial';
+  font-size: 0.75rem;
+}
+.event__description {
+  font-family: LatoWeb, 'Arial';
+  overflow: hidden;
+  font-size: 0.75rem;
+}
 .feedback {
   max-width: 18rem;
 }
@@ -157,6 +199,41 @@
   margin-top: 0.8rem;
   min-height: 5.4rem;
   box-sizing: border-box;
+}
+.news {
+  display: flex;
+  height: 13.3rem;
+  max-width: 18rem;
+}
+.news__photo {
+  background: #e75735;
+  width: 33%;
+  object-fit: cover;
+}
+.news__text {
+  display: flex;
+  flex-direction: column;
+  padding: 7.5%;
+  background-color: #e75735;
+  color: #fff;
+}
+.news__text > *:not(:first-child) {
+  margin-top: 6.5%;
+}
+.news__title {
+  font-family: LatoWebLight, 'Arial';
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+.news__date {
+  text-transform: uppercase;
+  font-family: LatoWebBlack, 'Arial';
+  font-size: 0.75rem;
+}
+.news__description {
+  font-family: LatoWeb, 'Arial';
+  overflow: hidden;
+  font-size: 0.75rem;
 }
 .percentages {
   position: relative;
@@ -413,20 +490,18 @@
   outline: none;
   width: 100%;
   background-color: #4eb7a8;
-  border-radius: 0.25rem;
-  border: 0.1rem solid #4eb7a8;
-  box-shadow: 0 0.25rem 0 0 #28a290;
+  border-radius: 4px;
+  border: 1px solid #4eb7a8;
+  box-shadow: 0 0.15rem 0 0 #28a290;
   font-family: LatoWebBlack, 'Arial';
 }
 .standart-button_size-normal .standart-button__button {
-  font-szie: 0.8rem;
-  padding: 0.6rem 1.9rem 0.3rem;
+  font-size: 0.8rem;
+  padding: 0.6rem 2rem 0.45rem;
 }
 .standart-button_size-small .standart-button__button {
   font-size: 0.65rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.34rem;
+  padding: 0.35rem 1.1rem 0.2rem;
 }
 .standart-button_type-error {
   color: #e75735;
@@ -434,7 +509,7 @@
 .standart-button_type-error .standart-button__button {
   background-color: #e75735;
   border-color: #e75735;
-  box-shadow: 0 0.25rem 0 0 #bf3e1f;
+  box-shadow: 0 0.15rem 0 0 #bf3e1f;
 }
 .standart-button_pressed .standart-button__button {
   box-shadow: none;

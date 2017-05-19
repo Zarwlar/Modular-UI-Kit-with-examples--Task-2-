@@ -1,0 +1,41 @@
+.event
+	display: flex;
+	height: 13.3rem;
+	max-width: 18rem;
+
+	&__photo
+		background: #e75735;
+		width: 33%;
+		object-fit: cover;
+
+	&__text
+		display: flex;
+		flex-direction: column;
+		padding: 7.5%;
+		background-color: #e75735;
+		color: white;
+
+		& > *:not(:first-child)
+			margin-top: 6.5%;
+
+	&__date
+		display: inline-flex;
+
+	&__button
+		padding: none;
+		font-size: 0.75rem;
+
+	&__title
+		font-family: LatoWebLight, 'Arial';
+		font-size: 1.7rem;
+		line-height: 1.7rem;
+
+	&__date
+		text-transform: uppercase;
+		font-family: LatoWebBlack, 'Arial';
+		font-size: 0.75rem;
+
+	&__description
+		font-family: LatoWeb, 'Arial';
+		overflow: hidden;
+		font-size: 0.75rem;

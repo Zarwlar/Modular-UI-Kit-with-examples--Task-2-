@@ -1,0 +1,9 @@
+mixin news(options)
+	if !options
+		- options = {}
+	.news
+		img.news__photo(src= options.imgsrc)
+		.news__text
+			.news__title= options.title
+			.news__date= options.date
+			.news__description= options.description

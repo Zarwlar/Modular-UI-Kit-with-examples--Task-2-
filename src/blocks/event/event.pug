@@ -1,0 +1,15 @@
+include ../standart-button/standart-button.pug
+
+mixin event(options)
+	if !options
+		- options = {}
+	.event
+		img.event__photo(src= options.imgsrc)
+		.event__text
+			.event__date
+				.event__day= options.day
+				.event__month= options.month
+			.event__title= options.title
+			.event__description= options.description
+			.event__button
+				+standart-button('normal','small','add to calendar')
