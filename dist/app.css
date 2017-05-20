@@ -96,34 +96,40 @@
 .event__text {
   display: flex;
   flex-direction: column;
-  padding: 7.5%;
+  padding: 4.5% 7% 1.5%;
   background-color: #e75735;
   color: #fff;
 }
-.event__text > *:not(:first-child) {
-  margin-top: 6.5%;
-}
 .event__date {
   display: inline-flex;
+  font-family: LatoWebLight;
+  padding-bottom: 4%;
+  align-items: baseline;
+}
+.event__day {
+  font-size: 4.25rem;
+  padding-right: 8%;
+}
+.event__month {
+  font-size: 1.8rem;
 }
 .event__button {
-  padding: none;
-  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 10%;
 }
 .event__title {
-  font-family: LatoWebLight, 'Arial';
-  font-size: 1.7rem;
-  line-height: 1.7rem;
+  font-family: LatoWebBlack, 'Arial';
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 .event__date {
-  text-transform: uppercase;
-  font-family: LatoWebBlack, 'Arial';
-  font-size: 0.75rem;
+  text-transform: capitalize;
 }
 .event__description {
   font-family: LatoWeb, 'Arial';
   overflow: hidden;
   font-size: 0.75rem;
+  max-height: 1.8rem;
 }
 .feedback {
   max-width: 18rem;
