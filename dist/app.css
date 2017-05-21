@@ -206,6 +206,13 @@
   min-height: 5.4rem;
   box-sizing: border-box;
 }
+.location__map {
+  width: 50%;
+  height: 250px;
+}
+.location__info {
+  display: flex;
+}
 .news {
   display: flex;
   height: 13.3rem;

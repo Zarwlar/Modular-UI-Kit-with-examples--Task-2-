@@ -5,7 +5,7 @@ html(lang="en")
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    script(src= 'https://maps.googleapis.com/maps/api/js')
   body
   include blocks/arrow-button/arrow-button.pug
   include blocks/percentages/percentages.pug
@@ -88,3 +88,6 @@ html(lang="en")
     month: 'aug',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   })
+  br
+  br
+  include blocks/location/location.pug
