@@ -53,7 +53,7 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 exclude: [/fonts/],
-                use: "file-loader?outputPath=images/"
+                use: "file-loader?outputPath=img/&name=[name].[ext]"
             },
 
             {

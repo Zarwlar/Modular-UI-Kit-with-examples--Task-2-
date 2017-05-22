@@ -10,8 +10,9 @@ $(function() {
       		center: uluru
       	});
       	var marker = new google.maps.Marker({
-      		position: uluru,
-      		map: map
+					position: map.getCenter(),
+					icon: './img/location__marker.png',
+					map: map
       	});
       }
 

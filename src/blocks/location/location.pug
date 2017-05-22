@@ -1,6 +1,8 @@
-mixin(phrase, adress)
+mixin location(phrase, adress)
 	.location
 		.location__map
 		.location__banner
-			span.location__phrase= phrase ? phrase : 'Meet Us!'
+			span.location__phrase= phrase ? phrase : 'Meet us!'
 			.location__adress= adress ? adress : '1259 california st san francisco, ca'
+			.location__icon.location__icon_crosshairs
+			.location__icon.location__icon_marker

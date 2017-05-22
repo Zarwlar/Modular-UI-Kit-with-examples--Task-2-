@@ -206,12 +206,45 @@
   min-height: 5.4rem;
   box-sizing: border-box;
 }
-.location__map {
-  width: 50%;
-  height: 250px;
+.location {
+  width: 44.6%;
 }
-.location__info {
+.location__map {
+  height: 9rem;
+}
+.location__banner {
   display: flex;
+  background-color: #e75735;
+  font-family: LatoWebLight;
+  color: #fff;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.location__banner > *:last-child {
+  padding-left: 4%;
+}
+.location__phrase {
+  font-size: 1.9rem;
+  padding-left: 4.5%;
+}
+.location__adress {
+  text-transform: uppercase;
+  font-family: LatoWebBlack;
+  font-size: 0.85rem;
+  padding-left: 4.5%;
+  padding-right: 10.5%;
+}
+.location__icon {
+  font-family: FontAwesome;
+  font-size: 1.8rem;
+}
+.location__icon_crosshairs::before {
+  display: block;
+  content: '\F05B';
+}
+.location__icon_marker::before {
+  display: block;
+  content: '\F041';
 }
 .news {
   display: flex;

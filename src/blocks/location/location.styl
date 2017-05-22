@@ -1,8 +1,40 @@
 .location
+	width: 44.6%;
 
 	&__map
-		width: 50%;
-		height: 250px;
+		height: 9rem;
 
-	&__info
-		display flex
+	&__banner
+		display: flex;
+		background-color: #e75735;
+		font-family: LatoWebLight;
+		color: white;
+		padding-top: 3%;
+		padding-bottom: 3%;
+
+		& > *:last-child
+			padding-left: 4%;
+
+	&__phrase
+		font-size: 1.9rem;
+		padding-left: 4.5%;
+
+	&__adress
+		text-transform: uppercase;
+		font-family: LatoWebBlack;
+		font-size: 0.85rem;
+		padding-left: 4.5%;
+		padding-right: 10.5%;
+
+	&__icon
+		font-family: FontAwesome;
+		font-size: 1.8rem;
+
+		&_crosshairs::before
+			display block
+			content '\f05b'
+
+		&_marker::before
+			display block
+			content '\f041'
+
