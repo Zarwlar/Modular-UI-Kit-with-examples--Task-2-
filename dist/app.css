@@ -246,6 +246,87 @@
   display: block;
   content: '\F041';
 }
+.messager {
+  box-sizing: border-box;
+  width: 500px;
+  min-width: 390px;
+  height: 600px;
+  background: #ffa500;
+  padding: 25px;
+  margin: 20px;
+  box-shadow: 0 3px #ccc;
+}
+.messager__chatlogs {
+  padding: 10px;
+  width: 100%;
+  height: 450px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.messager__chatlogs::-webkit-scrollbar {
+  width: 12px;
+}
+.messager__chatlogs::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(0,0,0,0.4);
+}
+.messager__chat {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.messager__chat .messager__message {
+  width: 70%;
+  padding: 15px;
+  background: #00f;
+  margin: 5px 10px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+.messager__friend .messager__message {
+  background: #1adda4;
+}
+.messager__self {
+  justify-content: flex-end;
+}
+.messager__self .messager__message {
+  background: #1ddced;
+}
+.messager__form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.messager__form textarea {
+  backface-visibility: #fbfbfb;
+  width: 75%;
+  height: 50px;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  resize: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #333;
+}
+.messager__form textarea:focus {
+  background: #fff;
+}
+.messager__form button {
+  background: #1ddced;
+  padding: 5px 15px;
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  margin: 0 10px;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 #0eb2c1;
+  cursor: pointer;
+}
+.messager__form button:hover {
+  background: #13c8d9;
+}
 .news {
   display: flex;
   height: 13.3rem;
