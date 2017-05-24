@@ -1,3 +1,5 @@
+include ../standart-button/standart-button.pug
+
 mixin messager()
 	.messager
 		.messager__chatlogs
@@ -24,5 +26,7 @@ mixin messager()
 					deleniti quidem laboriosam. Dolor sapiente consequuntur nobis 
 					officia qui, distinctio provident, dolores veritatis voluptatibus!
 		.messager__form
-			textarea
-			button Send
+			.messager__textarea
+				textarea
+			.messager__button-reply
+				+standart-button('normal','normal','reply')
