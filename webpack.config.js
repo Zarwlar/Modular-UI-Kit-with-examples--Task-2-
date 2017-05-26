@@ -13,7 +13,12 @@ module.exports = {
     },
 
     module: {
-        rules: [{
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
                 test: /\.styl$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
@@ -23,11 +28,6 @@ module.exports = {
             {
                 test: /\.(pug|jade)$/,
                 use: ['html-loader', 'pug-html-loader']
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-                
             },
             {
                 test: /\.svg$/,
@@ -59,8 +59,9 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: 'babel-loader',
-                exclude: [/node_modules/,
-                    /src\/vendor\/.*\.js$/
+                exclude: [ path.resolve(__dirname, "node_modules"),
+                    path.resolve(__dirname, "src"),
+                    path.resolve(__dirname, "vendor")
                 ]
             }
         ]
