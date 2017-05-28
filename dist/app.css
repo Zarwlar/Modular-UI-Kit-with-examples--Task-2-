@@ -46,12 +46,18 @@
   margin-left: 0.2rem;
   margin-top: 0.1rem;
 }
+.calendar {
+  max-width: 17rem;
+}
 .calendar .ui-datepicker-year {
   display: none;
 }
 .calendar .ui-datepicker {
   padding: 0;
-  width: 17.45em;
+  max-width: 17.45rem;
+}
+.calendar .ui-datepicker table {
+  margin: 0 0 0.1em;
 }
 .calendar .ui-widget.ui-widget-content {
   border: none;
@@ -63,12 +69,11 @@
   border: none;
   border-radius: 0;
 }
-.ui-state-active,
 .calendar .ui-widget-content .ui-state-active,
 .calendar .ui-widget-header .ui-state-active,
 .calendar a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover,
+.calendar .ui-button:active,
+.calendar .ui-button.ui-state-active:hover,
 .calendar .ui-state-default.ui-state-highlight.ui-state-active {
   background: #e75735;
   color: #fff;
@@ -148,6 +153,26 @@
   font-family: FontAwesome;
   content: '\F105';
   color: #fff;
+}
+.calendar__button_today {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #868686;
+  background: #e5e5e5;
+  font-family: LatoWebBlack;
+  font-size: 0.9rem;
+  padding: 1rem 0.6rem 1rem 1.2rem;
+}
+.calendar__day {
+  border: none;
+  display: block;
+  width: 100%;
+  background-color: #e75735;
+  color: #fff;
+  font-family: LatoWebLight, 'Arial';
+  font-size: 4.85rem;
+  text-align: center;
+  padding-top: 1rem;
 }
 .drop-down {
   max-width: 18rem;
