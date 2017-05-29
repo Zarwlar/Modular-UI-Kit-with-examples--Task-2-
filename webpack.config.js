@@ -55,6 +55,10 @@ module.exports = {
                 exclude: [/fonts/],
                 use: "file-loader?outputPath=img/&name=[name].[ext]"
             },
+            {
+                test: /\.mp4$/i,
+                use: "file-loader?outputPath=video/&name=[name].[ext]"
+            },
 
             {
                 test: /\.js$/,
