@@ -1,11 +1,11 @@
 .news
 	display: flex;
 	height: 13.3rem;
-	max-width: 18rem;
+	max-width: 15.5rem;
 
 	&__photo
 		background: #e75735;
-		width: 33%;
+		width: 37%;
 		object-fit: cover;
 
 	&__text
@@ -14,6 +14,7 @@
 		padding: 7.5%;
 		background-color: #e75735;
 		color: white;
+		min-width: 63%;
 
 		& > *:not(:first-child)
 			margin-top: 6.5%;
@@ -32,3 +33,6 @@
 		font-family: LatoWeb, 'Arial';
 		overflow: hidden;
 		font-size: 0.75rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		word-wrap: break-word;

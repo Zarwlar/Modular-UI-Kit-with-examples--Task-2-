@@ -2,10 +2,7 @@ mixin user-profile(options)
 	if !options
 		- options = {}
 	.user-profile
-		if options.imgsrc
-			img(class= 'user-profile__avatar' src= options.imgsrc ? options.imgsrc : '')
-		else
-			div.user-profile__avatar
+		img(class= 'user-profile__avatar' src= options.imgsrc ? options.imgsrc : '.\\blocks\\user-profile\\img\\user-profile__default-avatar.jpg')
 		.user-profile__info(class= options.imgsrc ? 'user-profile__info_active' : '')
 			.user-profile__name= options.name ? options.name : 'Anonymous'
 			.user-profile__proffesion= options.proffesion ? options.proffesion : 'Unknown'

@@ -35,11 +35,8 @@ $(function () {
 
 					$('<div class="player">' +
 						'<div class="play-pause play">' +
-						'<span class="play-button">&#9658;</span>' +
-						'<div class="pause-button">' +
-						'<span> </span>' +
-						'<span> </span>' +
-						'</div>' +
+						'<div class="play-button"></div>' +
+						'<div class="pause-button"></div>' +
 						'</div>' +
 						'<div class="progress">' +
 						'<div class="progress-bar">' +

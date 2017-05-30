@@ -1,12 +1,14 @@
 include ../standart-button/standart-button.pug
 
-mixin messager()
+mixin messager(user)
+	if !user
+		- user = {}
 	.messager
 		.messager__friend
-			.messager__friend_name Sarah Brown
+			.messager__friend_name= user.name ? user.name : 'Anonymous'
 			.messager__friend-information
 				.messager__vertical-position
-					img(src='http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png', alt='avatar',
+					img(src= user.photo ? user.photo : '.\\blocks\\messager\\img\\messager__default-avatar.jpg', alt='avatar',
 					class='messager__friend-information_photo')
 		.messager__actions
 			a(class="messager__actions_message", href="#")

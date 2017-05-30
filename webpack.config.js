@@ -27,7 +27,7 @@ module.exports = {
             },
             {
                 test: /\.(pug|jade)$/,
-                use: ['html-loader', 'pug-html-loader']
+                use: ['html-loader?attrs=img:src', 'pug-html-loader']
             },
             {
                 test: /\.svg$/,
