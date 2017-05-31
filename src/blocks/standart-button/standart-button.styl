@@ -4,14 +4,16 @@ $standart-button-shadow-color = #28a290
 $standart-button-error-color = #e75735
 $standart-button-error-shadow-color = #bf3e1f
 
+$button-text-color = #FFF;
+$inverted-button-background-color = #FFF;
+
 .standart-button
 	position: relative;
 	display: inline-block;
 	color: $standart-button-color;
-	width: inherit;
 
 	&__button
-		color: white;
+		color: $button-text-color;
 		font-weight: bold;
 		text-transform: uppercase;
 		text-align: center;
@@ -30,7 +32,7 @@ $standart-button-error-shadow-color = #bf3e1f
 
 	&_size-small &__button
 		font-size: 0.65rem;
-		padding: 0.35rem 1.1rem 0.2rem;
+		padding: 0.2rem 1rem;
 
 	&_type-error
 		color: $standart-button-error-color;
@@ -44,7 +46,7 @@ $standart-button-error-shadow-color = #bf3e1f
 		box-shadow: none;
 
 	&.standart-button_inverted &__button
-		background-color: white;
+		background-color: $inverted-button-background-color;
 		color: inherit;
 
 	&_ripple-effect
@@ -57,7 +59,7 @@ $standart-button-error-shadow-color = #bf3e1f
 		opacity: 1;
 
 	&_ripple-animation{
-		animation: ripple-drop .4s linear;
+		animation: ripple-drop .5s linear;
 }
 
 @keyframes ripple-drop {

@@ -1,3 +1,11 @@
+$active-date-background = #E75735;
+$active-date-color = #FFF;
+
+$default-date-color = #868686;
+$default-date-background = #F2F2F2;
+
+$button-today-color = #E5E5E5;
+
 .calendar
 	max-width: 17rem;
 
@@ -24,49 +32,48 @@
 	& .ui-widget-header .ui-state-active, 
 	& a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover,
 	& .ui-state-default.ui-state-highlight.ui-state-active
-		background: #E75735;
-		color: white;
+		background: $active-date-background;
+		color: $active-date-color;
 		border: none;
 
 	& .ui-widget-content .ui-state-highlight
 		border: none;
-		background-color: #F6F6F6;
-		color: #868686;
+		color: $default-date-color;
 
 	& .ui-widget-content .ui-state-default
 		border: none;
 
 	& .ui-datepicker-calendar thead
-		background: #e75735;
-		color: #FFF;
+		background: $active-date-background;
+		color: $active-date-color;
 		font-family: LatoWebBlack, 'Arial';
 		text-transform: uppercase;
 		font-size: 10px;
 
 	& .ui-datepicker-calendar tbody a,
 	& .ui-datepicker-calendar tbody span
-		color: #868686;
-		background: #F2F2F2;
+		color: $default-date-color;
+		background: $default-date-background;
 		font-family: SourceSansPro-Regular, 'Arial';
 		font-size: 1.25rem;
 		padding: 0.335em;
 		text-align: -webkit-center;
 
 	& .ui-datepicker-calendar tbody span
-		color: #FFF;
+		color: $active-date-color;
 
 	& .ui-state-disabled,
 	& .ui-widget-content .ui-state-disabled
 		opacity: 1;
 
 	& .ui-datepicker .ui-datepicker-title
-		color: #FFF;
-		font-family: LatoWebLight;
+		color: $active-date-color;
+		font-family: LatoWebLight, 'Arial';
 		font-size: 1.4rem;
 		font-weight: normal;
 
 	& .ui-datepicker .ui-datepicker-header
-		background: #d54c2c;
+		background: $active-date-background;
 
 	& .ui-icon.ui-icon-circle-triangle-e,
 	& .ui-icon.ui-icon-circle-triangle-w
@@ -85,7 +92,7 @@
 		background-color: inherit
 		border-radius: 0;
 		font-weight: inherit;
-		border: 1px solid #d54c2c;
+		border: 1px solid $active-date-background;
 
 	& .ui-datepicker-prev > *,
 	& .ui-datepicker-prev.ui-datepicker-prev-hover > *,
@@ -96,19 +103,19 @@
 	& .ui-datepicker-prev::after
 		font-family: FontAwesome;
 		content: '\f104';
-		color: white;
+		color: $active-date-color;
 
 	& .ui-datepicker-next::after
 		font-family: FontAwesome;
 		content: '\f105';
-		color: white;
+		color: $active-date-color;
 
 	&__button_today
 		text-transform: uppercase;
 		cursor: pointer;
-		color: #868686;
-		background: #e5e5e5;
-		font-family: LatoWebBlack;
+		color: $default-date-color;
+		background: $button-today-color;
+		font-family: LatoWebBlack, 'Arial';
 		font-size: 0.9rem;
 		padding: 1rem 0.6rem 1rem 1.2rem;
 
@@ -116,8 +123,8 @@
 		border: none;
 		display: block;
 		width: 100%;
-		background-color: #e75735;
-		color: white;
+		background-color: $active-date-background;
+		color: $active-date-color;
 		font-family: LatoWebLight, 'Arial';
 		font-size: 4.85rem;
 		text-align: center;

@@ -1,3 +1,9 @@
+$stages-text-color = #A4A4A4;
+$complete-active-background = #E75735;
+$complete-active-color = #FFF;
+
+$inactive-color = #E5E5E5;
+
 .stages {
 	list-style: none;
 	margin: 0;
@@ -5,7 +11,7 @@
 	display: table;
 	table-layout: fixed;
 	width: 100%;
-	color: #a4a4a4;
+	color: $stages-text-color;
 }
 
 .stages > li {
@@ -19,7 +25,7 @@
 	content: attr(data-step);
 	display: block;
 	margin: 0 auto;
-	background: #e5e5e5;
+	background: $inactive-color;
 	width: 2.5em;
 	height: 2.5em;
 	text-align: center;
@@ -28,14 +34,14 @@
 	border-radius: 100%;
 	position: relative;
 	z-index: 1000;
-	font-family: LatoWebBlack;
+	font-family: LatoWebBlack, 'Arial';
 }
 
 .stages > li:after {
 	content: '';
 	position: absolute;
 	display: block;
-	background: #e5e5e5;
+	background: $inactive-color;
 	width: 100%;
 	height: 0.5em;
 	top: 1em;
@@ -49,20 +55,20 @@
 }
 
 .stages > li.stages_complete {
-	color: #e75735;
+	color: $complete-active-background;
 }
 
 .stages > li.stages_complete:before, .stages > li.stages_complete:after {
-	color: #FFF;
-	background: #e75735;
+	color: $complete-active-color;
+	background: $complete-active-background;
 }
 
 .stages > li.stages_active {
-	color: #e75735;
+	color: $complete-active-background;
 }
 
 .stages > li.stages_active:before {
-	color: #FFF;
-	background: #e75735;
+	color: $complete-active-color;
+	background: $complete-active-background;
 }
 

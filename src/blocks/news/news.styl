@@ -1,20 +1,23 @@
+$news-background-color = #E75735;
+$text-color = #FFF;
+
 .news
 	display: flex;
 	height: 13.3rem;
-	max-width: 15.5rem;
+	max-width: 15.65rem;
 
 	&__photo
-		background: #e75735;
-		width: 37%;
+		background: $news-background-color;
+		width: 38%;
 		object-fit: cover;
 
 	&__text
 		display: flex;
 		flex-direction: column;
 		padding: 7.5%;
-		background-color: #e75735;
-		color: white;
-		min-width: 63%;
+		background-color: $news-background-color;
+		color: $text-color;
+		min-width: 62%;
 
 		& > *:not(:first-child)
 			margin-top: 6.5%;

@@ -1,21 +1,30 @@
+$option-backogrund-color = #4EB7A8;
+$option-color = #FFF;
+
+$select-background-color = #E5E5E5;
+$select-color = #888;
+
+$drop-down-arrow-color = #FFF;
+
 .drop-down
 	max-width: 18rem;
 	display: flex;
 	position: relative;
 
 	&__option
-		background-color: #4eb7a8;
-		color: white;
+		background-color: $option-backogrund-color;
+		color: $option-color;
 
 	&__select
 		font-family: SourceSansPro-Regular, 'Arial';
 		width: 100%;
-		background-color: #e5e5e5;
-		color: #888888;
+		background-color: $select-background-color;
+		color: $select-color;
 		padding: 0.35rem 0.85rem;;
 		border-top-left-radius: 3px;
 		border-bottom-left-radius: 3px;
 		border: none;
+		outline: none;
 
 
 	&::before
@@ -32,6 +41,6 @@
 		bottom: 0;
 		border-top-right-radius: 3px;
 		border-bottom-right-radius: 3px;
-		background-color: #4eb7a8;
-		color: white;
+		background-color: $option-backogrund-color;
+		color: $drop-down-arrow-color;
 		font-size: 1.6rem;

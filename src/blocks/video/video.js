@@ -33,19 +33,19 @@ $(function () {
 				// The Structure of our video player
 				{
 
-					$('<div class="player">' +
-						'<div class="play-pause play">' +
-						'<div class="play-button"></div>' +
-						'<div class="pause-button"></div>' +
+					$('<div class="video__player">' +
+						'<div class="video__play-pause video_play">' +
+						'<div class="video__play-button"></div>' +
+						'<div class="video__pause-button"></div>' +
 						'</div>' +
-						'<div class="progress">' +
-						'<div class="progress-bar">' +
-						'<div class="button-holder">' +
-						'<div class="progress-button"> </div>' +
+						'<div class="video__progress">' +
+						'<div class="video__progress-bar">' +
+						'<div class="video__button-holder">' +
+						'<div class="video__progress-button"> </div>' +
 						'</div>' +
 						'</div>' +
 						'</div>' +
-						'<div class="fullscreen"> ' +
+						'<div class="video__fullscreen"> ' +
 						'</div>' +
 						'</div>').appendTo($that);
 
@@ -57,7 +57,7 @@ $(function () {
 				$that.width($videoWidth + 'px');
 
 				// Set width of the player based on previously noted settings
-				$that.find('.player').css({
+				$that.find('.video__player').css({
 					'width': '100%',
 					'left': '0'
 				});
@@ -94,7 +94,7 @@ $(function () {
 				});
 
 				// Set some widths
-				var progWidth = $that.find('.progress').width();
+				var progWidth = $that.find('.video__progress').width();
 
 
 				var bufferLength = function () {
@@ -124,7 +124,7 @@ $(function () {
 							$('<div class="buffered"></div>').css({
 								"left": bufferOffset + '%',
 								'width': bufferWidth + '%'
-							}).appendTo($that.find('.progress'));
+							}).appendTo($that.find('.video__progress'));
 
 						}
 					}
@@ -137,7 +137,7 @@ $(function () {
 				var timeUpdate = function ($ignore) {
 
 					// The current time of the video based on progress bar position
-					var time = Math.round(($('.progress-bar').width() / progWidth) * $duration);
+					var time = Math.round(($('.video__progress-bar').width() / progWidth) * $duration);
 
 					// The 'real' time of the video
 					var curTime = $spc.currentTime;
@@ -179,11 +179,11 @@ $(function () {
 
 					// A variable set which we'll use later on
 					if ($ignore != true) {
-						$that.find('.progress-bar').css({
+						$that.find('.video__progress-bar').css({
 							'width': updProgWidth + 'px'
 						});
-						$that.find('.progress-button').css({
-							'left': (updProgWidth - $that.find('.progress-button').width()) + 'px'
+						$that.find('.video__progress-button').css({
+							'left': (updProgWidth - $that.find('.video__progress-button').width()) + 'px'
 						});
 					}
 
@@ -203,7 +203,7 @@ $(function () {
 				$spc.addEventListener('timeupdate', timeUpdate);
 
 				// When the user clicks play, bind a click event	
-				$that.find('.play-pause').bind('click', function () {
+				$that.find('.video__play-pause').bind('click', function () {
 
 					// Set up a playing variable
 					if ($spc.currentTime > 0 && $spc.paused == false && $spc.ended == false) {
@@ -215,19 +215,19 @@ $(function () {
 					// If playing, etc, change classes to show pause or play button
 					if ($playing == false) {
 						$spc.pause();
-						$(this).addClass('play').removeClass('pause');
+						$(this).addClass('video_play').removeClass('video_pause');
 						bufferLength();
 					} else {
 						$begin = true;
 						$spc.play();
-						$(this).addClass('pause').removeClass('play');
+						$(this).addClass('video_pause').removeClass('video_play');
 					}
 
 				});
 
 
 				// Bind a function to the progress bar so the user can select a point in the video
-				$that.find('.progress').bind('mousedown', function (e) {
+				$that.find('.video__progress').bind('mousedown', function (e) {
 
 					// Progress bar is being clicked
 					$mclicking = true;
@@ -238,7 +238,7 @@ $(function () {
 					}
 
 					// The x position of the mouse in the progress bar 
-					x = e.pageX - $that.find('.progress').offset().left;
+					x = e.pageX - $that.find('.video__progress').offset().left;
 
 					// Update current time
 					currentTime = (x / progWidth) * $duration;
@@ -254,11 +254,11 @@ $(function () {
 					// Hide the player if video has been played and user hovers away from video
 					if ($begin == true) {
 						$that.hover(function () {
-							$that.find('.player').stop(true, false).animate({
+							$that.find('.video__player').stop(true, false).animate({
 								'opacity': '1'
 							}, 0.5);
 						}, function () {
-							$that.find('.player').stop(true, false).animate({
+							$that.find('.video__player').stop(true, false).animate({
 								'opacity': '1'
 							}, 0.5); //Must desappear
 						});
@@ -272,17 +272,17 @@ $(function () {
 						// The thing we're going to apply to the CSS (changes based on conditional statements);
 						var progMove = 0;
 						// Width of the progress button (a little button at the end of the progress bar)
-						var buttonWidth = $that.find('.progress-button').width();
+						var buttonWidth = $that.find('.video__progress-button').width();
 
 						// Updated x posititon the user is at
-						x = e.pageX - $that.find('.progress').offset().left;
+						x = e.pageX - $that.find('.video__progress').offset().left;
 
 						// If video is playing
 						if ($playing == true) {
 							// And the current time is less than the duration				
 							if (currentTime < $duration) {
 								// Then the play-pause icon should definitely be a pause button 
-								$that.find('.play-pause').addClass('pause').removeClass('play');
+								$that.find('.video__play-pause').addClass('video_pause').removeClass('video_play');
 							}
 						}
 
@@ -300,10 +300,10 @@ $(function () {
 						}
 
 						// Change CSS based on previous conditional statement
-						$that.find('.progress-bar').css({
+						$that.find('.video__progress-bar').css({
 							'width': progMove + 'px'
 						});
-						$that.find('.progress-button').css({
+						$that.find('.video__progress-button').css({
 							'left': (progMove - buttonWidth) + 'px'
 						});
 
@@ -319,7 +319,7 @@ $(function () {
 
 					// If the user is not dragging
 					if ($draggingProgress == false) {
-						$that.find('.play-pause').addClass('play').removeClass('pause');
+						$that.find('.video__play-pause').addClass('video_play').removeClass('video_pause');
 					}
 
 				});
@@ -344,11 +344,11 @@ $(function () {
 
 				// Check if fullscreen supported. If it's not just don't show the fullscreen icon.
 				if (!$spc.requestFullscreen && !$spc.mozRequestFullScreen && !$spc.webkitRequestFullScreen) {
-					$('.fullscreen').hide();
+					$('.video__fullscreen').hide();
 				}
 
 				// Requests fullscreen based on browser.
-				$('.fullscreen').click(function () {
+				$('.video__fullscreen').click(function () {
 
 					if ($spc.requestFullscreen) {
 						$spc.requestFullscreen();

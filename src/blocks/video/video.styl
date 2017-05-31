@@ -1,4 +1,9 @@
-.player {
+$progress-bar-color = #FFF;
+$progress-bar-active = #E75735;
+$button-color = #FFF;
+$button-background = #E75735;
+
+.video__player
 	background-color: rgba(0,0,0,0.4);
 	opacity: .9;
 	box-sizing: border-box;
@@ -13,84 +18,80 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
 
-.player .progress {
-	width: 78%;
-	height: 5px;
-	border-radius: 5px;
-	background: white;
-	float: left;
-	cursor: pointer;
-	padding: 0;
-	position: relative;
-}
 
-.player .progress-bar {
-	background: #e75735;
-	border-radius: 5px;
-	height: 100%;
-	position: relative;
-	z-index: 999;
-	width: 0;
-}
+ & .video__progress
+		width: 78%;
+		height: 5px;
+		border-radius: 5px;
+		background: $progress-bar-color;
+		float: left;
+		cursor: pointer;
+		padding: 0;
+		position: relative;
 
-.player .button-holder {
-	visibility: hidden;
-	position: relative;
-	left: 10px;
-}
 
-.player [class^="buffered"] {
-	background: rgba(255,255,255,0.1);
-	position: absolute;
-	top: 0;
-	left: 30px;
-	height: 100%;
-	border-radius: 5px;
-	z-index: 1;
-}
+	& .video__progress-bar
+		background: $progress-bar-active;
+		border-radius: 5px;
+		height: 100%;
+		position: relative;
+		z-index: 999;
+		width: 0;
 
-.player .play .pause-button, .player .pause .play-button {
-	display: none;
-}
 
-.play-pause {
+	& .video__button-holder
+		visibility: hidden;
+		position: relative;
+		left: 10px;
+
+
+	& [class^="buffered"]
+		background: rgba(255,255,255,0.1);
+		position: absolute;
+		top: 0;
+		left: 30px;
+		height: 100%;
+		border-radius: 5px;
+		z-index: 1;
+
+
+	& .video_play .video__pause-button, & .video_pause .video__play-button
+		display: none;
+
+	& .video__play-button:after, & .video__pause-button:after
+		font-size: 0.9rem;
+		font-family: FontAwesome;
+		color: $button-color;
+
+	& .video__play-button:after
+		content: "\f04b";
+
+
+	& .video__pause-button:after
+		content: "\f04c";
+
+
+	& .video__fullscreen
+		width: 8%;
+		cursor: pointer;
+		float: left;
+		height: 100%;
+
+
+	& .video__fullscreen:after
+		font-family: FontAwesome;
+		content: "\f065";
+		position: absolute;
+		font-size: 2rem;
+		color: $button-color;
+		background-color: $button-background;
+		height: inherit;
+		display: flex;
+		width: 8%;
+		justify-content: center;
+		align-items: center;	
+
+ .video__play-pause 
 	margin-left: 3.8%;
 	font-size: 0.9rem;
-}
-
-.player .play-button:after, .player .pause-button:after {
-	font-size: 0.9rem;
-	font-family: FontAwesome;
-	color: white;
-}
-
-.player .play-button:after {
-	content: "\f04b";
-}
-
-.player .pause-button:after {
-	content: "\f04c";
-}
-
-.player .fullscreen {
-	width: 8%;
-	cursor: pointer;
-	float: left;
-	height: 100%;
-}
-
-.player .fullscreen:after {
-	font-family: FontAwesome;
-	content: "\f065";
-	position: absolute;
-	font-size: 2rem;
-	color: white;
-	background-color: #e75735;
-	height: inherit;
-	display: flex;
-	width: 8%;
-	justify-content: center;
-	align-items: center;	
-}

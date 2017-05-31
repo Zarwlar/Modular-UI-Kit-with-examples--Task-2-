@@ -1,3 +1,15 @@
+$avatar-background = #E5E5E5;
+$info-background = #4eb7a8;
+$info-text = #FFF;
+
+$profile-active-background = #E5E5E5;
+$profile-active-text = #757575;
+$profile-active-name = #E75735
+
+$link-color = #FFF;
+$link-active = #757575;
+$link-active-hover = #E75735;
+
 .user-profile
 	display: flex;
 
@@ -6,20 +18,20 @@
 		height: 88px;
 		background-size: cover;
 		background-position: center;
-		border: 3px solid #E5E5E5;
+		border: 3px solid $avatar-background ;
 		border-radius: 50%;
 
 	&__name
 		overflow: hidden;
 		text-overflow: ellipsis;
-		font-family: LatoWeb;
+		font-family: LatoWeb, 'Arial';
 		text-align: center;
 		font-size: 1.15rem;
 
 	&__proffesion
 		overflow: hidden;
 		text-overflow: ellipsis;
-		font-family: LatoWebBlack;
+		font-family: LatoWebBlack, 'Arial';
 		text-transform: uppercase;
 		text-align: center;
 		font-size: 0.78rem;
@@ -30,19 +42,19 @@
 		justify-content: center;
 		min-width: 9.4rem;
 		max-width: 6rem;
-		background-color: #4eb7a8;
-		color: white;
+		background-color: $info-background;
+		color: $info-text;
 		margin-left: 0.7rem;
 		position: relative;
 		border-radius: 9px;
 		padding: 0.4rem;
 
 		&_active
-			background-color: #e5e5e5;
-			color: #757575;
+			background-color: $profile-active-background;
+			color: $profile-active-text;
 
 			& .user-profile__name
-				color: #e75735;
+				color: $profile-active-name;
 
 		&:before
 			content: " ";
@@ -70,16 +82,16 @@
 			margin-right: auto;
 
 	&__link
-		color: white;
+		color: $link-color;
 		text-decoration: none;
 		cursor: default;
 
 		&.user-profile__links_active
-			color: #757575;
+			color: $link-active;
 			cursor: pointer;
 
 		&.user-profile__links_active:hover
-			color: #e75735;
+			color: $link-active-hover;
 
 		&_facebook:after
 			content: "\f09a";

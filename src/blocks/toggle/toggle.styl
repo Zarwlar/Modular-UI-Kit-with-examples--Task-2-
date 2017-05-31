@@ -1,3 +1,10 @@
+$toggle-background = #FFF;
+$label-background = #ECEEEF;
+$handle-background = #FFF;
+$label-off-text-color = #AAA;
+$label-on-text-color = #FFF;
+$label-on-background-color = #4eb7a8;
+
 .toggle
   position: relative;
   display: inline-block;
@@ -5,7 +12,7 @@
   width: 3.7rem;
   height: 1.5rem;
   padding: 0.18rem;
-  background-color: white;
+  background-color: $toggle-background ;
   border-radius: 11px;
   cursor: pointer;
 
@@ -22,7 +29,7 @@
     height: inherit;
     font-size: 0.7rem;
     text-transform: uppercase;
-    background: #eceeef;
+    background: $label-background;
     border-radius: inherit;
     -webkit-transition: 0.15s ease-out;
     -moz-transition: 0.15s ease-out;
@@ -35,7 +42,7 @@
     left: 0.4rem;
     width: 1.1rem;
     height: 1.1rem;
-    background: white;
+    background: $handle-background;
     border-radius: 10px;
     -webkit-transition: left 0.15s ease-out;
     -moz-transition: left 0.15s ease-out;
@@ -47,21 +54,21 @@
   top: 50%;
   margin-top: -.5em;
   line-height: 1;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
 }
 .toggle__label:before {
   content: attr(data-off);
   right: 0.6rem;
-  color: #aaa;
+  color: $label-off-text-color;
 }
 .toggle__label:after {
   content: attr(data-on);
   left: 0.75rem;
-  color: white;
+  color: $label-on-text-color;
   opacity: 0;
 }
 .toggle__input:checked ~ .toggle__label {
-  background: #4eb7a8;
+  background: $label-on-background-color;
 }
 .toggle__input:checked ~ .toggle__label:before {
   opacity: 0;

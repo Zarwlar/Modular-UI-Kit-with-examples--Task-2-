@@ -10,103 +10,107 @@ html(lang="en")
   include blocks/arrow-button/arrow-button.pug
   include blocks/percentages/percentages.pug
   include blocks/pie-chart/pie-chart.pug
-  //- AIzaSyAfaOl0X5qQf4yJIocRvRey0yE9liHwVIA
-  
-  +percentages(0)
-  +percentages(38)
-  +percentages(62)
-  +percentages(89)
-
-  +pie-chart('12, 25, 30, 33')
-
-  +arrow-button('left', 'inactive')
-  +arrow-button('right', 'inactive')
-  +arrow-button('left', 'disabled')
-  +arrow-button('right', 'disabled')
-  +arrow-button('left', 'enabled')
-  +arrow-button('right', 'enabled')
-
-  include blocks/standart-button/standart-button.pug
-
-  +standart-button('normal','small','button')
-  +standart-button('normal','normal','button')
-  +standart-button('error','normal','button')
-  +standart-button('error','small','button')
-
   include blocks/slider-discret/slider-discret.pug
-  +slider-discret()
-  br
-  br
+  include blocks/standart-button/standart-button.pug
   include blocks/slider-continuous/slider-continuous.pug
-  +slider-continuous()
   include blocks/stages/stages.pug
-  +stages(5,3)
-  br
-  br
   include blocks/toggle/toggle.pug
-  +toggle('on','off')
-  br
-  br
   include blocks/tick-box/tick-box.pug
-  +tick-box()
-  br
-  br
-  include blocks/feedback/feedback.pug
-  +feedback()
-  br
-  br
-  include blocks/search/search.pug
-  +search()
-  br
-  br
-  include blocks/drop-down/drop-down.pug
-  +drop-down(['Orange','Apple','Pear'])
-  br
-  br
   include blocks/user-profile/user-profile.pug
-  br
-  br
-  +user-profile({
-  imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
-  name: 'John Smith',
-  proffesion: 'developer',
-  'facebook':'123',
-  'twitter':'321',
-  'dribbble':'hah'
-  })
-
-  +user-profile()
-
-  br
-  br
+  include blocks/feedback/feedback.pug
+  include blocks/search/search.pug
+  include blocks/drop-down/drop-down.pug
   include blocks/news/news.pug
-  +news({
-    imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
-    title: 'It\'s all going downhill',
-    date: '24 august 2014',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
-  })
-  br
-  br
   include blocks/event/event.pug
-  +event({
-    imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
-    title: 'this is the title',
-    day: '24',
-    month: 'aug',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-  })
-  br
-  br
   include blocks/location/location.pug
-  +location()
-  include blocks/messager/messager.pug
-  +messager()
-  br
-  br
   include blocks/calendar/calendar.pug
-  +calendar()
-  br
-  br
+  include blocks/messager/messager.pug
   include blocks/video/video.pug
-  +video()
+  .container
+    .container__center
+      h2 standart buttons
+
+      +standart-button('normal','small','button')
+      +standart-button('normal','normal','button')
+      +standart-button('error','normal','button')
+      +standart-button('error','small','button')
+
+      h2 arrow buttons
+
+      +arrow-button('left', 'inactive')
+      +arrow-button('right', 'inactive')
+      +arrow-button('left', 'disabled')
+      +arrow-button('right', 'disabled')
+      +arrow-button('left', 'enabled')
+      +arrow-button('right', 'enabled')
+
+      h2 percentages/pie chart
+
+      +percentages(0)
+      +percentages(38)
+      +percentages(62)
+      +percentages(89)
+      +pie-chart('12, 25, 30, 33')
+
+      h2 sliders
+    .container__center
+      .container__sliders-position
+        .container__left
+            +slider-discret()
+        .container__right
+            +slider-continuous()
+    .container__center
+      h2 stages
+      +stages(5,3)
+    .container__center
+      h2 form elements
+      .container__left
+          +feedback()
+      .container__right
+        h2 toggles
+        +toggle('on','off')
+        +toggle('on','off')
+        h2 tick boxes
+        +tick-box(true)
+        +tick-box()
+
+
+
+  //- +search()
+
+
+  //- +drop-down(['Orange','Apple','Pear'])
+
+  //- +user-profile({
+  //- imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
+  //- name: 'John Smith',
+  //- proffesion: 'developer',
+  //- 'facebook':'123',
+  //- 'twitter':'321',
+  //- 'dribbble':'hah'
+  //- })
+
+  //- +user-profile()
+
+  //- +news({
+  //-   imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
+  //-   title: 'It\'s all going downhill',
+  //-   date: '24 august 2014',
+  //-   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
+  //- })
+
+  //- +event({
+  //-   imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
+  //-   title: 'this is the title',
+  //-   day: '24',
+  //-   month: 'aug',
+  //-   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+  //- })
+
+  //- +location()
+
+  //- +messager()
+
+  //- +calendar()
+
+  //- +video()

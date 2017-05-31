@@ -80,7 +80,6 @@
 }
 .calendar .ui-widget-content .ui-state-highlight {
   border: none;
-  background-color: #f6f6f6;
   color: #868686;
 }
 .calendar .ui-widget-content .ui-state-default {
@@ -111,12 +110,12 @@
 }
 .calendar .ui-datepicker .ui-datepicker-title {
   color: #fff;
-  font-family: LatoWebLight;
+  font-family: LatoWebLight, 'Arial';
   font-size: 1.4rem;
   font-weight: normal;
 }
 .calendar .ui-datepicker .ui-datepicker-header {
-  background: #d54c2c;
+  background: #e75735;
 }
 .calendar .ui-icon.ui-icon-circle-triangle-e,
 .calendar .ui-icon.ui-icon-circle-triangle-w {
@@ -135,7 +134,7 @@
   background-color: inherit;
   border-radius: 0;
   font-weight: inherit;
-  border: 1px solid #d54c2c;
+  border: 1px solid #e75735;
 }
 .calendar .ui-datepicker-prev > *,
 .calendar .ui-datepicker-prev.ui-datepicker-prev-hover > *,
@@ -158,7 +157,7 @@
   cursor: pointer;
   color: #868686;
   background: #e5e5e5;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
   font-size: 0.9rem;
   padding: 1rem 0.6rem 1rem 1.2rem;
 }
@@ -172,6 +171,44 @@
   font-size: 4.85rem;
   text-align: center;
   padding-top: 1rem;
+}
+.container {
+  margin: 0 auto;
+  width: 707px;
+}
+.container h2 {
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  font-family: LatoWebBlack;
+  font-size: 1.25rem;
+}
+.container .standart-button {
+  margin-left: 24px;
+}
+.container .percentages {
+  margin-left: 20px;
+}
+.container .pie-chart {
+  margin-left: 24px;
+}
+.container .arrow-button {
+  margin-left: 24px;
+}
+.container__center {
+  text-align: center;
+}
+.container__left {
+  width: 50%;
+  float: left;
+}
+.container__right {
+  width: 50%;
+  float: right;
+}
+.container__sliders-position {
+  padding-left: 10%;
+  padding-bottom: 6%;
 }
 .drop-down {
   max-width: 18rem;
@@ -191,6 +228,7 @@
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border: none;
+  outline: none;
 }
 .drop-down::before {
   content: "\F107";
@@ -229,7 +267,7 @@
 }
 .event__date {
   display: inline-flex;
-  font-family: LatoWebLight;
+  font-family: LatoWebLight, 'Arial';
   padding-bottom: 4%;
   align-items: baseline;
 }
@@ -342,8 +380,8 @@
 .location__banner {
   display: flex;
   background-color: #e75735;
-  font-family: LatoWebLight;
-  color: #fff;
+  font-family: LatoWebLight, 'Arial';
+  color: #e75735;
   padding-top: 3%;
   padding-bottom: 3%;
 }
@@ -356,7 +394,7 @@
 }
 .location__adress {
   text-transform: uppercase;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
   font-size: 0.85rem;
   padding-left: 4.5%;
   padding-right: 10.5%;
@@ -421,9 +459,9 @@
 }
 .messager__friend_name {
   text-align: center;
-  background-color: #4eb7a8;
+  background-color: #28a290;
   color: #fff;
-  font-family: LatoWebLight;
+  font-family: LatoWebLight, 'Arial';
   font-size: 1.9rem;
   padding: 7% 0 9%;
 }
@@ -486,7 +524,7 @@
   border-radius: 3px;
   resize: none;
   font-size: 0.9rem;
-  font-family: LatoWebBold;
+  font-family: LatoWebBold, 'Arial';
   color: #868686;
   box-sizing: border-box;
   width: 100%;
@@ -498,11 +536,11 @@
 .news {
   display: flex;
   height: 13.3rem;
-  max-width: 15.5rem;
+  max-width: 15.65rem;
 }
 .news__photo {
   background: #e75735;
-  width: 37%;
+  width: 38%;
   object-fit: cover;
 }
 .news__text {
@@ -511,7 +549,7 @@
   padding: 7.5%;
   background-color: #e75735;
   color: #fff;
-  min-width: 63%;
+  min-width: 62%;
 }
 .news__text > *:not(:first-child) {
   margin-top: 6.5%;
@@ -541,6 +579,11 @@
   height: 110px;
   text-align: center;
 }
+.percentages__position-vertical {
+  position: relative;
+  bottom: 2rem;
+  display: inline-block;
+}
 .percentages canvas {
   position: absolute;
   top: 0;
@@ -552,7 +595,7 @@
   z-index: 2;
   font-size: 2.5rem;
   color: #b1b1b1;
-  font-family: LatoWebLight;
+  font-family: LatoWebLight, 'Arial';
 }
 .pie-chart {
   display: inline-block;
@@ -626,7 +669,7 @@
   -ms-touch-action: pan-y;
 }
 .rangeslider-continuous_horizontal {
-  max-width: 260px;
+  max-width: 277px;
   height: 5px;
   width: 100%;
   touch-action: pan-y;
@@ -648,7 +691,7 @@
   width: auto;
   margin: 0;
   white-space: nowrap;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
   font-size: 0.8rem;
 }
 .rangeslider__value-bubble::before {
@@ -693,7 +736,7 @@
   -ms-touch-action: pan-y;
 }
 .rangeslider-discret_horizontal {
-  max-width: 260px;
+  max-width: 277px;
   height: 5px;
   width: 100%;
   touch-action: pan-y;
@@ -705,10 +748,10 @@
   position: absolute;
   top: 100%;
   text-align: justify;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
   color: #e6e6e6;
   padding-top: 0.7rem;
-  width: 270px;
+  width: 287px;
 }
 .rangeslider-discret__scale:after {
   content: "";
@@ -743,7 +786,7 @@
   border-radius: 100%;
   position: relative;
   z-index: 1000;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
 }
 .stages > li:after {
   content: '';
@@ -779,7 +822,6 @@
   position: relative;
   display: inline-block;
   color: #4eb7a8;
-  width: inherit;
 }
 .standart-button__button {
   color: #fff;
@@ -801,7 +843,7 @@
 }
 .standart-button_size-small .standart-button__button {
   font-size: 0.65rem;
-  padding: 0.35rem 1.1rem 0.2rem;
+  padding: 0.2rem 1rem;
 }
 .standart-button_type-error {
   color: #e75735;
@@ -828,7 +870,7 @@
   opacity: 1;
 }
 .standart-button_ripple-animation {
-  animation: ripple-drop 0.4s linear;
+  animation: ripple-drop 0.5s linear;
 }
 @-moz-keyframes ripple-drop {
   100% {
@@ -867,6 +909,7 @@
   cursor: pointer;
   transition: background 0.15s ease-in, color 0.15s ease-in;
   font-family: FontAwesome;
+  display: inline-block;
 }
 .tick-box:after {
   content: '\F00C';
@@ -928,7 +971,7 @@
   top: 50%;
   margin-top: -0.5em;
   line-height: 1;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
 }
 .toggle__label:before {
   content: attr(data-off);
@@ -967,14 +1010,14 @@
 .user-profile__name {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: LatoWeb;
+  font-family: LatoWeb, 'Arial';
   text-align: center;
   font-size: 1.15rem;
 }
 .user-profile__proffesion {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: LatoWebBlack;
+  font-family: LatoWebBlack, 'Arial';
   text-transform: uppercase;
   text-align: center;
   font-size: 0.78rem;
@@ -1045,7 +1088,7 @@
 .user-profile__link_dribbble:after {
   content: "\F17D";
 }
-.player {
+.video__player {
   background-color: rgba(0,0,0,0.4);
   opacity: 0.9;
   box-sizing: border-box;
@@ -1061,7 +1104,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.player .progress {
+.video__progress {
   width: 78%;
   height: 5px;
   border-radius: 5px;
@@ -1071,7 +1114,7 @@
   padding: 0;
   position: relative;
 }
-.player .progress-bar {
+.video__progress-bar {
   background: #e75735;
   border-radius: 5px;
   height: 100%;
@@ -1079,12 +1122,12 @@
   z-index: 999;
   width: 0;
 }
-.player .button-holder {
+.video__button-holder {
   visibility: hidden;
   position: relative;
   left: 10px;
 }
-.player [class^="buffered"] {
+[class^="buffered"] {
   background: rgba(255,255,255,0.1);
   position: absolute;
   top: 0;
@@ -1093,33 +1136,29 @@
   border-radius: 5px;
   z-index: 1;
 }
-.player .play .pause-button,
-.player .pause .play-button {
+.video_play .video__pause-button,
+.video_pause .video__play-button {
   display: none;
 }
-.play-pause {
-  margin-left: 3.8%;
-  font-size: 0.9rem;
-}
-.player .play-button:after,
-.player .pause-button:after {
+.video__play-button:after,
+.video__pause-button:after {
   font-size: 0.9rem;
   font-family: FontAwesome;
   color: #fff;
 }
-.player .play-button:after {
+.video__play-button:after {
   content: "\F04B";
 }
-.player .pause-button:after {
+.video__pause-button:after {
   content: "\F04C";
 }
-.player .fullscreen {
+.video__fullscreen {
   width: 8%;
   cursor: pointer;
   float: left;
   height: 100%;
 }
-.player .fullscreen:after {
+.video__fullscreen:after {
   font-family: FontAwesome;
   content: "\F065";
   position: absolute;
@@ -1131,6 +1170,10 @@
   width: 8%;
   justify-content: center;
   align-items: center;
+}
+.video__play-pause {
+  margin-left: 3.8%;
+  font-size: 0.9rem;
 }
 @font-face {
   font-family: 'FontAwesome';

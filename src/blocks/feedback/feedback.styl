@@ -1,3 +1,10 @@
+$validation-color = #FFF;
+$validation-ok = #4eb7a8;
+$validation-error = #E75735;
+
+$input-color = #888;
+$input-background-color = #E5E5E5;
+
 .feedback
 	max-width: 18rem;
 	&__name, &__email
@@ -8,7 +15,7 @@
 		position: relative;
 		font-family: LatoWebBlack, 'Arial';
 		font-size: 0.7rem;
-		color: white;
+		color: $validation-color;
 		border-radius: 4px;
 		margin-left: 0.5rem;
 		text-transform: uppercase;
@@ -20,13 +27,13 @@
 		&_ok, &_error
 			display: flex;
 		&_ok
-			background-color: #4eb7a8;
+			background-color: $validation-ok;
 			&:after
-								border-top: 1rem solid #4eb7a8;
+								border-top: 1rem solid $validation-ok;
 		&_error
-			background-color: #e75735;
+			background-color: $validation-error;
 			&:after
-								border-top: 1rem solid #e75735;
+								border-top: 1rem solid $validation-error;
 		&:after
 			position: absolute;
 			display: block;
@@ -45,10 +52,10 @@
 	&__input, &__textarea
 		display: block;
 		width: 100%;
-		color: #888888;
+		color: $input-color;
 		border-radius: 4px;
 		font-family: SourceSansPro-Regular, 'Arial';
-		background-color: #e5e5e5;
+		background-color: $input-background-color;
 		padding: 0.35rem 0.85rem;
 		border: none;
 		outline: none;
