@@ -5,11 +5,19 @@ html(lang="en")
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     title Site_2
-    script(src= 'https://maps.googleapis.com/maps/api/js')
+    script(src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAfaOl0X5qQf4yJIocRvRey0yE9liHwVIA')
   body
   include blocks/arrow-button/arrow-button.pug
   include blocks/percentages/percentages.pug
   include blocks/pie-chart/pie-chart.pug
+  //- AIzaSyAfaOl0X5qQf4yJIocRvRey0yE9liHwVIA
+  
+  +percentages(0)
+  +percentages(38)
+  +percentages(62)
+  +percentages(89)
+
+  +pie-chart('12, 25, 30, 33')
 
   +arrow-button('left', 'inactive')
   +arrow-button('right', 'inactive')

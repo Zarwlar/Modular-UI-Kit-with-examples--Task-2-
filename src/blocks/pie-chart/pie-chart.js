@@ -1,7 +1,10 @@
 import Chart from 'chart.js'
 
 $(function () {
-	var ctx = document.getElementsByClassName("pie-chart")[0].getContext('2d');
+	var tx = document.getElementsByClassName("pie-chart")[0],
+	ctx = tx.getContext('2d'),
+	txvalue = tx.dataset['value'].split(',');
+
 	var myChart = new Chart(ctx, {
 		type: 'doughnut',
 		data: {
@@ -12,7 +15,7 @@ $(function () {
 					"#4eb7a8",
 					"#e5e5e5"
 				],
-				data: [12, 25, 30, 33]
+				data: txvalue
 			}]
 		},
 		options: {
