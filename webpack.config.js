@@ -13,8 +13,7 @@ module.exports = {
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
@@ -63,7 +62,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: 'babel-loader',
-                exclude: [ path.resolve(__dirname, "node_modules"),
+                exclude: [path.resolve(__dirname, "node_modules"),
                     path.resolve(__dirname, "src"),
                     path.resolve(__dirname, "vendor")
                 ]
@@ -73,7 +72,18 @@ module.exports = {
 
     plugins: [new HtmlWebpackPlugin({
             template: "./src/index.pug"
-        }), new ExtractTextPlugin({
+        }), 
+        new HtmlWebpackPlugin({
+            chunks: ['app'],
+            filename: 'main.html',
+        template: './src/main.pug'
+    }),
+    new HtmlWebpackPlugin({
+        chunks: ['app'],
+        filename: 'market.html',
+        template: './src/market.pug'
+    }),
+   new ExtractTextPlugin({
             filename: 'app.css'
         }),
         new webpack.ProvidePlugin({

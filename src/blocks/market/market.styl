@@ -1,0 +1,91 @@
+.market
+
+	&__container
+		display: flex;
+		flex-wrap: wrap;
+
+	&__header
+		display: flex;
+		font-family: LatoWebBlack, 'Arial';
+		background-color: lighten(#E75735, 10);
+		justify-content: space-between;
+		flex-grow: 1;
+		width: 100%;
+
+		& > *:first-child
+			margin-left: 3%;
+
+		& > *
+			margin-top: 1%;
+			margin-bottom: 1%;
+			margin-right: 2%;
+
+		& > a:first-of-type
+			margin-left: 10%;
+
+	&__basket-link::before
+		margin-right: 30%;
+		font-family: FontAwesome;
+		content: '\F291';
+
+	&__login-link, &__registration-link, &__helper-link, &__basket-link
+		color: white;
+		text-decoration: none;
+		line-height: 2;
+
+	&__login-link:hover, &__registration-link:hover, &__helper-link:hover
+		text-decoration: underline;
+
+	&__brand
+		font-size: 2rem;
+		color: white;
+		flex-grow: 1;
+
+	&__search
+		flex-grow: 1;
+
+	&__top-day-sellers
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+
+		&-text
+			text-align: center;
+			font-family: LatoWebBlack, 'Arial';
+			font-size: 1.5rem;
+			text-transform: capitalize;
+			padding: 1% 0 2% 0;
+
+	&__top-day-stuff
+		height: 10rem;
+		background: white;
+		width: 33.33333333%;
+
+		& > *
+			justify-content: center;
+
+	&__stuff-container
+		display: flex;
+
+	&__stuff
+		margin-left: 30%;
+		margin-right: 30%;
+		margin-top: 5%;
+
+		& > *
+			text-align: center;
+			font-family: LatoWebBlack, 'Arial';
+
+	&__stuff-img
+		width: 180px;
+		height: 150px;
+
+	&__user_gold.user-profile__info
+		background: gold;
+
+	&__user_silver.user-profile__info
+		background: silver;
+
+	&__user_bronze.user-profile__info
+		background: #cc9966;

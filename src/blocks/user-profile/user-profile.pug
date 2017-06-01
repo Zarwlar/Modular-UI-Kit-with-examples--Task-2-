@@ -3,7 +3,7 @@ mixin user-profile(options)
 		- options = {}
 	.user-profile
 		img(class= 'user-profile__avatar' src= options.imgsrc ? '.\\blocks\\user-profile\\img\\' + options.imgsrc : '.\\blocks\\user-profile\\img\\user-profile__default-avatar.jpg')
-		.user-profile__info(class= options.imgsrc ? 'user-profile__info_active' : '')
+		.user-profile__info(class= options.imgsrc ? options.bkg || 'user-profile__info_active' : '')
 			.user-profile__name= options.name ? options.name : 'Sarah Brown'
 			.user-profile__proffesion= options.proffesion ? options.proffesion : 'developer'
 			.user-profile__links

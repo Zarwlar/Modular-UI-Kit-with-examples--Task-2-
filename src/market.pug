@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	title Craft Market
+	style(type='text/css').
+		* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+		}
+body
+include blocks/search/search.pug
+include blocks/market/market.pug
+include blocks/user-profile/user-profile.pug
+.market__container 
+	+market__header()
+	.market__top-day-sellers
+		h2.market__top-day-sellers-text продавцы дня
+		.market__stuff-container
+			.market__top-day-stuff #[+user-profile({imgsrc: 'av1.jpg', name: 'Андрей Иванов', proffesion: 'г. Томск', bkg: 'market__user_gold'})]
+				+market__stuff({imgsrc: './blocks/market/img/pegasus.jpg', name: 'Пегас Сатана', price: '7200'})
+			.market__top-day-stuff #[+user-profile({imgsrc: 'av3.jpg', name: 'Елена Суркова', proffesion: 'г. Северск', bkg: 'market__user_silver'})]
+				+market__stuff({imgsrc: './blocks/market/img/hare.jpg', name: 'Милый Кролик', price: '5000'})
+			.market__top-day-stuff #[+user-profile({imgsrc: 'av2.jpg', name: 'Сергей Ерёхин', proffesion: 'г. Кемерово', bkg: 'market__user_bronze'})]
+				+market__stuff({imgsrc: './blocks/market/img/mouse.jpg', name: 'Коврик Мышь', price: '700'})

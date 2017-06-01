@@ -1,0 +1,15 @@
+mixin market__header()
+	.market__header
+		h1.market__brand  Craft Market
+		.market__search
+			+search()
+		a(href="#" class="market__login-link") Вход
+		a(href="#" class="market__registration-link") Регистрация
+		a(href="#" class="market__helper-link") Помощь
+		a(href="#" class="market__basket-link") 0
+
+mixin market__stuff(options)
+	.market__stuff
+		img.market__stuff-img(src= options.imgsrc)
+		div.market__stuff-name= options.name
+		div.market__stuff-price= options.price + ' ₽'
