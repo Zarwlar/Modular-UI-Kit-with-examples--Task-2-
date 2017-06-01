@@ -1,5 +1,5 @@
-mixin toggle(on, off)
+mixin toggle(on, off, state)
 	label.toggle
-		input(type="checkbox" class="toggle__input")
+		input(type="checkbox" class="toggle__input" checked=state ? true : false)
 		span(class="toggle__label" data-on=on data-off=off)
 		span.toggle__handle

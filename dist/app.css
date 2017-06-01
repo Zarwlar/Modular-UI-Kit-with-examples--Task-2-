@@ -54,6 +54,7 @@
 }
 .calendar .ui-datepicker {
   padding: 0;
+  max-width: 17rem;
 }
 .calendar .ui-datepicker table {
   margin: 0 0 0.1em;
@@ -174,20 +175,18 @@
 }
 .container {
   margin: 0 auto;
-  width: 707px;
+  width: 700px;
 }
 .container h2 {
   text-transform: uppercase;
   display: block;
   text-align: center;
-  font-family: LatoWebBlack;
-  font-size: 1.25rem;
-}
-.container .standart-button {
-  margin-left: 24px;
+  font-family: LatoWebBlack, 'Arial';
+  font-size: 1.2rem;
 }
 .container .percentages {
   margin-left: 20px;
+  bottom: 2rem;
 }
 .container .pie-chart {
   margin-left: 24px;
@@ -195,8 +194,58 @@
 .container .arrow-button {
   margin-left: 24px;
 }
+.container .sliders {
+  padding-left: 10%;
+  padding-bottom: 6%;
+}
+.container .search,
+.container .drop-down,
+.container .calendar,
+.container .news,
+.container .feedback,
+.container .user-profile {
+  padding-left: 16%;
+}
+.container .rangeslider-continuous_horizontal,
+.container .rangeslider-discret_horizontal {
+  left: 16%;
+}
+.container .search,
+.container .drop-down {
+  margin-bottom: 4.5%;
+}
+.container .feedback {
+  margin-bottom: 2%;
+}
+.container .user-profile {
+  margin-top: 8%;
+}
+.container .event,
+.container .messager__container {
+  padding-left: 10%;
+}
+.container .news,
+.container .event {
+  text-align: left;
+}
+.container .location {
+  padding-right: 3.5%;
+  padding-left: 7.5%;
+}
+.container .video {
+  padding-left: 5%;
+}
 .container__center {
   text-align: center;
+}
+.container__center > .standart-button {
+  margin-left: 24px;
+}
+.container__center h2 {
+  padding-left: 3.5%;
+}
+.container__center .container__left h2 {
+  padding-left: 15%;
 }
 .container__left {
   width: 50%;
@@ -206,12 +255,51 @@
   width: 50%;
   float: right;
 }
-.container__sliders-position {
-  padding-left: 10%;
-  padding-bottom: 6%;
+.container__right .rangeslider-continuous_horizontal {
+  margin-bottom: 6%;
+}
+.container__right .toggle {
+  margin-left: 0.5rem;
+}
+.container__right .tick-box {
+  margin-left: 1rem;
+}
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 700px) {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 250px;
+  }
+  .container__left {
+    float: none;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .container__left > *,
+  .container .container__right > * {
+    padding-left: 0;
+    left: 0;
+  }
+  .container__right {
+    float: none;
+    width: inherit;
+    padding-left: 0;
+    left: 0;
+  }
 }
 .drop-down {
   max-width: 18rem;
+  min-width: 12.5rem;
   display: flex;
   position: relative;
 }
@@ -371,9 +459,6 @@
   min-height: 5.4rem;
   box-sizing: border-box;
 }
-.location {
-  width: 44.6%;
-}
 .location__map {
   height: 12.3rem;
 }
@@ -381,7 +466,7 @@
   display: flex;
   background-color: #e75735;
   font-family: LatoWebLight, 'Arial';
-  color: #e75735;
+  color: #fff;
   padding-top: 3%;
   padding-bottom: 3%;
 }
@@ -470,6 +555,9 @@
 }
 .messager__button-reply {
   margin-top: 2%;
+  width: 100%;
+}
+.messager__button-reply .standart-button {
   width: 100%;
 }
 .messager__chatlogs {
@@ -602,6 +690,7 @@
 }
 .search {
   max-width: 18rem;
+  position: relative;
 }
 .search__form {
   display: flex;
@@ -669,7 +758,7 @@
   -ms-touch-action: pan-y;
 }
 .rangeslider-continuous_horizontal {
-  max-width: 277px;
+  max-width: 240px;
   height: 5px;
   width: 100%;
   touch-action: pan-y;
@@ -736,7 +825,7 @@
   -ms-touch-action: pan-y;
 }
 .rangeslider-discret_horizontal {
-  max-width: 277px;
+  max-width: 260px;
   height: 5px;
   width: 100%;
   touch-action: pan-y;
@@ -751,7 +840,7 @@
   font-family: LatoWebBlack, 'Arial';
   color: #e6e6e6;
   padding-top: 0.7rem;
-  width: 287px;
+  width: 270px;
 }
 .rangeslider-discret__scale:after {
   content: "";
@@ -897,7 +986,6 @@
   }
 }
 .tick-box {
-  margin-right: 20px;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;

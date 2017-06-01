@@ -53,64 +53,69 @@ html(lang="en")
       +pie-chart('12, 25, 30, 33')
 
       h2 sliders
-    .container__center
-      .container__sliders-position
+    .container__center.clearfix
         .container__left
             +slider-discret()
         .container__right
             +slider-continuous()
-    .container__center
+    .container__center.clearfix
       h2 stages
       +stages(5,3)
-    .container__center
+    .container__center.clearfix
       h2 form elements
       .container__left
           +feedback()
       .container__right
         h2 toggles
         +toggle('on','off')
-        +toggle('on','off')
+        +toggle('on','off',true)
         h2 tick boxes
         +tick-box(true)
         +tick-box()
+    .container__center.clearfix
+      .container__left
+        h2 search / drop-down
+        +search()
+        +drop-down(['Orange','Apple','Pear'])
+      .container__right
+        h2 user profile
+        +user-profile({
+        imgsrc: 'john.jpg',
+        name: 'John Smith',
+        proffesion: 'developer',
+        'facebook':'123',
+        'twitter':'321',
+        'dribbble':'hah'
+        })
 
+        +user-profile()
+    .container__center.clearfix
+      h2 news & events
+      .container__left
+        +news({
+          title: 'It\'s all going downhill',
+          date: '24 august 2014',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
+        })
+      .container__right
+        +event({
+          title: 'this is the title',
+          day: '24',
+          month: 'aug',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        })
 
+    .container__center.clearfix
+      h2 location
+      +location()
 
-  //- +search()
-
-
-  //- +drop-down(['Orange','Apple','Pear'])
-
-  //- +user-profile({
-  //- imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
-  //- name: 'John Smith',
-  //- proffesion: 'developer',
-  //- 'facebook':'123',
-  //- 'twitter':'321',
-  //- 'dribbble':'hah'
-  //- })
-
-  //- +user-profile()
-
-  //- +news({
-  //-   imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
-  //-   title: 'It\'s all going downhill',
-  //-   date: '24 august 2014',
-  //-   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
-  //- })
-
-  //- +event({
-  //-   imgsrc: 'http://static.tumblr.com/u7rwwlh/nyNm6v1n7/tonyavatar.png',
-  //-   title: 'this is the title',
-  //-   day: '24',
-  //-   month: 'aug',
-  //-   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-  //- })
-
-  //- +location()
-
-  //- +messager()
-
-  //- +calendar()
-
-  //- +video()
+    .container__center.clearfix
+      .container__left
+        h2 calendar
+        +calendar()
+      .container__right
+        h2 messaging
+        +messager()
+    .container__center.clearfix
+      h2 video
+      +video()
