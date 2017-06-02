@@ -1,3 +1,9 @@
-mixin standart-button(type, size, text)
-	div(class='standart-button ' + 'standart-button_type-'+type +' '+ 'standart-button_size-' + size) 
-		button.standart-button__button= text
+mixin standart-button(options)
+	if !options
+		- options = {}
+	div.standart-button(
+			class= options.type ? 'standart-button_type-' + options.type : 'standart-button_type-normal', 
+			class=options.size ? 'standart-button_size-' + options.size : 'standart-button_size-normal',
+			class=options.text_color ? options.text_color : ''
+	)
+		button.standart-button__button(class= options.bkg ? options.bkg : '')= options.text ? options.text : 'button'

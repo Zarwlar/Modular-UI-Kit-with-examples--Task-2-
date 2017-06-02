@@ -30,19 +30,31 @@ html(lang="en")
     .container__center
       h2 standart buttons
 
-      +standart-button('normal','small','button')
-      +standart-button('normal','normal','button')
-      +standart-button('error','normal','button')
-      +standart-button('error','small','button')
+      +standart-button({
+				type: 'nomral',
+				size: 'small',
+			})
+      +standart-button({
+				type: 'nomral',
+				size: 'normal',
+			})
+      +standart-button({
+				type: 'error',
+				size: 'normal'
+			})
+      +standart-button({
+				type: 'error',
+				size: 'small'
+			})
 
       h2 arrow buttons
 
-      +arrow-button('left', 'inactive')
-      +arrow-button('right', 'inactive')
-      +arrow-button('left', 'disabled')
-      +arrow-button('right', 'disabled')
-      +arrow-button('left', 'enabled')
-      +arrow-button('right', 'enabled')
+      +arrow-button({state: 'inactive', direction: 'left'})
+      +arrow-button({state: 'inactive', direction: 'right'})
+      +arrow-button({state: 'disabled', direction: 'left'})
+      +arrow-button({state: 'disabled', direction: 'right'})
+      +arrow-button({state: 'enabled', direction: 'left'})
+      +arrow-button({state: 'enabled', direction: 'right'})
 
       h2 percentages/pie chart
 
