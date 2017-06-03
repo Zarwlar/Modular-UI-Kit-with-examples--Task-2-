@@ -3,5 +3,5 @@ mixin search(options)
 		- options = {}
 	.search
 		form.search__form
-			input(type='text', placeholder='Search').search__input
+			input(type='text', placeholder='Search', class=options.nf ? options.nf : '').search__input
 			button(type='button' class=options.bkg ? options.bkg : '').search__submit

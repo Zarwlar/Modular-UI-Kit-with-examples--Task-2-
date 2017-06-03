@@ -1,5 +1,9 @@
+include ./../messager/messager.pug
+include ./../search/search.pug
+include ./../standart-button/standart-button.pug
 mixin market__header()
 	.market__helper
+		.market__helper_close close
 		+messager({
 			bkg_name: 'market__helper_bkg',
 			bkg_info: 'market__helper-info_bkg',
@@ -8,11 +12,10 @@ mixin market__header()
 			btn_bkg: 'market__helper-button',
 			btn_clr: 'market__helper-button_text'
 		})
-		.market__helper_close close
 	.market__header
 		h1.market__brand  Craft Market
 		.market__search
-			+search({bkg: 'market__search-submit-bkg'})
+			+search({bkg: 'market__search-submit-bkg', nf: 'market__search-submit-not-found'})
 		a(href="#" class="market__login-link") Вход
 		a(href="#" class="market__registration-link") Регистрация
 		a(href="#" class="market__helper-link") Помощь

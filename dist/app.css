@@ -562,7 +562,7 @@
 .market__helper_close:hover {
   opacity: 0.8;
 }
-.market__helper > *:first-child {
+.market__helper > *:last-child {
   flex: none;
 }
 .market__search {
@@ -649,6 +649,9 @@
 }
 .market__search-submit-bkg.search__submit {
   background-color: #d69259;
+}
+.market__search-submit-not-found.search__input_not-found {
+  background-color: #eac8ab;
 }
 .market__arrow-button_blue.arrow-button__arrow,
 .market__arrow-button_blue.arrow-button {
@@ -908,6 +911,50 @@
   content: '\F002';
   color: #fff;
 }
+.seller__bkg.user-profile__info {
+  background: #d18545;
+}
+.seller__chat-bkg.messager__friend_name {
+  color: #000;
+  background: #d5d5d5;
+}
+.seller__chat-text.messager__friend-information {
+  background: #bcbcbc;
+}
+.seller__chat-button.standart-button__button {
+  box-shadow: 0 0.15rem 0 0 #a2a2a2;
+  background-color: #afafaf;
+  border: 1px solid #afafaf;
+}
+.seller__helper-button_text.standart-button {
+  color: #a2a2a2;
+}
+.seller__messager {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+.seller__messager > *:last-child {
+  flex: none;
+}
+.seller__messager_hide {
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: LatoWebBlack, 'Arial';
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  flex: initial;
+  writing-mode: vertical-rl;
+  opacity: 0.4;
+}
+.seller__messager_hide:hover {
+  opacity: 0.8;
+}
 .rangeslider-continuous {
   display: block;
   border-radius: 10px;
@@ -1158,6 +1205,42 @@
     opacity: 0;
   }
 }
+.stuff {
+  display: flex;
+  flex-wrap: wrap;
+}
+.stuff__container {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.stuff__seller {
+  display: flex;
+  margin-top: 2%;
+  flex-wrap: wrap;
+}
+.stuff__seller-reputation-text {
+  font-family: LatoWebBlack, 'Arial';
+  text-align: center;
+}
+.stuff__element {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.stuff__name {
+  padding: 2% 0;
+  font-family: LatoWebBlack, 'Arial';
+  font-size: 2rem;
+}
+.stuff__photo {
+  width: 40%;
+  height: 75%;
+}
 .tick-box {
   width: 1.5rem;
   height: 1.5rem;
@@ -1267,6 +1350,7 @@
   background-position: center;
   border: 3px solid #e5e5e5;
   border-radius: 50%;
+  align-self: center;
 }
 .user-profile__name {
   overflow: hidden;
@@ -1288,7 +1372,6 @@
   flex-direction: column;
   justify-content: center;
   min-width: 9.4rem;
-  max-width: 6rem;
   background-color: #4eb7a8;
   color: #fff;
   margin-left: 0.7rem;

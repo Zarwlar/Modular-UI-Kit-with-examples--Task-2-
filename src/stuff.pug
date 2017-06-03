@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	title Document
+	style(type='text/css').
+		* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+		}
+body
+include ./blocks/market/market.pug
+include ./blocks/user-profile/user-profile.pug
+include ./blocks/percentages/percentages.pug
+include ./blocks/standart-button/standart-button.pug
+include ./blocks/messager/messager.pug
+.stuff
+	+market__header()
+	.stuff__container
+		.stuff__seller
+			+user-profile({imgsrc: 'av1.jpg', name: 'Андрей Иванов', proffesion: 'г. Томск', bkg: 'seller__bkg'
+			})
+			.stuff__seller-reputation
+				.stuff__seller-reputation-text Репутация
+				+percentages(38)
+		.stuff__element
+			.stuff__name Пегас Сатана
+			img.stuff__photo(src= './blocks/market/img/pegasus.jpg', alt='pegasus')
+	.seller__messager
+		.seller__messager_hide hide
+		+messager({
+			bkg_name: 'seller__chat-bkg',
+			bkg_info: 'seller__chat-text',
+			name: 'Андрей Иванов',
+			photo: '.\\blocks\\user-profile\\img\\av1.jpg',
+			btn_bkg: 'seller__chat-button',
+			btn_clr: 'seller__helper-button_text'
+		})
+

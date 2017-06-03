@@ -1,0 +1,47 @@
+.seller
+
+	&__bkg.user-profile__info
+		background: darken(#E0AD82, 15);
+
+
+	&__chat-bkg.messager__friend_name
+		color: black;
+		background: #D5D5D5;
+
+	&__chat-text.messager__friend-information
+		background: darken(#D5D5D5, 10);
+
+	&__chat-button.standart-button__button
+		box-shadow: 0 0.15rem 0 0 darken(#D5D5D5, 20);
+		background-color: darken(#D5D5D5, 15);
+		border: 1px solid darken(#D5D5D5, 15);
+
+	&__helper-button_text.standart-button
+			color: darken(#D5D5D5, 20);
+
+	&__messager
+		display: flex;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+
+		& > *:last-child
+			flex: none;
+
+
+	&__messager_hide
+		width: 100%;
+		font-size: 0.8rem;
+		text-align: center;
+		padding: 5px;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-family: LatoWebBlack, 'Arial';
+		background-color: white;
+		border: 1px solid rgba(0,0,0,0.1);
+		flex: initial;
+		writing-mode: vertical-rl;
+		opacity: 0.4;
+
+		&:hover
+			opacity: 0.8;

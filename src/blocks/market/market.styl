@@ -63,7 +63,7 @@
 		&_close:hover
 			opacity: 0.8;
 
-		& > *:first-child
+		& > *:last-child
 			flex: none;
 
 	&__search
@@ -152,6 +152,9 @@
 
 	&__search-submit-bkg.search__submit
 		background-color: darken(#E0AD82, 10);
+
+	&__search-submit-not-found.search__input_not-found
+			background-color: lighten(#E0AD82, 10);
 
 	&__arrow-button_blue.arrow-button__arrow, &__arrow-button_blue.arrow-button
 		color: lighten(#E0AD82, 10);

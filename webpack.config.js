@@ -83,6 +83,11 @@ module.exports = {
         filename: 'market.html',
         template: './src/market.pug'
     }),
+    new HtmlWebpackPlugin({
+        chunks: ['app'],
+        filename: 'stuff.html',
+        template: './src/stuff.pug'
+    }),
    new ExtractTextPlugin({
             filename: 'app.css'
         }),
