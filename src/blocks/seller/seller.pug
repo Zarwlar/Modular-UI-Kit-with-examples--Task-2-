@@ -1,0 +1,14 @@
+include ./../messager/messager.pug
+include ./../standart-button/standart-button.pug
+
+mixin seller__messager(options)
+	.seller__messager
+		.seller__messager_hide hide
+		+messager({
+			bkg_name: options.bkg,
+			bkg_info: options.text_color,
+			name: options.name,
+			photo: options.photo,
+			btn_bkg:  options.btn_bkg,
+			btn_clr: options.btn_clr
+		})

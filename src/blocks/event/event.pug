@@ -12,4 +12,4 @@ mixin event(options)
 			.event__title= options.title ? options.title : 'title'
 			.event__description= options.description ? options.description : 'description'
 			.event__button
-				+standart-button({type:'normal',text:'add to calendar',size:'small'})
+				+standart-button({type:'normal',text: options.btn_text ? options.btn_text : 'button' ,size:'small',bkg: options.btn_bkg ? options.btn_bkg : '' , text_color: options.btn_color ? options.btn_color : ''})

@@ -2,6 +2,12 @@
 	display: flex; 
 	flex-wrap: wrap;
 
+	& > *
+		margin: 0 auto;
+
+	& > *:last-child
+		padding-bottom: 2%;
+
 	&__container
 		margin: 0 auto;
 		height: 100%;
@@ -10,14 +16,11 @@
 		text-align: center;
 		flex-wrap: wrap;
 
-	&__seller
-		display: flex;
-		margin-top: 2%;
-		flex-wrap: wrap;
+		& > *:first-child
+			margin-top: 2%;
 
-		&-reputation-text
-			font-family: LatoWebBlack, 'Arial';
-			text-align: center;
+	&__buy-button
+		padding-bottom: 1%;
 
 	&__element
 		display: flex;
@@ -26,10 +29,19 @@
 		align-items: center;
 
 	&__name
-		padding: 2% 0;
+		padding: 2% 0 1%;
 		font-family: LatoWebBlack, 'Arial';
 		font-size: 2rem;
 
 	&__photo
 		width: 40%;
-		height: 75%;
+
+	&__description
+		margin: 1% 0;
+		text-align: justify;
+		width: 40%;
+		font-family: LatoWebLight, 'Arial';
+		font-weight: bold;
+
+	&__location-banner.location__banner
+		background-color: #D18545;

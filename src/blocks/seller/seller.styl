@@ -1,8 +1,19 @@
 .seller
+	display: flex;
+	flex-wrap: wrap;
+
+	& > *:first-child
+		margin-top: 2%;
+		margin-left: 2%;
+		margin-bottom: 2%;
+
+	&__events
+		flex-basis: 100%;
+		justify-content: space-around;
+		display: flex;
 
 	&__bkg.user-profile__info
-		background: darken(#E0AD82, 15);
-
+		background: darken(#E0AD82, 7);
 
 	&__chat-bkg.messager__friend_name
 		color: black;
@@ -45,3 +56,4 @@
 
 		&:hover
 			opacity: 0.8;
+

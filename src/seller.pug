@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	title Андрей Иванов
+	style(type='text/css').
+		* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+		}
+body
+include ./blocks/market/market.pug
+include ./blocks/seller/seller.pug
+include ./blocks/news/news.pug
+include ./blocks/event/event.pug
++market__header()
+.seller
+	+market__seller({
+		imgsrc: 'av1.jpg', name: 'Андрей Иванов', city: 'г. Томск', bkg: 'seller__bkg', rep: 39
+	})
+	+seller__messager({
+		bkg: 'seller__chat-bkg',
+		text_color: 'seller__chat-text',
+		name: 'Андрей Иванов',
+		photo: '.\\blocks\\user-profile\\img\\av1.jpg',
+		btn_bkg: 'seller__chat-button',
+		btn_clr: 'seller__helper-button_text'
+	})
+	.seller__events
+		+news({
+			title: 'It\'s all going downhill',
+			date: '24 august 2014',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
+		})
+		+event({
+			title: 'СКИДКА НА СТЕКЛО',
+			day: '9',
+			month: 'Февраля',
+			description: 'Скидка на все товары из стекла.',
+			btn_text: 'Получить'
+		})
+		+news({
+			title: 'It\'s all going downhill',
+			date: '24 august 2014',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'
+		})

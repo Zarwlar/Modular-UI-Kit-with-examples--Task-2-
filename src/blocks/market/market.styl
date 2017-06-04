@@ -8,8 +8,6 @@
 		display: flex;
 		font-family: LatoWebBlack, 'Arial';
 		background-color: #E0AD82;
-		justify-content: space-between;
-		flex-grow: 1;
 		width: 100%;
 
 		& > *:first-child
@@ -39,7 +37,7 @@
 	&__brand
 		font-size: 2rem;
 		color: white;
-		flex-grow: 1;
+		text-decoration: none;
 
 	&__helper
 		display: none;
@@ -68,6 +66,7 @@
 
 	&__search
 		flex-grow: 1;
+		margin-left: 15%;
 
 	&__top-day-sellers
 		width: 100%;
@@ -124,6 +123,13 @@
 	&__stuff
 		float: left;
 
+	&__seller
+		display: flex;
+		flex-wrap: wrap;
+
+		&-reputation-text
+			font-family: LatoWebBlack, 'Arial';
+			text-align: center;
 
 	&__stuff-img
 		width: 180px;

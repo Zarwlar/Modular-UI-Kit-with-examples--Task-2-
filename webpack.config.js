@@ -88,6 +88,11 @@ module.exports = {
         filename: 'stuff.html',
         template: './src/stuff.pug'
     }),
+        new HtmlWebpackPlugin({
+        chunks: ['app'],
+        filename: 'seller.html',
+        template: './src/seller.pug'
+    }),
    new ExtractTextPlugin({
             filename: 'app.css'
         }),

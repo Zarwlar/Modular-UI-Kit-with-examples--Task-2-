@@ -1,6 +1,8 @@
 include ./../messager/messager.pug
 include ./../search/search.pug
 include ./../standart-button/standart-button.pug
+include ./../user-profile/user-profile.pug
+include ./../percentages/percentages.pug
 mixin market__header()
 	.market__helper
 		.market__helper_close close
@@ -13,7 +15,8 @@ mixin market__header()
 			btn_clr: 'market__helper-button_text'
 		})
 	.market__header
-		h1.market__brand  Craft Market
+		h1
+			a.market__brand(href="market.html")  Craft Market
 		.market__search
 			+search({bkg: 'market__search-submit-bkg', nf: 'market__search-submit-not-found'})
 		a(href="#" class="market__login-link") Вход
@@ -34,3 +37,11 @@ mixin market__stuff(options)
 							div.market__stuff-price= option.price + ' ₽'
 							+standart-button({type: 'normal', size: 'normal', text: 'купить', bkg: 'market__buy-button', text_color: 'market__buy-button-text'})
 		+arrow-button({state: 'inactive', direction: 'right', color: 'market__arrow-button_blue'})
+
+mixin market__seller(options)
+		.market__seller
+			+user-profile({imgsrc: options.imgsrc, name: options.name, proffesion: options.city, bkg: options.bkg
+			})
+			.market__seller-reputation
+				.market__seller-reputation-text Репутация
+				+percentages(options.rep ? options.rep : 0)
