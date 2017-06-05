@@ -3,7 +3,7 @@ mixin news(options)
 		- options = {}
 	.news
 		img.news__photo(src= options.imgsrc ? options.imgsrc : ".\\blocks\\news\\img\\news__default-img.jpg")
-		.news__text
+		.news__text(class= options.bkg ? options.bkg : '')
 			.news__title= options.title ? options.title : 'Title'
 			.news__date= options.date ? options.date : 'Date'
 			.news__description= options.description ? options.description : 'Description'
