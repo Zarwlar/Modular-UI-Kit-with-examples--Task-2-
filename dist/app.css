@@ -850,6 +850,52 @@
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
+.order {
+  display: flex;
+  flex-direction: column;
+}
+.order__stages-color.stages__stage.stages_complete:before,
+.order__stages-color.stages__stage.stages_complete:after {
+  background: #d69259;
+}
+.order__stages-color.stages__stage.stages_active:before {
+  background: #d69259;
+}
+.order__stages {
+  margin: 1% 0;
+}
+.order__steps {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.4%;
+  font-family: SourceSansPro-Regular, 'Arial';
+}
+.order__steps > *:nth-child(2n) {
+  padding-right: 3%;
+}
+.order__steps > *:last-child {
+  padding-right: 1%;
+}
+.order__stuffs {
+  margin: 0 auto;
+}
+.order__cartmain {
+  border-spacing: 1.5rem 0.3rem;
+  font-family: LatoWebLight, 'Arial';
+}
+.order__delivery-title {
+  font-family: LatoWebBlack, 'Arial';
+  display: block;
+  margin: 0 auto;
+  padding: 1% 0;
+}
+.order__delivery {
+  margin: 0 auto;
+}
+.order__select-country_bkg.drop-down__option,
+.order__select-country_bkg.drop-down::before {
+  background: #e0ad82;
+}
 .percentages {
   position: relative;
   display: inline-block;
@@ -1222,13 +1268,13 @@
   width: 100%;
   color: #a4a4a4;
 }
-.stages > li {
+.stages__stage {
   position: relative;
   display: table-cell;
   text-align: center;
   font-size: 0.8em;
 }
-.stages > li:before {
+.stages__stage:before {
   content: attr(data-step);
   display: block;
   margin: 0 auto;
@@ -1240,10 +1286,10 @@
   line-height: 2.5em;
   border-radius: 100%;
   position: relative;
-  z-index: 1000;
+  z-index: 5;
   font-family: LatoWebBlack, 'Arial';
 }
-.stages > li:after {
+.stages__stage:after {
   content: '';
   position: absolute;
   display: block;
@@ -1255,21 +1301,21 @@
   margin-left: 1.5em 9;
   z-index: -1;
 }
-.stages > li:last-child:after {
+.stages__stage:last-child:after {
   display: none;
 }
-.stages > li.stages_complete {
+.stages__stage.stages_complete {
   color: #e75735;
 }
-.stages > li.stages_complete:before,
-.stages > li.stages_complete:after {
+.stages__stage.stages_complete:before,
+.stages__stage.stages_complete:after {
   color: #fff;
   background: #e75735;
 }
-.stages > li.stages_active {
+.stages__stage.stages_active {
   color: #e75735;
 }
-.stages > li.stages_active:before {
+.stages__stage.stages_active:before {
   color: #fff;
   background: #e75735;
 }

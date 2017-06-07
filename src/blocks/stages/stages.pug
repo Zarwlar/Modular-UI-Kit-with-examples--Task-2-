@@ -1,10 +1,12 @@
-mixin stages(count, completed)
+mixin stages(options)
+	if !options
+		- options = {}
 	-var stages = 0;
 	ol.stages
-		-for (var i = 0; i < completed-1; i++, stages++)
-			li(class='stages_complete' data-step=stages+1)
+		-for (var i = 0; i < options.completed-1; i++, stages++)
+			li.stages__stage(class='stages_complete' class=options.clr ? options.clr : '' data-step=stages+1)
 
-		li(class='stages_active' data-step=stages=stages+1)
+		li.stages__stage(class='stages_active' class=options.clr ? options.clr : '' data-step=stages=stages+1)
 
-		-for (var i = 0; i < count-completed; i++, stages++)
-			li(data-step=stages+1)
+		-for (var i = 0; i < options.count-options.completed; i++, stages++)
+			li.stages__stage(data-step=stages+1)

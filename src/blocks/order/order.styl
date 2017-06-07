@@ -1,0 +1,43 @@
+.order
+	display: flex;
+	flex-direction: column;
+
+	&__stages-color.stages__stage.stages_complete:before, &__stages-color.stages__stage.stages_complete:after
+		background: #D69259;
+
+	&__stages-color.stages__stage.stages_active:before
+		background: #D69259;
+
+	&__stages
+		margin: 1% 0;
+
+	&__steps
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 0.4%;
+		font-family: SourceSansPro-Regular, 'Arial';
+
+		& > *:nth-child(2n)
+			padding-right: 3%;
+
+		& > *:last-child
+			padding-right: 1%;
+
+	&__stuffs
+		margin: 0 auto;
+
+	&__cartmain
+		border-spacing: 1.5rem 0.3rem;
+		font-family: LatoWebLight, 'Arial';
+
+	&__delivery-title
+		font-family: LatoWebBlack, 'Arial';
+		display: block;
+		margin: 0 auto;
+		padding: 1% 0;
+
+	&__delivery
+		margin: 0 auto;
+
+	&__select-country_bkg.drop-down__option, &__select-country_bkg.drop-down::before
+		background: lighten(#D69259, 10);
