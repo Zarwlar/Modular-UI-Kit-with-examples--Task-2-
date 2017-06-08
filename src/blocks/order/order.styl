@@ -18,10 +18,10 @@
 		font-family: SourceSansPro-Regular, 'Arial';
 
 		& > *:nth-child(2n)
-			padding-right: 3%;
+			padding-right: 2rem;
 
 		& > *:last-child
-			padding-right: 1%;
+			padding-right: 1rem;
 
 	&__stuffs
 		margin: 0 auto;
@@ -37,7 +37,61 @@
 		padding: 1% 0;
 
 	&__delivery
+		margin-top: 1%;
 		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		font-family: SourceSansPro-Regular, 'Arial';
 
 	&__select-country_bkg.drop-down__option, &__select-country_bkg.drop-down::before
 		background: lighten(#D69259, 10);
+
+	&__premium-delivery
+		margin-top: 3%;
+		display: flex;
+		outline: 1px solid rgba(0,0,0,0.2);
+		outline-offset: 5px;
+
+	&__premium-delivery-description
+		padding-left: 3%;
+		white-space: pre;
+
+	&__premium-delivery-flag
+		align-self: center;
+
+	&__country
+		margin: 0 auto;
+
+
+	&__premium-delivery-toggle_bkg.toggle__input:checked ~ .toggle__label
+		background: #D69259;
+
+	&__premium-delivery-payment
+		margin-top: 2%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+
+	&__premium-delivery-payment-text
+		align-self: center;
+
+	&__premium-delivery-payment-way
+
+		& > *
+			margin: 5% 0;
+
+	&__premium-delivery-payment-tickbox.tick-box__mark-active
+		background-color: #D69259;
+
+	&__payment-button
+		align-self: flex-end;
+		margin: 2% 0;
+
+
+	&__payment-button-bkg.standart-button__button
+		box-shadow: 0 0.15rem 0 0 darken(#D69259, 10);
+		background-color: #D69259;
+		border: 1px solid #D69259;
+
+	&__payment-button-text.standart-button
+		color: darken(#D69259, 10)

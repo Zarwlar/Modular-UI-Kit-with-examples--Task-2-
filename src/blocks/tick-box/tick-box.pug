@@ -1,3 +1,5 @@
-mixin tick-box(state)
-	.tick-box(class= state ? 'tick-box__mark-active' : '')
+mixin tick-box(options)
+	if !options
+		- options = {}
+	.tick-box(class= options.state ? 'tick-box__mark-active' : '', class=options.bkg ? options.bkg : '')
 

@@ -82,10 +82,10 @@ html(lang="en")
           +feedback()
       .container__right
         h2 toggles
-        +toggle('on','off')
-        +toggle('on','off',true)
+        +toggle()
+        +toggle({state: true})
         h2 tick boxes
-        +tick-box(true)
+        +tick-box({state: true})
         +tick-box()
     .container__center.clearfix
       .container__left
