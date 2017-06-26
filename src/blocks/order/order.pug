@@ -1,24 +1,24 @@
 mixin order__stuffs(options)
-	ul
-		each option in options
-			li #{option}
+    ul
+        each option in options
+            li #{option}
 
 mixin order__cart(options)
-	- sum = 0;
-	table.order__cartmain
-		tr
-			th Наименование продукта
-			th
-			th Цена
-		each option in options
-			tr
-				td #{option.name}
-				td #[img(src=option.imgsrc height='70' width='80')]
-				td #{option.price}
-			- sum = +option.price + sum
-		tr
-			td
-			td
-				strong Стоимость товара
-			td 
-				strong #{sum}
+    - sum = 0;
+    table.order__cartmain
+        tr
+            th Наименование продукта
+            th
+            th Цена
+        each option in options
+            tr
+                td #{option.name}
+                td #[img(src=option.imgsrc height='70' width='80')]
+                td #{option.price}
+            - sum = +option.price + sum
+        tr
+            td
+            td
+                strong Стоимость товара
+            td 
+                strong #{sum}

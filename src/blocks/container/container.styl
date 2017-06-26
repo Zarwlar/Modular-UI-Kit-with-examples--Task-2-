@@ -1,121 +1,98 @@
 .container
-	margin: 0 auto;
-	width 700px;
+    margin: 0 auto;
+    width 700px;
 
-	h2
-		text-transform: uppercase;
-		display: block;
-		text-align: center;
-		font-family: LatoWebBlack, 'Arial';
-		font-size: 1.2rem;
+    h2
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        font-family: LatoWebBlack, 'Arial';
+        font-size: 1.2rem;
 
-	.percentages
-		margin-left: 20px;
-		bottom: 2rem;
+    .percentages
+        margin-right: 25px;
 
-	.pie-chart
-		margin-left: 24px;
+    .arrow-button
+        margin-left: 10px;
+        margin-right: 10px;
 
-	.arrow-button
-		margin-left: 24px;
+    & .search,
+    & .drop-down
+        margin-bottom: 4.5%;
 
-	.sliders
-		padding-left: 10%;
-		padding-bottom: 6%;
+    & .feedback
+        margin-bottom: 2%;
 
-	& .search,
-	& .drop-down,
-	& .calendar,
-	& .news,
-	& .feedback,
-	& .user-profile
-		padding-left: 16%;
+    & .user-profile
+        margin-top: 8%;
 
-	& .rangeslider-continuous_horizontal,
-	& .rangeslider-discret_horizontal
-		left: 16%;
+    & .news, .event
+        text-align: left;
 
-	& .search,
-	& .drop-down
-		margin-bottom: 4.5%;
+    & .video
+        padding-left: 5%;
 
-	& .feedback
-		margin-bottom: 2%;
+    &__center
+        text-align: center;
 
-	& .user-profile
-		margin-top: 8%;
+        & > .standart-button
+            margin-left: 12px;
+            margin-right: 12px;
 
-	& .event, & .messager__container
-		padding-left: 10%;
+    &__left
+        width: 50%;
+        float: left;
 
-	& .news, .event
-		text-align: left;
+        & > *
+            margin-left: auto;
+            margin-right: auto;
 
-	& .location
-		padding-right: 3.5%;
-		padding-left: 7.5%;
+    &__right
+        width: 50%;
+        float: right;
 
-	& .video
-		padding-left: 5%;
+        & > *
+            margin-left: auto;
+            margin-right: auto;
 
-	&__center
-		text-align: center;
+        & .rangeslider-continuous_horizontal
+            margin-bottom: 6%;
 
-		& > .standart-button
-			margin-left: 24px;
+        & .toggle
+            margin-left: 0.5rem;
 
-		& h2
-			padding-left: 3.5%;
-
-		& .container__left h2
-			padding-left: 15%;
-
-	&__left
-		width: 50%;
-		float: left;
-
-	&__right
-		width: 50%;
-		float: right;
-
-		& .rangeslider-continuous_horizontal
-			margin-bottom: 6%;
-
-		& .toggle
-			margin-left: 0.5rem;
-
-		& .tick-box
-			margin-left: 1rem;
+        & .tick-box
+            margin-left: 1rem;
 
 .clearfix::after
-	content: " ";
-	display: table;
-	clear: both;
+    content: " ";
+    display: table;
+    clear: both;
 
 @media screen and (max-width: 700px) {
-	html, body {
-		padding: 0;
-		margin: 0;
-	}
+    html, body {
+        padding: 0;
+        margin: 0;
+    }
   .container {
     width: 250px;
   }
-	  .container__left {
-		float: none;
-		width: inherit;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+      .container__left {
+        float: none;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
   }
-	.container .container__left > *, .container .container__right  > * {
-		padding-left: 0;
-		left: 0;
-	}
+    .container .container__left > *, .container .container__right  > * {
+        padding-left: 0;
+        left: 0;
+    }
 
   .container__right {
-		float: none;
-		width: inherit;
-		padding-left: 0;
-		left: 0;
+        float: none;
+        width: inherit;
+        padding-left: 0;
+        left: 0;
   }
 }

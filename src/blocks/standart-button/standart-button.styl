@@ -8,63 +8,63 @@ $button-text-color = #FFF;
 $inverted-button-background-color = #FFF;
 
 .standart-button
-	position: relative;
-	display: inline-block;
-	color: $standart-button-color;
+    position: relative;
+    display: inline-block;
+    color: $standart-button-color;
 
-	&__button
-		color: $button-text-color;
-		font-weight: bold;
-		text-transform: uppercase;
-		text-align: center;
-		cursor: pointer;
-		outline: none;
-		width: 100%;
-		background-color: $standart-button-color;
-		border-radius: 4px;
-		border: 1px solid $standart-button-color;
-		box-shadow: 0 0.15rem 0 0 $standart-button-shadow-color;
-		font-family: LatoWebBlack, 'Arial';
+    &__button
+        color: $button-text-color;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        width: 100%;
+        background-color: $standart-button-color;
+        border-radius: 4px;
+        border: 1px solid $standart-button-color;
+        box-shadow: 0 0.15rem 0 0 $standart-button-shadow-color;
+        font-family: LatoWebBlack, 'Arial';
 
-	&_size-normal &__button
-		font-size: 0.8rem;
-		padding: 0.6rem 2rem 0.45rem;
+    &_size-normal &__button
+        font-size: 0.8rem;
+        padding: 0.6rem 2rem 0.45rem;
 
-	&_size-small &__button
-		font-size: 0.65rem;
-		padding: 0.2rem 1rem;
+    &_size-small &__button
+        font-size: 0.65rem;
+        padding: 0.2rem 1rem;
 
-	&_type-error
-		color: $standart-button-error-color;
+    &_type-error
+        color: $standart-button-error-color;
 
-	&_type-error &__button
-		background-color: $standart-button-error-color;
-		border-color: $standart-button-error-color;
-		box-shadow: 0 0.15rem 0 0 $standart-button-error-shadow-color;
+    &_type-error &__button
+        background-color: $standart-button-error-color;
+        border-color: $standart-button-error-color;
+        box-shadow: 0 0.15rem 0 0 $standart-button-error-shadow-color;
 
-	&_pressed &__button
-		box-shadow: none;
+    &_pressed &__button
+        box-shadow: none;
 
-	&.standart-button_inverted &__button
-		background-color: $inverted-button-background-color;
-		color: inherit;
+    &.standart-button_inverted &__button
+        background-color: $inverted-button-background-color;
+        color: inherit;
 
-	&_ripple-effect
-		width: 0;
-		height: 0;
-		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.4);
-		transform: scale(0);
-		position: absolute;
-		opacity: 1;
+    &_ripple-effect
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(0);
+        position: absolute;
+        opacity: 1;
 
-	&_ripple-animation{
-		animation: ripple-drop .5s linear;
+    &_ripple-animation{
+        animation: ripple-drop .5s linear;
 }
 
 @keyframes ripple-drop {
-	100% {
-		transform: scale(0.5);
-		opacity: 0;
-	}
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
 }

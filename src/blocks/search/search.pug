@@ -1,7 +1,7 @@
 mixin search(options)
-	if !options
-		- options = {}
-	.search
-		form.search__form
-			input(type='text', placeholder='Search', class=options.nf ? options.nf : '').search__input
-			button(type='button' class=options.bkg ? options.bkg : '').search__submit
+    if !options
+        - options = {}
+    .search
+        form.search__form
+            input(type='text', placeholder='Search', class=options.nf ? options.nf : '').search__input
+            button(type='button' class=options.bkg ? options.bkg : '').search__submit

@@ -4,94 +4,93 @@ $button-color = #FFF;
 $button-background = #E75735;
 
 .video__player
-	background-color: rgba(0,0,0,0.4);
-	opacity: .9;
-	box-sizing: border-box;
-	height: 3rem;
-	-moz-box-sizing: border-box;
-	float: left;
-	position: relative;
-	padding: 0;
-	bottom: 3.4rem;
-	z-index: 2;
-	opacity: 1;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    background-color: rgba(0,0,0,0.4);
+    opacity: .9;
+    box-sizing: border-box;
+    height: 3rem;
+    -moz-box-sizing: border-box;
+    float: left;
+    position: relative;
+    padding: 0;
+    bottom: 3.4rem;
+    z-index: 2;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 
  & .video__progress
-		width: 78%;
-		height: 5px;
-		border-radius: 5px;
-		background: $progress-bar-color;
-		float: left;
-		cursor: pointer;
-		padding: 0;
-		position: relative;
+        width: 78%;
+        height: 5px;
+        border-radius: 5px;
+        background: $progress-bar-color;
+        float: left;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
 
 
-	& .video__progress-bar
-		background: $progress-bar-active;
-		border-radius: 5px;
-		height: 100%;
-		position: relative;
-		z-index: 999;
-		width: 0;
+    & .video__progress-bar
+        background: $progress-bar-active;
+        border-radius: 5px;
+        height: 100%;
+        position: relative;
+        z-index: 999;
+        width: 0;
 
 
-	& .video__button-holder
-		visibility: hidden;
-		position: relative;
-		left: 10px;
+    & .video__button-holder
+        visibility: hidden;
+        position: relative;
 
 
-	& [class^="buffered"]
-		background: rgba(255,255,255,0.1);
-		position: absolute;
-		top: 0;
-		left: 30px;
-		height: 100%;
-		border-radius: 5px;
-		z-index: 1;
+    & [class^="buffered"]
+        background: rgba(255,255,255,0.1);
+        position: absolute;
+        top: 0;
+        left: 30px;
+        height: 100%;
+        border-radius: 5px;
+        z-index: 1;
 
 
-	& .video_play .video__pause-button, & .video_pause .video__play-button
-		display: none;
+    & .video_play .video__pause-button, & .video_pause .video__play-button
+        display: none;
 
-	& .video__play-button:after, & .video__pause-button:after
-		font-size: 0.9rem;
-		font-family: FontAwesome;
-		color: $button-color;
+    & .video__play-button:after, & .video__pause-button:after
+        font-size: 0.9rem;
+        font-family: FontAwesome;
+        color: $button-color;
 
-	& .video__play-button:after
-		content: "\f04b";
-
-
-	& .video__pause-button:after
-		content: "\f04c";
+    & .video__play-button:after
+        content: "\f04b";
 
 
-	& .video__fullscreen
-		width: 8%;
-		cursor: pointer;
-		float: left;
-		height: 100%;
+    & .video__pause-button:after
+        content: "\f04c";
 
 
-	& .video__fullscreen:after
-		font-family: FontAwesome;
-		content: "\f065";
-		position: absolute;
-		font-size: 2rem;
-		color: $button-color;
-		background-color: $button-background;
-		height: inherit;
-		display: flex;
-		width: 8%;
-		justify-content: center;
-		align-items: center;	
+    & .video__fullscreen
+        width: 8%;
+        cursor: pointer;
+        float: left;
+        height: 100%;
+
+
+    & .video__fullscreen:after
+        font-family: FontAwesome;
+        content: "\f065";
+        position: absolute;
+        font-size: 2rem;
+        color: $button-color;
+        background-color: $button-background;
+        height: inherit;
+        display: flex;
+        width: 8%;
+        justify-content: center;
+        align-items: center;	
 
  .video__play-pause 
-	margin-left: 3.8%;
-	font-size: 0.9rem;
+    margin-left: 3.8%;
+    font-size: 0.9rem;

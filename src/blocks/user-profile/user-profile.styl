@@ -11,93 +11,93 @@ $link-active = #757575;
 $link-active-hover = #E75735;
 
 .user-profile
-	display: flex;
+    display: flex;
 
-	&__avatar
-		width: 88px;
-		height: 88px;
-		background-size: cover;
-		background-position: center;
-		border: 3px solid $avatar-background ;
-		border-radius: 50%;
-		align-self: center;
+    &__avatar
+        width: 88px;
+        height: 88px;
+        background-size: cover;
+        background-position: center;
+        border: 3px solid $avatar-background ;
+        border-radius: 50%;
+        align-self: center;
 
-	&__name
-		overflow: hidden;
-		text-overflow: ellipsis;
-		font-family: LatoWeb, 'Arial';
-		text-align: center;
-		font-size: 1.15rem;
+    &__name
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: LatoWeb, 'Arial';
+        text-align: center;
+        font-size: 1.15rem;
 
-	&__proffesion
-		overflow: hidden;
-		text-overflow: ellipsis;
-		font-family: LatoWebBlack, 'Arial';
-		text-transform: uppercase;
-		text-align: center;
-		font-size: 0.78rem;
+    &__proffesion
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: LatoWebBlack, 'Arial';
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.78rem;
 
-	&__info
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-width: 9.4rem;
-		background-color: $info-background;
-		color: $info-text;
-		margin-left: 0.7rem;
-		position: relative;
-		border-radius: 9px;
-		padding: 0.4rem;
+    &__info
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 9.4rem;
+        background-color: $info-background;
+        color: $info-text;
+        margin-left: 0.7rem;
+        position: relative;
+        border-radius: 9px;
+        padding: 0.4rem;
 
-		&_active
-			background-color: $profile-active-background;
-			color: $profile-active-text;
+        &_active
+            background-color: $profile-active-background;
+            color: $profile-active-text;
 
-			& .user-profile__name
-				color: $profile-active-name;
+            & .user-profile__name
+                color: $profile-active-name;
 
-		&:before
-			content: " ";
-			height: 0.7rem;
-			width: 0.7rem;
-			position: absolute;
-			background-color: inherit;
-			left: -5px;
-			top: 45%;
-			transform: rotate(45deg);
+        &:before
+            content: " ";
+            height: 0.7rem;
+            width: 0.7rem;
+            position: absolute;
+            background-color: inherit;
+            left: -5px;
+            top: 45%;
+            transform: rotate(45deg);
 
-	&__links
-		font-family: FontAwesome;
-		font-size: 1.65rem;
-		display: flex;
-		padding-top: 0.2rem;
+    &__links
+        font-family: FontAwesome;
+        font-size: 1.65rem;
+        display: flex;
+        padding-top: 0.2rem;
 
-		& > *:nth-child(2n)
-			margin: 0 1rem;
+        & > *:nth-child(2n)
+            margin: 0 1rem;
 
-		& > *:first-child
-			margin-left: auto;
+        & > *:first-child
+            margin-left: auto;
 
-		& > *:last-child
-			margin-right: auto;
+        & > *:last-child
+            margin-right: auto;
 
-	&__link
-		color: $link-color;
-		text-decoration: none;
-		cursor: default;
+    &__link
+        color: $link-color;
+        text-decoration: none;
+        cursor: default;
 
-		&.user-profile__links_active
-			color: $link-active;
-			cursor: pointer;
+        &.user-profile__links_active
+            color: $link-active;
+            cursor: pointer;
 
-		&.user-profile__links_active:hover
-			color: $link-active-hover;
+        &.user-profile__links_active:hover
+            color: $link-active-hover;
 
-		&_facebook:after
-			content: "\f09a";
+        &_facebook:after
+            content: "\f09a";
 
-		&_twitter:after
-			content: "\f099";
+        &_twitter:after
+            content: "\f099";
 
-		&_dribbble:after
-			content: "\f17d";
+        &_dribbble:after
+            content: "\f17d";

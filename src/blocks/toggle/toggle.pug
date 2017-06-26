@@ -1,7 +1,7 @@
 mixin toggle(options)
-	if !options
-		- options = {}
-	label.toggle
-		input(type="checkbox", class="toggle__input", class=options.bkg ? options.bkg : '', checked=options.state ? options.state : false)
-		span(class="toggle__label" data-on=options.on ? options.on : 'on' data-off=options.off ? options.off : 'off')
-		span.toggle__handle
+    if !options
+        - options = {}
+    label.toggle
+        input(type="checkbox", class="toggle__input", class=options.bkg ? options.bkg : '', checked=options.state ? options.state : false)
+        span(class="toggle__label" data-on=options.on ? options.on : 'on' data-off=options.off ? options.off : 'off')
+        span.toggle__handle

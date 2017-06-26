@@ -35,3 +35,4 @@ $(function () {
 	});
 	$('.pie-chart').removeAttr('style');
 });
+

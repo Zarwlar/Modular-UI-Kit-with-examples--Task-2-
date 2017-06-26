@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 html(lang="en")
 head
-	meta(charset="UTF-8")
-	meta(name="viewport", content="width=device-width, initial-scale=1.0")
-	meta(http-equiv="X-UA-Compatible", content="ie=edge")
-	title Оформление заказа
-	style(type='text/css').
-		* {
-				padding: 0;
-				margin: 0;
-				box-sizing: border-box;
-		}
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Оформление заказа
+    style(type='text/css').
+        * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+        }
 body
 include ./blocks/market/market.pug
 include ./blocks/stages/stages.pug
@@ -21,59 +21,59 @@ include ./blocks/tick-box/tick-box.pug
 include ./blocks/standart-button/standart-button.pug
 +market__header()
 .order
-	.order__stages
-		.order__steps
-			div.order__stages-step_one Выбор товара
-			div.order__stages-step_one Заказ
-			div.order__stages-step_one Оплата
-		+stages({
-			count: 3,
-			completed: 2,
-			clr: 'order__stages-color'
-		})
-	.order__stuffs
-		+order__cart([{imgsrc: './blocks/market/img/1-1.jpg', name: 'Милый кролик', price: '4000'},
-					{imgsrc: './blocks/market/img/1-2.jpg', name: 'Коврик Мышь', price: '4700'},
-					{imgsrc: './blocks/market/img/1-3.jpg', name: 'Пегас Сатана', price: '7000'}
-				])
+    .order__stages
+        .order__steps
+            div.order__stages-step_one Выбор товара
+            div.order__stages-step_one Заказ
+            div.order__stages-step_one Оплата
+        +stages({
+            count: 3,
+            completed: 2,
+            clr: 'order__stages-color'
+        })
+    .order__stuffs
+        +order__cart([{imgsrc: './blocks/market/img/1-1.jpg', name: 'Милый кролик', price: '4000'},
+                    {imgsrc: './blocks/market/img/1-2.jpg', name: 'Коврик Мышь', price: '4700'},
+                    {imgsrc: './blocks/market/img/1-3.jpg', name: 'Пегас Сатана', price: '7000'}
+                ])
 
-	.order__delivery
-		h2.order__delivery-title  Доставка и оплата
-		.order__country
-			+drop-down({
-				elements: ['Россия','Казахстан','Украина'],
-				name: 'Страна доставки',
-				bkg: 'order__select-country_bkg'
-				})
-		.order__premium-delivery
-			.order__premium-delivery-flag
-				+toggle({
-					on: 'Yes',
-					off: 'No',
-					bkg: 'order__premium-delivery-toggle_bkg',
-					state: true
-				})
-			.order__premium-delivery-description
-				| Используйте премиум доставку, 
-				| чтобы получить заказ в более надежной и усиленной упаковке.
-		.order__premium-delivery-payment
-			.order__premium-delivery-payment-text 
-				b Способ оплаты
-			.order__premium-delivery-payment-way
-				.order__premium-delivery-paypal.
-					#[+tick-box({bkg: 'order__premium-delivery-payment-tickbox'})]
-					PayPal
-				.order__premium-delivery-card.
-					#[+tick-box({bkg: 'order__premium-delivery-payment-tickbox'})]
-					Кредитная карта
-				.order__premium-delivery-prepay.
-					#[+tick-box({bkg: 'order__premium-delivery-payment-tickbox'})]
-					Предоплата
-		.order__payment-button
-			+standart-button({
-				type: 'normal',
-				size: 'normal',
-				text_color: 'order__payment-button-text',
-				bkg: 'order__payment-button-bkg',
-				text: 'Перейти к оплате ˃'
-			})
+    .order__delivery
+        h2.order__delivery-title  Доставка и оплата
+        .order__country
+            +drop-down({
+                elements: ['Россия','Казахстан','Украина'],
+                name: 'Страна доставки',
+                bkg: 'order__select-country_bkg'
+                })
+        .order__premium-delivery
+            .order__premium-delivery-flag
+                +toggle({
+                    on: 'Yes',
+                    off: 'No',
+                    bkg: 'order__premium-delivery-toggle_bkg',
+                    state: true
+                })
+            .order__premium-delivery-description
+                | Используйте премиум доставку, 
+                | чтобы получить заказ в более надежной и усиленной упаковке.
+        .order__premium-delivery-payment
+            .order__premium-delivery-payment-text 
+                b Способ оплаты
+            .order__premium-delivery-payment-way
+                .order__premium-delivery-paypal.
+                    #[+tick-box({bkg: 'order__premium-delivery-payment-tickbox'})]
+                    PayPal
+                .order__premium-delivery-card.
+                    #[+tick-box({bkg: 'order__premium-delivery-payment-tickbox'})]
+                    Кредитная карта
+                .order__premium-delivery-prepay.
+                    #[+tick-box({bkg: 'order__premium-delivery-payment-tickbox'})]
+                    Предоплата
+        .order__payment-button
+            +standart-button({
+                type: 'normal',
+                size: 'normal',
+                text_color: 'order__payment-button-text',
+                bkg: 'order__payment-button-bkg',
+                text: 'Перейти к оплате ˃'
+            })

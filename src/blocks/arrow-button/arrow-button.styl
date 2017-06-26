@@ -8,47 +8,47 @@ $enabled-button-color = #fff;
 $enabled-background-color = #4eb7a8;
 
 .arrow-button
-	display: inline-block;
-	cursor: pointer;
-	border-radius: 50%;
-	border: 0.2rem solid #e5e5e5;
-	font-size: 2.5rem;
-	text-align: center;
-	width: 2.75rem;
-	height: 2.75rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0.2rem solid #e5e5e5;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 2.75rem;
+    height: 2.75rem;
 
-	&_disabled
-		background-color: $disabled-button-color;
-		border-color: $disabled-button-color;
-		color: $disabled-button-background;
+    &_disabled
+        background-color: $disabled-button-color;
+        border-color: $disabled-button-color;
+        color: $disabled-button-background;
 
-	&_inactive
-		background-color: $inactive-button-background;
-		border-color: $inactive-button-color;
-		color: $inactive-button-color;
+    &_inactive
+        background-color: $inactive-button-background;
+        border-color: $inactive-button-color;
+        color: $inactive-button-color;
 
-		&:hover
-			border-color: darken($inactive-button-color, 15%);
-			color: darken($inactive-button-color, 15%);
+        &:hover
+            border-color: darken($inactive-button-color, 15%);
+            color: darken($inactive-button-color, 15%);
 
-	&_enabled
-		background-color: $enabled-background-color;
-		border-color: $enabled-background-color;
-		color: $enabled-button-color;
+    &_enabled
+        background-color: $enabled-background-color;
+        border-color: $enabled-background-color;
+        color: $enabled-button-color;
 
-		&:hover
-			background-color: darken($enabled-background-color, 15%);
-			border-color: darken($enabled-background-color, 15%);
+        &:hover
+            background-color: darken($enabled-background-color, 15%);
+            border-color: darken($enabled-background-color, 15%);
 
-	&__arrow
-		font-family FontAwesome
+    &__arrow
+        font-family FontAwesome
 
-		&_left::after
-			display block
-			content '\f104'
-			margin-right 0.3rem;
+        &_left::after
+            display block
+            content '\f104'
+            margin-right 0.3rem;
 
-		&_right::after
-			display block
-			content '\f105'
-			margin-left 0.2rem;
+        &_right::after
+            display block
+            content '\f105'
+            margin-left 0.2rem;

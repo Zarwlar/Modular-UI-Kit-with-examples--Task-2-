@@ -1,25 +1,25 @@
 include ../standart-button/standart-button.pug
 
 mixin feedback(options)
-	if !options 
-		- options = {}
-	.feedback
-		form(action="feedback", class="feedback__form")
-			.feedback__name
-				input(type="text", placeholder="Your Name").feedback__input
-				+validation()
-			.feedback__email
-				input(type="text", placeholder="Your Email").feedback__input
-				+validation()
-			textarea(placeholder="Your Message").feedback__textarea
-			.feedback__submit
-				+standart-button({
-					type: 'normal',
-					size: 'normal',
-					text: options.btn_text ? options.btn_text : 'submit',
-					bkg: options.btn_bkg,
-					text_color: options.btn_clr
-				})
+    if !options 
+        - options = {}
+    .feedback
+        form(action="feedback", class="feedback__form")
+            .feedback__name
+                input(type="text", placeholder="Your Name").feedback__input
+                +validation()
+            .feedback__email
+                input(type="text", placeholder="Your Email").feedback__input
+                +validation()
+            textarea(placeholder="Your Message").feedback__textarea
+            .feedback__submit
+                +standart-button({
+                    type: 'normal',
+                    size: 'normal',
+                    text: options.btn_text ? options.btn_text : 'submit',
+                    bkg: options.btn_bkg,
+                    text_color: options.btn_clr
+                })
 
 mixin validation()
-	div(class="feedback__validation")
+    div(class="feedback__validation")

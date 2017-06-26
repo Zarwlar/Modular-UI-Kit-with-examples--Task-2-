@@ -1,4 +1,10 @@
-mixin percentages(percent)
-		span(class="percentages" data-percent= percent)
-				span.percentages__percent
+//- mixin percentages(percent)
+//-         span(class="percentages" data-percent= percent)
+//-                 span.percentages__percent
 
+
+
+mixin percentages(percent)
+        - if (typeof(percent) === 'undefined')
+                - percent = 50
+        canvas(class="percentages" data-value=percent)

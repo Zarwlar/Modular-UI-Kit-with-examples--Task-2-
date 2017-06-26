@@ -1,21 +1,21 @@
 include ../standart-button/standart-button.pug
 
 mixin event(options)
-	if !options
-		- options = {}
-	.event
-		img.event__photo(src= options.imgsrc ? options.imgsrc : '.\\blocks\\event\\img\\event__default-img.jpg')
-		.event__text(class= options.bkg ? options.bkg : '')
-			.event__date
-				.event__day= options.day ? options.day : '1'
-				.event__month= options.month ? options.month : 'January' 
-			.event__title= options.title ? options.title : 'title'
-			.event__description= options.description ? options.description : 'description'
-			.event__button
-				+standart-button({
-					type: options.btn_type ? options.btn_type : 'standart',
-					text: options.btn_text ? options.btn_text : 'button',
-					size: options.btn_size ? options.btn_sie : 'small',
-					bkg: options.btn_bkg ? options.btn_bkg : '', 
-					text_color: options.btn_clr ? options.btn_clr : ''
-					})
+    if !options
+        - options = {}
+    .event
+        img.event__photo(src= options.imgsrc ? options.imgsrc : '.\\blocks\\event\\img\\event__default-img.jpg' alt='event')
+        .event__text(class= options.bkg ? options.bkg : '')
+            .event__date
+                .event__day= options.day ? options.day : '1'
+                .event__month= options.month ? options.month : 'January' 
+            .event__title= options.title ? options.title : 'title'
+            .event__description= options.description ? options.description : 'description'
+            .event__button
+                +standart-button({
+                    type: options.btn_type ? options.btn_type : 'standart',
+                    text: options.btn_text ? options.btn_text : 'button',
+                    size: options.btn_size ? options.btn_sie : 'small',
+                    bkg: options.btn_bkg ? options.btn_bkg : '', 
+                    text_color: options.btn_clr ? options.btn_clr : ''
+                    })

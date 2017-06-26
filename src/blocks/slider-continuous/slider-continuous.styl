@@ -4,69 +4,69 @@ $slider-color = #E75735;
 $max-width = 277px;
 
 .rangeslider-continuous
-	display: block;
-	border-radius: 10px;
-	position: absolute;
-	top: 0;
-	height: 100%;
-	bottom: 0;
-	width: 100%;
+    display: block;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    bottom: 0;
+    width: 100%;
 
-	&__handle 
-		background: $slider-color;
-		cursor: pointer;
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		position: absolute;
-		background-size: 100%;
-		border-radius: 50%;
-		top: -7px;
-		touch-action: pan-y;
-		-ms-touch-action: pan-y;
+    &__handle 
+        background: $slider-color;
+        cursor: pointer;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-size: 100%;
+        border-radius: 50%;
+        top: -7px;
+        touch-action: pan-y;
+        -ms-touch-action: pan-y;
 
 
-	&_horizontal 
-		max-width: 240px;
-		height: 5px;
-		width: 100%;
-		touch-action: pan-y;
-		-ms-touch-action: pan-y;
+    &_horizontal 
+        max-width: 240px;
+        height: 5px;
+        width: 100%;
+        touch-action: pan-y;
+        -ms-touch-action: pan-y;
 
 
 .rangeslider__value-bubble {
-	position: absolute;
-	top: auto;
-	left: 50%;
-	bottom: 1.2rem;
-	transform: translate(-50%, 0);
-	-webkit-transform: translate(-50%, 0);
-	-ms-transform: translate(-50%, 0);
-	text-align: center;
-	border-radius: 20%;
-	background-color: $slider-color;
-	padding: 0.3rem 0.65rem;
-	color: $bubble-text-color;
-	width: auto;
-	margin: 0;
-	white-space: nowrap;
-	font-family: LatoWebBlack, 'Arial';
-	font-size: 0.8rem;
+    position: absolute;
+    top: auto;
+    left: 50%;
+    bottom: 1.2rem;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    text-align: center;
+    border-radius: 20%;
+    background-color: $slider-color;
+    padding: 0.3rem 0.65rem;
+    color: $bubble-text-color;
+    width: auto;
+    margin: 0;
+    white-space: nowrap;
+    font-family: LatoWebBlack, 'Arial';
+    font-size: 0.8rem;
 }
 
 .rangeslider__value-bubble::before {
-	content: "";
-	width: 0;
-	height: 0;
-	border-left: 0.9rem solid transparent;
-	border-right: 0.9rem solid transparent;
-	border-top: 1rem solid $slider-color;
-	position: absolute;
-	top: auto;
-	left: 50%;
-	bottom: -0.75rem;
-	transform: translate(-50%, -45%);
-	-webkit-transform: translate(-50%, -45%);
-	-ms-transform: translate(-50%, -45%);
-	z-index: -1;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 0.9rem solid transparent;
+    border-right: 0.9rem solid transparent;
+    border-top: 1rem solid $slider-color;
+    position: absolute;
+    top: auto;
+    left: 50%;
+    bottom: -0.75rem;
+    transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    -ms-transform: translate(-50%, -45%);
+    z-index: -1;
 }

@@ -15,127 +15,127 @@ $textarea-color = #868686;
 $textarea-focus-color = #fff;
 
 .messager
-	box-sizing: border-box;
-	width: 100%;
-	max-width: 18rem;
-	background: $messager-background-color;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 18rem;
+    background: $messager-background-color;
 
-	&__friend-information
-		display: flex;
-		justify-content: center;
-		background: $friend-information-background-color;
-		height: 2.15rem;
+    &__friend-information
+        display: flex;
+        justify-content: center;
+        background: $friend-information-background-color;
+        height: 2.15rem;
 
-		&_photo
-			width: 88px;
-			height: 88px;
-			background-size: cover;
-			background-position: center;
-			border: 3px solid $friend-photo-border-color;
-			border-radius: 50%;
+        &_photo
+            width: 88px;
+            height: 88px;
+            background-size: cover;
+            background-position: center;
+            border: 3px solid $friend-photo-border-color;
+            border-radius: 50%;
 
-	&__vertical-position
-		position: absolute;
-		top: 4.5rem;
+    &__vertical-position
+        position: absolute;
+        top: 4.5rem;
 
-	&__actions
-		display: flex;
-		justify-content: space-between;
-		font-family: FontAwesome;
-		color: $friend-actions-color;
-		font-size: 1.4rem;
-		padding: 7.1% 9% 2%;
+    &__actions
+        display: flex;
+        justify-content: space-between;
+        font-family: FontAwesome;
+        color: $friend-actions-color;
+        font-size: 1.4rem;
+        padding: 7.1% 9% 2%;
 
-		&_message, &_photo
-			color: inherit;
-			text-decoration: none;
+        &_message, &_photo
+            color: inherit;
+            text-decoration: none;
 
-		&_message::before
-			content: '\F0E0';
+        &_message::before
+            content: '\F0E0';
 
-		&_photo::before
-			content: '\F030';
+        &_photo::before
+            content: '\F030';
 
-	&__friend
-		position: relative;
+    &__friend
+        position: relative;
 
-		&_name
-			text-align: center;
-			background-color: $friend-name-background-color;
-			color: $friend-name-color;
-			font-family: LatoWebLight, 'Arial';
-			font-size: 1.9rem;
-			padding: 7% 0 9%;
+        &_name
+            text-align: center;
+            background-color: $friend-name-background-color;
+            color: $friend-name-color;
+            font-family: LatoWebLight, 'Arial';
+            font-size: 1.9rem;
+            padding: 7% 0 9%;
 
-	&__textarea
-		width: 100%;
+    &__textarea
+        width: 100%;
 
-	&__button-reply
-		margin-top: 2%;
-		width: 100%;
+    &__button-reply
+        margin-top: 2%;
+        width: 100%;
 
-		& .standart-button
-			width: 100%;
+        & .standart-button
+            width: 100%;
 
-	&__chatlogs
-		width: 100%;
-		max-height: 9rem;
-		overflow-x: hidden;
-		overflow-y: scroll;
-		padding-top: 0.5rem;
-		box-sizing: border-box;
+    &__chatlogs
+        width: 100%;
+        max-height: 9rem;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-top: 0.5rem;
+        box-sizing: border-box;
 
-		&::-webkit-scrollbar
-			width: 6px;
+        &::-webkit-scrollbar
+            width: 6px;
 
-		&::-webkit-scrollbar-thumb
-			border-radius: 5px;
-			background: rgba(0,0,0,.0)
+        &::-webkit-scrollbar-thumb
+            border-radius: 5px;
+            background: rgba(0,0,0,.0)
 
-	&__chat
-		display: flex;
-		flex-flow: row wrap;
-		align-items: flex-start;
-		margin-bottom: 0.5rem;
-
-
-		& .messager__message
-			width: 70%;
-			padding: 2.5%
-			margin: 2% 4% 0;
-			border-radius: 7px;
-			color: #868686;
-			font-size: 0.85rem;
-			font-family: LatoWebBold, 'Arial';
+    &__chat
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
 
 
-	&__chat_friend .messager__message
-		background: $message-background-color;
+        & .messager__message
+            width: 70%;
+            padding: 2.5%
+            margin: 2% 4% 0;
+            border-radius: 7px;
+            color: #868686;
+            font-size: 0.85rem;
+            font-family: LatoWebBold, 'Arial';
 
-	&__chat_self .messager__message
-		background: $message-background-color;
 
-	&__chat_self
-		justify-content: flex-end;
+    &__chat_friend .messager__message
+        background: $message-background-color;
 
-	&__form
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 6.5%;
+    &__chat_self .messager__message
+        background: $message-background-color;
 
-	&__form textarea
-			background-color: $textarea-background-color;
-			height: 5rem;
-			border: 3px solid $textarea-border-color;
-			border-radius: 3px;
-			resize: none;
-			font-size: 0.9rem;
-			font-family: LatoWebBold, 'Arial';
-			color: $textarea-color;
-			box-sizing: border-box;
-			width: 100%;
-			outline: none;
+    &__chat_self
+        justify-content: flex-end;
 
-	&__form textarea:focus
-		background: $textarea-focus-color;
+    &__form
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6.5%;
+
+    &__form textarea
+            background-color: $textarea-background-color;
+            height: 5rem;
+            border: 3px solid $textarea-border-color;
+            border-radius: 3px;
+            resize: none;
+            font-size: 0.9rem;
+            font-family: LatoWebBold, 'Arial';
+            color: $textarea-color;
+            box-sizing: border-box;
+            width: 100%;
+            outline: none;
+
+    &__form textarea:focus
+        background: $textarea-focus-color;

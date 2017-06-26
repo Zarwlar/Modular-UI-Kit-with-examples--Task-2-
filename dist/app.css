@@ -183,30 +183,11 @@
   font-size: 1.2rem;
 }
 .container .percentages {
-  margin-left: 20px;
-  bottom: 2rem;
-}
-.container .pie-chart {
-  margin-left: 24px;
+  margin-right: 25px;
 }
 .container .arrow-button {
-  margin-left: 24px;
-}
-.container .sliders {
-  padding-left: 10%;
-  padding-bottom: 6%;
-}
-.container .search,
-.container .drop-down,
-.container .calendar,
-.container .news,
-.container .feedback,
-.container .user-profile {
-  padding-left: 16%;
-}
-.container .rangeslider-continuous_horizontal,
-.container .rangeslider-discret_horizontal {
-  left: 16%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .container .search,
 .container .drop-down {
@@ -218,17 +199,9 @@
 .container .user-profile {
   margin-top: 8%;
 }
-.container .event,
-.container .messager__container {
-  padding-left: 10%;
-}
 .container .news,
 .container .event {
   text-align: left;
-}
-.container .location {
-  padding-right: 3.5%;
-  padding-left: 7.5%;
 }
 .container .video {
   padding-left: 5%;
@@ -237,21 +210,24 @@
   text-align: center;
 }
 .container__center > .standart-button {
-  margin-left: 24px;
-}
-.container__center h2 {
-  padding-left: 3.5%;
-}
-.container__center .container__left h2 {
-  padding-left: 15%;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 .container__left {
   width: 50%;
   float: left;
 }
+.container__left > * {
+  margin-left: auto;
+  margin-right: auto;
+}
 .container__right {
   width: 50%;
   float: right;
+}
+.container__right > * {
+  margin-left: auto;
+  margin-right: auto;
 }
 .container__right .rangeslider-continuous_horizontal {
   margin-bottom: 6%;
@@ -947,29 +923,7 @@
   color: #ca7732;
 }
 .percentages {
-  position: relative;
   display: inline-block;
-  width: 110px;
-  height: 110px;
-  text-align: center;
-}
-.percentages__position-vertical {
-  position: relative;
-  bottom: 2rem;
-  display: inline-block;
-}
-.percentages canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.percentages__percent {
-  display: inline-block;
-  line-height: 110px;
-  z-index: 2;
-  font-size: 2.5rem;
-  color: #b1b1b1;
-  font-family: LatoWebLight, 'Arial';
 }
 .pie-chart {
   display: inline-block;
@@ -1570,8 +1524,7 @@
 .toggle__label:before,
 .toggle__label:after {
   position: absolute;
-  top: 50%;
-  margin-top: -0.5em;
+  margin-top: 0.6em;
   line-height: 1;
   font-family: LatoWebBlack, 'Arial';
 }
@@ -1727,7 +1680,6 @@
 .video__button-holder {
   visibility: hidden;
   position: relative;
-  left: 10px;
 }
 [class^="buffered"] {
   background: rgba(255,255,255,0.1);
