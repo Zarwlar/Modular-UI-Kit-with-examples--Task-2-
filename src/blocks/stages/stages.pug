@@ -1,12 +1,15 @@
 mixin stages(options)
     if !options
         - options = {}
-    -var stages = 0;
-    ol.stages
-        -for (var i = 0; i < options.completed-1; i++, stages++)
-            li.stages__stage(class='stages_complete' class=options.clr ? options.clr : '' data-step=stages+1)
-
-        li.stages__stage(class='stages_active' class=options.clr ? options.clr : '' data-step=stages=stages+1)
-
-        -for (var i = 0; i < options.count-options.completed; i++, stages++)
-            li.stages__stage(data-step=stages+1)
+    - var stages = 0;
+    .stages
+        - for (var i = 0; i < options.completed - 1; i++, stages++)
+            .stages__step.stages__step_active=stages+1
+            .stages__line.stages__line_active
+        .stages__step.stages__step_active=stages+1
+        .stages__line
+        - stages++
+        - for (var i = 0; i < options.count - options.completed - 1; i++, stages++)
+            .stages__step=stages+1
+            .stages__line
+        .stages__step=stages+1

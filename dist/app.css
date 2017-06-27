@@ -1174,7 +1174,6 @@
   -ms-touch-action: pan-y;
 }
 .rangeslider-continuous_horizontal {
-  max-width: 240px;
   height: 5px;
   width: 100%;
   touch-action: pan-y;
@@ -1241,7 +1240,6 @@
   -ms-touch-action: pan-y;
 }
 .rangeslider-discret_horizontal {
-  max-width: 260px;
   height: 5px;
   width: 100%;
   touch-action: pan-y;
@@ -1256,7 +1254,7 @@
   font-family: LatoWebBlack, 'Arial';
   color: #e6e6e6;
   padding-top: 0.7rem;
-  width: 270px;
+  width: 105%;
 }
 .rangeslider-discret__scale:after {
   content: "";
@@ -1264,63 +1262,32 @@
   width: 100%;
 }
 .stages {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  color: #a4a4a4;
+  display: flex;
+  justify-content: space-between;
 }
-.stages__stage {
-  position: relative;
-  display: table-cell;
-  text-align: center;
-  font-size: 0.8em;
-}
-.stages__stage:before {
-  content: attr(data-step);
-  display: block;
-  margin: 0 auto;
+.stages__step {
   background: #e5e5e5;
-  width: 2.5em;
-  height: 2.5em;
+  color: #a4a4a4;
+  border-radius: 50%;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+  font-size: 0.8rem;
   text-align: center;
-  margin-bottom: 0.25em;
-  line-height: 2.5em;
-  border-radius: 100%;
-  position: relative;
-  z-index: 5;
+  line-height: 1.8rem;
   font-family: LatoWebBlack, 'Arial';
 }
-.stages__stage:after {
-  content: '';
-  position: absolute;
-  display: block;
-  background: #e5e5e5;
-  width: 100%;
-  height: 0.5em;
-  top: 1em;
-  left: 50%;
-  margin-left: 1.5em 9;
-  z-index: -1;
-}
-.stages__stage:last-child:after {
-  display: none;
-}
-.stages__stage.stages_complete {
-  color: #e75735;
-}
-.stages__stage.stages_complete:before,
-.stages__stage.stages_complete:after {
-  color: #fff;
+.stages__step.stages__step_active {
   background: #e75735;
-}
-.stages__stage.stages_active {
-  color: #e75735;
-}
-.stages__stage.stages_active:before {
   color: #fff;
+}
+.stages__line {
+  background: #e5e5e5;
+  display: block;
+  width: 100%;
+  height: 0.5rem;
+  align-self: center;
+}
+.stages__line.stages__line_active {
   background: #e75735;
 }
 .standart-button {
