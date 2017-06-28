@@ -4,12 +4,15 @@ $text-color = #FFF;
 .event
     display: flex;
     height: 13.3rem;
-    max-width: 18rem;
+
+    &__photo-frame
+        width: 35%;
+        background: $event-background-color;
 
     &__photo
-        background: $event-background-color;
-        width: 33%;
         object-fit: cover;
+        height: 100%;
+        width: 100%;
 
     &__text
         display: flex;
@@ -17,6 +20,7 @@ $text-color = #FFF;
         padding: 4.5% 7% 1.5%;
         background-color: $event-background-color;
         color: $text-color;
+        width: 65%;
 
     &__date
         display: inline-flex;

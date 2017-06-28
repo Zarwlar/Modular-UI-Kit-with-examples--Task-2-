@@ -4,12 +4,15 @@ $text-color = #FFF;
 .news
     display: flex;
     height: 13.3rem;
-    max-width: 15.65rem;
+
+    &__photo-frame
+        background: $news-background-color;
+        width: 35%;
 
     &__photo
-        background: $news-background-color;
-        width: 38%;
         object-fit: cover;
+        width: 100%;
+        height: 100%;
 
     &__text
         display: flex;
@@ -17,7 +20,8 @@ $text-color = #FFF;
         padding: 7.5%;
         background-color: $news-background-color;
         color: $text-color;
-        min-width: 62%;
+        width: 65%;
+        text-align: left;
 
         & > *:not(:first-child)
             margin-top: 6.5%;

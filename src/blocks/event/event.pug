@@ -4,7 +4,8 @@ mixin event(options)
     if !options
         - options = {}
     .event
-        img.event__photo(src= options.imgsrc ? options.imgsrc : '.\\blocks\\event\\img\\event__default-img.jpg' alt='event')
+        .event__photo-frame
+            img.event__photo(src= options.imgsrc ? options.imgsrc : '.\\blocks\\event\\img\\event__default-img.jpg' alt='event')
         .event__text(class= options.bkg ? options.bkg : '')
             .event__date
                 .event__day= options.day ? options.day : '1'
