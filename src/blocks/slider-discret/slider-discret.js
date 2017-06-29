@@ -1,5 +1,5 @@
 $(function () {
-    var $r = $('.slider-discret');
+    var $r = $('.js-slider-discret');
 
 
     $r.rangeslider({

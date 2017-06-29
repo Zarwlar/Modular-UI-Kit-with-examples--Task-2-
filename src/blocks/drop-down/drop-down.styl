@@ -7,8 +7,6 @@ $select-color = #888;
 $drop-down-arrow-color = #FFF;
 
 .drop-down
-    max-width: 18rem;
-    min-width: 12.5rem;
     display: flex;
     position: relative;
 
@@ -45,3 +43,9 @@ $drop-down-arrow-color = #FFF;
         background-color: $option-backogrund-color;
         color: $drop-down-arrow-color;
         font-size: 1.6rem;
+
+    &__option_theme_order
+        background: lighten(#D69259, 10);
+
+    &_theme_order.drop-down::before
+        background: lighten(#D69259, 10);

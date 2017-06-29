@@ -1,6 +1,6 @@
 $(function () {
 
-    $(".standart-button").click(function (e) {
+    $(".js-standart-button").click(function (e) {
 
         var posX = $(this).offset().left,
             posY = $(this).offset().top,

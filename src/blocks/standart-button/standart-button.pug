@@ -1,7 +1,7 @@
 mixin standart-button(options)
     if !options
         - options = {}
-    div.standart-button(
+    div.js-standart-button.standart-button(
             class= options.type ? 'standart-button_type-' + options.type : 'standart-button_type-normal', 
             class=options.size ? 'standart-button_size-' + options.size : 'standart-button_size-normal',
             class=options.text_color ? options.text_color : ''

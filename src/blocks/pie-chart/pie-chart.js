@@ -1,7 +1,7 @@
 import Chart from 'chart.js'
 
 $(function () {
-	var tx = document.getElementsByClassName("pie-chart")[0],
+	var tx = document.getElementsByClassName("js-pie-chart")[0],
 	ctx = tx.getContext('2d'),
 	txvalue = tx.dataset['value'].split(',');
 

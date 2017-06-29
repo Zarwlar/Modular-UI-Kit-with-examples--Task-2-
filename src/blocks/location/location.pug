@@ -2,8 +2,8 @@ mixin location(options)
     if !options
         - options = {}
     .location
-        .location__map(data-lat= options.lat ? options.lat : '37.79128631', data-lng= options.lng ? options.lng : '-122.41516113')
-        .location__banner(class= options.banner_bkg ? options.banner_bkg : '')
+        .js-location__map.location__map(data-lat= options.lat ? options.lat : '37.79128631', data-lng= options.lng ? options.lng : '-122.41516113')
+        .location__banner(class= options.theme ? "location__banner_theme_" + options.theme : '')
             span.location__phrase= options.phrase ? options.phrase : 'Meet us!'
             .location__adress= options.adress ? options.adress : '1259 california st san francisco, ca'
             .location__icon.location__icon_crosshairs

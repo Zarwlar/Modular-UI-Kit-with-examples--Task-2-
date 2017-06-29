@@ -3,17 +3,17 @@ include ../standart-button/standart-button.pug
 mixin messager(options)
     if !options
         - options = {}
-    .messager
+    .js-messager.messager
         .messager__friend
-            .messager__friend_name(class= options.bkg_name ? options.bkg_name : '')= options.name ? options.name : 'Sarah Brown'
-            .messager__friend-information(class= options.bkg_info ? options.bkg_info : '')
+            .messager__friend_name(class= options.theme_name ? "messager_theme-name_" + options.theme_name : '')= options.name ? options.name : 'Sarah Brown'
+            .messager__friend-information(class= options.theme_info ? "messager_theme-info_" + options.theme_info : '')
                 .messager__vertical-position
                     img(src= options.photo ? options.photo : '.\\blocks\\messager\\img\\messager__default-avatar.jpg', alt='avatar',
                     class='messager__friend-information_photo')
         .messager__actions
             a(class="messager__actions_message", href="#")
             a(class="messager__actions_photo", href="#")
-        .messager__chatlogs
+        .js-messager__chatlogs.messager__chatlogs
             .messager__chat.messager__chat_friend
                 p.messager__message Hey! So are we cool to meet at the art gallery? Say 8pm
             .messager__chat.messager__chat_self
@@ -39,7 +39,7 @@ mixin messager(options)
         .messager__form
             .messager__textarea
                 textarea
-            .messager__button-reply
+            .js-messager__button-reply.messager__button-reply
                 +standart-button({
                                     type: 'nomral',
                                     size: 'normal',

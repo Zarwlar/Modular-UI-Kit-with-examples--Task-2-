@@ -23,11 +23,10 @@ $link-active-hover = #E75735;
         align-self: center;
 
     &__name
-        overflow: hidden;
-        text-overflow: ellipsis;
         font-family: LatoWeb, 'Arial';
         text-align: center;
         font-size: 1.15rem;
+        word-wrap: break-word;
 
     &__proffesion
         overflow: hidden;
@@ -101,3 +100,15 @@ $link-active-hover = #E75735;
 
         &_dribbble:after
             content: "\f17d";
+
+    &_theme_seller
+        background: darken(#E0AD82, 7);
+
+    &_theme_gold-seller
+        background: gold;
+
+    &_theme_silver-seller
+        background: silver;
+
+    &_theme_bronze-seller
+        background: #cc9966;

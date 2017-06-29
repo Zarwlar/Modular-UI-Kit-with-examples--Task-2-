@@ -5,12 +5,8 @@ mixin feedback(options)
         - options = {}
     .feedback
         form(action="feedback", class="feedback__form")
-            .feedback__name
-                input(type="text", placeholder="Your Name").feedback__input
-                +validation()
-            .feedback__email
-                input(type="text", placeholder="Your Email").feedback__input
-                +validation()
+            +field('name','text','Your Name')
+            +field('email','email','Your Email')
             textarea(placeholder="Your Message").feedback__textarea
             .feedback__submit
                 +standart-button({
@@ -21,5 +17,7 @@ mixin feedback(options)
                     text_color: options.btn_clr
                 })
 
-mixin validation()
-    div(class="feedback__validation")
+mixin field(name, type, placeholder)
+    div(class="js-feedback__" + name class="feedback__" + name)
+        input(type=type, placeholder=placeholder).feedback__input.js-feedback__input
+        div(class="feedback__validation" class="js-feedback__validation")

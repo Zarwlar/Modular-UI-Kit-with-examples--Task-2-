@@ -1,5 +1,5 @@
 mixin tick-box(options)
     if !options
         - options = {}
-    .tick-box(class= options.state ? 'tick-box__mark-active' : '', class=options.bkg ? options.bkg : '')
+    .js-tick-box.tick-box(class= options.state ? 'tick-box__mark-active' : '', class=options.theme ? 'tick-box_theme_' + options.theme : '')
 

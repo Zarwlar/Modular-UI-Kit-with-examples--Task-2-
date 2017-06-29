@@ -22,7 +22,7 @@ $(function () {
         }
     }
 
-    $('.slider-continuous').rangeslider({
+    $('.js-slider-continuous').rangeslider({
         polyfill: false,
         fillClass: 'rangeslider-continuous',
         handleClass: 'rangeslider-continuous__handle',

@@ -4,9 +4,9 @@ mixin stages(options)
     - var stages = 0;
     .stages
         - for (var i = 0; i < options.completed - 1; i++, stages++)
-            .stages__step.stages__step_active=stages+1
-            .stages__line.stages__line_active
-        .stages__step.stages__step_active=stages+1
+            .stages__step.stages__step_active(class=options.step_active_theme ? "stages__theme_" + options.step_active_theme : "")=stages+1
+            .stages__line.stages__line_active(class=options.line_active_theme ? "stages__theme_" + options.line_active_theme : "")
+        .stages__step.stages__step_active(class=options.step_active_theme ? "stages__theme_" + options.step_active_theme : "")=stages+1
         .stages__line
         - stages++
         - for (var i = 0; i < options.count - options.completed - 1; i++, stages++)

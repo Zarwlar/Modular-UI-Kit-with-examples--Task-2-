@@ -1,8 +1,8 @@
 $(function() {
 
-        var day = $('.calendar__day');
+        var day = $('.js-calendar__day');
 
-        var calendar =	$('.calendar_jquery').datepicker({
+        var calendar =	$('.js-calendar').datepicker({
                     altField: day,
                     altFormat: "dd",
                     firstDay: 1,
@@ -10,7 +10,7 @@ $(function() {
                     dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
             });
 
-            $('.calendar__button_today').on('click', function() {
+            $('.js-calendar__button_today').on('click', function() {
         calendar.datepicker('setDate', new Date());
 })
 })

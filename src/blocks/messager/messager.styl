@@ -23,6 +23,7 @@ $textarea-focus-color = #fff;
         justify-content: center;
         background: $friend-information-background-color;
         height: 2.15rem;
+        position: relative;
 
         &_photo
             width: 88px;
@@ -31,10 +32,10 @@ $textarea-focus-color = #fff;
             background-position: center;
             border: 3px solid $friend-photo-border-color;
             border-radius: 50%;
+            margin-top: -25%;
 
     &__vertical-position
         position: absolute;
-        top: 4.5rem;
 
     &__actions
         display: flex;
@@ -64,6 +65,8 @@ $textarea-focus-color = #fff;
             font-family: LatoWebLight, 'Arial';
             font-size: 1.9rem;
             padding: 7% 0 9%;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
     &__textarea
         width: 100%;
@@ -137,3 +140,17 @@ $textarea-focus-color = #fff;
 
     &__form textarea:focus
         background: $textarea-focus-color;
+
+
+    &_theme-name_helper
+        background: darken(#E0AD82, 15);
+
+    &_theme-info_helper
+        background: darken(#E0AD82, 20);
+
+    &_theme-name_seller
+        color: black;
+        background: #D5D5D5;
+
+    &_theme-info_seller
+        background: darken(#D5D5D5, 10);

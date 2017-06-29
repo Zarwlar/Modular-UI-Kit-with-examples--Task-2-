@@ -6,7 +6,7 @@ mixin event(options)
     .event
         .event__photo-frame
             img.event__photo(src= options.imgsrc ? options.imgsrc : '.\\blocks\\event\\img\\event__default-img.jpg' alt='event')
-        .event__text(class= options.bkg ? options.bkg : '')
+        .event__text(class= options.theme ? 'event_theme_' + options.theme : '')
             .event__date
                 .event__day= options.day ? options.day : '1'
                 .event__month= options.month ? options.month : 'January' 

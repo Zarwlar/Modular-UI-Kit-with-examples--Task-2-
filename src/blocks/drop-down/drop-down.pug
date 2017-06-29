@@ -1,6 +1,6 @@
 mixin drop-down(options)
-    div.drop-down(class= options.bkg ? options.bkg : '')
+    div.drop-down(class= options.drop_theme ? 'drop-down_theme_' + options.drop_theme : '')
         select.drop-down__select
                 option(value="" disabled selected)= options.name ? options.name : 'Choose an option'
                 each element in options.elements
-                    option.drop-down__option(class= options.bkg ? options.bkg : '')= element
+                    option.drop-down__option(class= options.option_theme ? 'drop-down__option_theme_' +  options.option_theme : '')= element

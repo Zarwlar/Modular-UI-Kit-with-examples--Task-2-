@@ -3,5 +3,5 @@ mixin search(options)
         - options = {}
     .search
         form.search__form
-            input(type='text', placeholder='Search', class=options.nf ? options.nf : '').search__input
-            button(type='button' class=options.bkg ? options.bkg : '').search__submit
+            input(type='text', placeholder='Search', class=options.input_theme ? "search__input-theme_" + options.input_theme : '' class="js-search__input").search__input
+            button(type='button' class=options.button_theme ? "search__submit-theme_" + options.button_theme : '' class="js-search__submit").search__submit

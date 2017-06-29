@@ -52,34 +52,36 @@ $label-on-background-color = #4eb7a8;
     -o-transition: left 0.15s ease-out;
     transition: left 0.15s ease-out;
 
-.toggle__label:before, .toggle__label:after {
+.toggle__label:before, .toggle__label:after
   position: absolute;
   margin-top: .6em;
   line-height: 1;
   font-family: LatoWebBlack, 'Arial';
-}
-.toggle__label:before {
+
+.toggle__label:before
   content: attr(data-off);
   right: 0.6rem;
   color: $label-off-text-color;
-}
-.toggle__label:after {
+
+.toggle__label:after
   content: attr(data-on);
   left: 0.75rem;
   color: $label-on-text-color;
   opacity: 0;
-}
-.toggle__input:checked ~ .toggle__label {
+
+.toggle__input:checked ~ .toggle__label
   background: $label-on-background-color;
-}
-.toggle__input:checked ~ .toggle__label:before {
+
+.toggle__input:checked ~ .toggle__label:before
   opacity: 0;
-}
-.toggle__input:checked ~ .toggle__label:after {
+
+.toggle__input:checked ~ .toggle__label:after
   opacity: 1;
-}
 
-.toggle__input:checked ~ .toggle__handle {
+
+.toggle__input:checked ~ .toggle__handle
   left: 2.5rem;
-}
 
+
+.toggle_theme_premium-order.toggle__input:checked ~ .toggle__label
+  background: #D69259;

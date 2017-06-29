@@ -3,16 +3,26 @@ mixin user-profile(options)
         - options = {}
     .user-profile
         img(class= 'user-profile__avatar' src= options.imgsrc ? '.\\blocks\\user-profile\\img\\' + options.imgsrc : '.\\blocks\\user-profile\\img\\user-profile__default-avatar.jpg' alt='avatar')
-        .user-profile__info(class= options.imgsrc ? options.bkg || 'user-profile__info_active' : '')
-            .user-profile__name= options.name ? options.name : 'Sarah Brown'
-            .user-profile__proffesion= options.proffesion ? options.proffesion : 'developer'
-            .user-profile__links
-                a.user-profile__link_facebook.user-profile__link(
-                    href=options['facebook'] ? options['facebook'] : '#', 
-                    class=options['facebook'] ? 'user-profile__links_active' : '')
-                a.user-profile__link_twitter.user-profile__link(
-                    href=options['twitter'] ? options['twitter'] : '#', 
-                    class=options['twitter'] ? 'user-profile__links_active' : '')
-                a.user-profile__link_dribbble.user-profile__link(
-                    href=options['dribbble'] ? options['dribbble'] : '#', 
-                    class=options['dribbble'] ? 'user-profile__links_active' : '')
+        if (typeof(options.theme) === 'undefined' && typeof(options.imgsrc) !== 'undefined')
+            .user-profile__info.user-profile__info_active
+                +links(options)
+        else if (typeof(options.theme) === 'undefined' && typeof(options.imgsrc) === 'undefined')
+            .user-profile__info
+                +links(options)
+        else
+            .user-profile__info(class= 'user-profile_theme_' + options.theme)
+                +links(options)
+
+mixin links(options)
+    span.user-profile__name= options.name ? options.name : 'Sarah Brown'
+    span.user-profile__proffesion= options.proffesion ? options.proffesion : 'developer'
+    .user-profile__links
+        a.user-profile__link_facebook.user-profile__link(
+            href=options['facebook'] ? options['facebook'] : '#', 
+            class=options['facebook'] ? 'user-profile__links_active' : '')
+        a.user-profile__link_twitter.user-profile__link(
+            href=options['twitter'] ? options['twitter'] : '#', 
+            class=options['twitter'] ? 'user-profile__links_active' : '')
+        a.user-profile__link_dribbble.user-profile__link(
+            href=options['dribbble'] ? options['dribbble'] : '#', 
+            class=options['dribbble'] ? 'user-profile__links_active' : '')

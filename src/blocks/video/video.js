@@ -5,7 +5,7 @@ $(function () {
 
         var settings = {
             playerWidth: '1.0', // Default is 95%
-            videoClass: 'video' // Video Class
+            videoClass: 'js-video' // Video Class
         }
 
         // Extend the options so they work with the plugin
