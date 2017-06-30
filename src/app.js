@@ -4,3 +4,5 @@ requireAll(require.context('./', true, /\.(styl|css)$/));
 requireAll(require.context('./', true, /\.js$/));
 requireAll(require.context('./', true, /\.mp4$/));
 requireAll(require.context('./', true, /\.(jpe?g|png|gif|svg)$/i));
+
+import './favicon.ico';

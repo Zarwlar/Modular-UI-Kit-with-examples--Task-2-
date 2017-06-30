@@ -4,6 +4,6 @@ mixin standart-button(options)
     div.js-standart-button.standart-button(
             class= options.type ? 'standart-button_type-' + options.type : 'standart-button_type-normal', 
             class=options.size ? 'standart-button_size-' + options.size : 'standart-button_size-normal',
-            class=options.text_color ? options.text_color : ''
+            class=options.theme ? 'standart-button_theme_' + options.theme : ''
     )
-        button.standart-button__button(class= options.bkg ? options.bkg : '')= options.text ? options.text : 'button'
+        button.standart-button__button(class= options.theme ? 'standart-button_theme_' + options.theme : '')= options.text ? options.text : 'button'

@@ -1,7 +1,7 @@
 $(function () {
 
-    var messager = $('.seller__messager .messager');
-    var close = $('.seller__messager_hide');
+    var messager = $('.js-seller__messager .messager');
+    var close = $('.js-seller__messager_hide');
 
     messager.css('display', 'none');
 

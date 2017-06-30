@@ -61,6 +61,57 @@ $inverted-button-background-color = #FFF;
     &_ripple-animation
         animation: ripple-drop .5s linear;
 
+    &_theme_buy.standart-button__button
+        box-shadow: 0 0.15rem 0 0 darken(#8EC0F4, 10);
+        background-color: #8EC0F4;
+        border: 1px solid #8EC0F4;
+
+    &_theme_buy.standart-button
+        color: darken(#8EC0F4, 10)
+
+    &_theme_helper.standart-button__button
+        box-shadow: 0 0.15rem 0 0 darken(#E0AD82, 20);
+        background-color: darken(#E0AD82, 15);
+        border: 1px solid darken(#E0AD82, 15);
+
+    &_theme_helper.standart-button
+        color: darken(#E0AD82, 20)
+
+    &_theme_payment.standart-button__button
+        box-shadow: 0 0.15rem 0 0 darken(#D69259, 10);
+        background-color: #D69259;
+        border: 1px solid #D69259;
+
+    &_theme_payment.standart-button
+        color: darken(#D69259, 10)
+
+    &_theme_seller.standart-button__button
+        box-shadow: 0 0.15rem 0 0 darken(#D5D5D5, 20);
+        background-color: darken(#D5D5D5, 15);
+        border: 1px solid darken(#D5D5D5, 15);
+
+    &_theme_seller.standart-button
+        color: darken(#D5D5D5, 20);
+
+
+    &_theme_event-yellow.standart-button__button
+        box-shadow: 0 0.15rem 0 0 darken(yellow, 10);
+        background-color: yellow;
+        border: 1px solid yellow;
+        color: black;
+
+    &_theme_event-yellow.standart-button
+        color: black;
+
+
+    &_theme_feedback.standart-button__button
+        box-shadow: 0 0.15rem 0 0 darken(#D5D5D5, 20);
+        background-color: darken(#D5D5D5, 15);
+        border: 1px solid darken(#D5D5D5, 15);
+
+    &_theme_feedback.standart-button
+        color: darken(#D5D5D5, 20);
+
 
 @keyframes ripple-drop {
     100% {

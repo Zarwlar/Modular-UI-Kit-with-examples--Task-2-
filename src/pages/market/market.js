@@ -6,7 +6,7 @@ $(function () {
     var animationSpeed = 500;
     var pause = 1500;
 
-    $('.market__stuff-container').each(function () {
+    $('.js-market__stuff-container').each(function () {
 
         var currentSlide = 1;
 

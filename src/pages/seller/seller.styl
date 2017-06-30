@@ -59,25 +59,16 @@
     &__stuff-name
         margin: 3% 0;
 
-    &__chat-button.standart-button__button
-        box-shadow: 0 0.15rem 0 0 darken(#D5D5D5, 20);
-        background-color: darken(#D5D5D5, 15);
-        border: 1px solid darken(#D5D5D5, 15);
-
-    &__helper-button_text.standart-button
-            color: darken(#D5D5D5, 20);
-
     &__messager
         display: flex;
         position: fixed;
         right: 0;
         bottom: 0;
         z-index: 10;
-        width: 20%;
+        max-width: 20%;
 
 
     &__messager_hide
-        width: 10%;
         font-size: 0.8rem;
         text-align: center;
         padding: 5px;
@@ -92,15 +83,6 @@
 
         &:hover
             opacity: 0.8;
-
-    &__events-button.standart-button__button
-        box-shadow: 0 0.15rem 0 0 darken(yellow, 10);
-        background-color: yellow;
-        border: 1px solid yellow;
-        color: black;
-
-    &__events-button-text.standart-button
-        color: black;
 
 .seller__stuffs:last-of-type
         padding-bottom: 0;
@@ -176,11 +158,3 @@
     flex-basis: 51%;
     margin: 0 auto;
 }
-
-.seller__comments-btn.standart-button__button
-        box-shadow: 0 0.15rem 0 0 darken(#D5D5D5, 20);
-        background-color: darken(#D5D5D5, 15);
-        border: 1px solid darken(#D5D5D5, 15);
-
-.seller__comments-btn-text.standart-button
-            color: darken(#D5D5D5, 20);

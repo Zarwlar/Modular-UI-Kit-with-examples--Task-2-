@@ -13,8 +13,7 @@ mixin feedback(options)
                     type: 'normal',
                     size: 'normal',
                     text: options.btn_text ? options.btn_text : 'submit',
-                    bkg: options.btn_bkg,
-                    text_color: options.btn_clr
+                    theme: options.theme ? options.theme : '',
                 })
 
 mixin field(name, type, placeholder)

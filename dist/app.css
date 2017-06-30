@@ -924,6 +924,55 @@
 .standart-button_ripple-animation {
   animation: ripple-drop 0.5s linear;
 }
+.standart-button_theme_buy.standart-button__button {
+  box-shadow: 0 0.15rem 0 0 #60a6ef;
+  background-color: #8ec0f4;
+  border: 1px solid #8ec0f4;
+}
+.standart-button_theme_buy.standart-button {
+  color: #60a6ef;
+}
+.standart-button_theme_helper.standart-button__button {
+  box-shadow: 0 0.15rem 0 0 #ca7832;
+  background-color: #d18545;
+  border: 1px solid #d18545;
+}
+.standart-button_theme_helper.standart-button {
+  color: #ca7832;
+}
+.standart-button_theme_payment.standart-button__button {
+  box-shadow: 0 0.15rem 0 0 #ca7732;
+  background-color: #d69259;
+  border: 1px solid #d69259;
+}
+.standart-button_theme_payment.standart-button {
+  color: #ca7732;
+}
+.standart-button_theme_seller.standart-button__button {
+  box-shadow: 0 0.15rem 0 0 #a2a2a2;
+  background-color: #afafaf;
+  border: 1px solid #afafaf;
+}
+.standart-button_theme_seller.standart-button {
+  color: #a2a2a2;
+}
+.standart-button_theme_event-yellow.standart-button__button {
+  box-shadow: 0 0.15rem 0 0 #cc0;
+  background-color: #ff0;
+  border: 1px solid #ff0;
+  color: #000;
+}
+.standart-button_theme_event-yellow.standart-button {
+  color: #000;
+}
+.standart-button_theme_feedback.standart-button__button {
+  box-shadow: 0 0.15rem 0 0 #a2a2a2;
+  background-color: #afafaf;
+  border: 1px solid #afafaf;
+}
+.standart-button_theme_feedback.standart-button {
+  color: #a2a2a2;
+}
 @-moz-keyframes ripple-drop {
   100% {
     transform: scale(0.5);
@@ -1386,22 +1435,6 @@
   display: block;
   margin: 2% 0;
 }
-.market__buy-button.standart-button__button {
-  box-shadow: 0 0.15rem 0 0 #60a6ef;
-  background-color: #8ec0f4;
-  border: 1px solid #8ec0f4;
-}
-.market__buy-button-text.standart-button {
-  color: #60a6ef;
-}
-.market__helper-button.standart-button__button {
-  box-shadow: 0 0.15rem 0 0 #ca7832;
-  background-color: #d18545;
-  border: 1px solid #d18545;
-}
-.market__helper-button_text.standart-button {
-  color: #ca7832;
-}
 .order {
   display: flex;
   flex-direction: column;
@@ -1480,14 +1513,6 @@
   align-self: flex-end;
   margin: 2% 0;
 }
-.order__payment-button-bkg.standart-button__button {
-  box-shadow: 0 0.15rem 0 0 #ca7732;
-  background-color: #d69259;
-  border: 1px solid #d69259;
-}
-.order__payment-button-text.standart-button {
-  color: #ca7732;
-}
 .seller {
   display: flex;
   flex-wrap: wrap;
@@ -1547,24 +1572,15 @@
 .seller__stuff-name {
   margin: 3% 0;
 }
-.seller__chat-button.standart-button__button {
-  box-shadow: 0 0.15rem 0 0 #a2a2a2;
-  background-color: #afafaf;
-  border: 1px solid #afafaf;
-}
-.seller__helper-button_text.standart-button {
-  color: #a2a2a2;
-}
 .seller__messager {
   display: flex;
   position: fixed;
   right: 0;
   bottom: 0;
   z-index: 10;
-  width: 20%;
+  max-width: 20%;
 }
 .seller__messager_hide {
-  width: 10%;
   font-size: 0.8rem;
   text-align: center;
   padding: 5px;
@@ -1579,15 +1595,6 @@
 }
 .seller__messager_hide:hover {
   opacity: 0.8;
-}
-.seller__events-button.standart-button__button {
-  box-shadow: 0 0.15rem 0 0 #cc0;
-  background-color: #ff0;
-  border: 1px solid #ff0;
-  color: #000;
-}
-.seller__events-button-text.standart-button {
-  color: #000;
 }
 .seller__stuffs:last-of-type {
   padding-bottom: 0;
@@ -1651,14 +1658,6 @@
 .seller__comments-form {
   flex-basis: 51%;
   margin: 0 auto;
-}
-.seller__comments-btn.standart-button__button {
-  box-shadow: 0 0.15rem 0 0 #a2a2a2;
-  background-color: #afafaf;
-  border: 1px solid #afafaf;
-}
-.seller__comments-btn-text.standart-button {
-  color: #a2a2a2;
 }
 .stuff {
   display: flex;

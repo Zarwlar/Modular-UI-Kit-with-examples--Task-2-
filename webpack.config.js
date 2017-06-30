@@ -66,6 +66,9 @@ module.exports = {
                     path.resolve(__dirname, "src"),
                     path.resolve(__dirname, "vendor")
                 ]
+            },
+            {
+                test: /\.(ico)$/i, use: "file-loader?name=[name].[ext]"
             }
         ]
     },

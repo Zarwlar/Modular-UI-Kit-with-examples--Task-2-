@@ -12,8 +12,7 @@ mixin market__header()
                     theme_info: 'helper',
                     name: 'Support',
                     photo: '.\\pages\\market\\img\\helper.jpg',
-                    btn_bkg: 'market__helper-button',
-                    btn_clr: 'market__helper-button_text'
+                    theme: 'helper'
                 })
     .market__header
         h1
@@ -26,7 +25,7 @@ mixin market__header()
         a(href="#" class="market__basket-link") 0
 
 mixin market__stuffs(options)
-    .market__stuff-container
+    .js-market__stuff-container.market__stuff-container
         +arrow-button({state: 'inactive', direction: 'left', color: 'grown'})
         .market__stuff-slider
             ul.market__slides
@@ -36,7 +35,7 @@ mixin market__stuffs(options)
                             img.market__stuff-img(src= option.imgsrc)
                             a.market__stuff-name(href=option.name)= option.name
                             div.market__stuff-price= option.price + ' ₽'
-                            +standart-button({type: 'normal', size: 'normal', text: 'купить', bkg: 'market__buy-button', text_color: 'market__buy-button-text'})
+                            +standart-button({type: 'normal', size: 'normal', text: 'купить', theme: 'buy'})
         +arrow-button({state: 'inactive', direction: 'right', color: 'grown'})
 
 mixin market__seller(options)
