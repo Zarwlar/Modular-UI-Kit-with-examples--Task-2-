@@ -1,0 +1,14 @@
+include ../market__helper/market__helper.pug
+include ../../search/search.pug
+
+mixin market__header()
+    +market__helper()
+    .market__header
+        h1
+            a.market__brand(href="market.html")  Craft Market
+        .market__search
+            +search({button_theme: 'market', input_theme: 'market'})
+        a(href="#" class="market__login-link") Вход
+        a(href="#" class="market__registration-link") Регистрация
+        a(href="#" class="market__helper-link" class="js-market__helper-link") Помощь
+        a(href="#" class="market__basket-link") 0

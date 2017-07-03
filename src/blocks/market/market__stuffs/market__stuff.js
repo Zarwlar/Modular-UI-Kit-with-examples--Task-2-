@@ -48,25 +48,15 @@ $(function () {
             })();
         }
 
-        var left_arrow = $('.arrow-button__arrow_left', $(this)).parent();
-        var right_arrow = $('.arrow-button__arrow_right', $(this)).parent();
+        var $left_arrow = $('.arrow-button__arrow_left', $(this)).parent();
+        var $right_arrow = $('.arrow-button__arrow_right', $(this)).parent();
 
-        left_arrow.on('click', function () {
+        $left_arrow.on('click', function () {
             movePrevSlide();
         })
 
-        right_arrow.on('click', function () {
+        $right_arrow.on('click', function () {
             moveNextSlide();
         })
     });
-
-    $('.market__helper-link').on('click', function() {
-        $('.market__helper').css('display','flex')
-        $('.market__helper').draggable();
-    })
-
-    $('.market__helper_close').on('click', function() {
-        $('.market__helper').css('display','none');
-    })
-
 });

@@ -1,0 +1,16 @@
+include ../../arrow-button/arrow-button.pug
+
+mixin market__stuffs(options)
+    .js-market__stuff-container.market__stuff-container
+        +arrow-button({state: 'inactive', direction: 'left', color: 'grown'})
+        .market__stuff-slider
+            ul.market__slides
+                each option in options
+                    li.market__slide
+                        .market__stuff
+                            img.market__stuff-img(src= option.imgsrc)
+                            a.market__stuff-name(href=option.name)= option.name
+                            div.market__stuff-price= option.price + ' ₽'
+                            +standart-button({type: 'normal', size: 'normal', text: 'купить', theme: 'buy'})
+        +arrow-button({state: 'inactive', direction: 'right', color: 'grown'})
+

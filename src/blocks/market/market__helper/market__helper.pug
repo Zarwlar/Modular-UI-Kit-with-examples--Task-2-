@@ -1,0 +1,13 @@
+include ../../messager/messager.pug
+
+mixin market__helper()
+    .market__helper
+        .market__helper_close.js-market__helper_close close
+        .market__helper-wrapper
+                +messager({
+                    theme_name: 'helper',
+                    theme_info: 'helper',
+                    name: 'Support',
+                    photo: '.\\blocks\\market\\market__helper\\img\\helper.jpg',
+                    theme: 'helper'
+                })
