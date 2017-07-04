@@ -1,0 +1,38 @@
+.market-stuff
+    float: left;
+
+    &__container
+        display: flex;
+        align-items: center;
+
+    &__slider
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-top: 5%;
+        padding-bottom: 1%;
+        display: flex;
+        flex-direction: column;
+        outline: 1px solid gray;
+        outline-offset: 10px;
+        overflow: hidden;
+        width: 180px;
+
+
+        & > *
+            text-align: center;
+            font-family: LatoWebBlack, 'Arial';
+
+    &__slides
+        width: 6000px;
+        list-style-type: none;
+
+        & > li
+            height: 0;
+
+    &__img
+        width: 180px;
+        height: 150px;
+
+    &__name
+        display: block;
+        margin: 2% 0;

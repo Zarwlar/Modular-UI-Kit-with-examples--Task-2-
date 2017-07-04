@@ -1899,7 +1899,7 @@ function loadLocale(name) {
             module && module.exports) {
         try {
             oldLocale = globalLocale._abbr;
-            __webpack_require__(248)("./" + name);
+            __webpack_require__(251)("./" + name);
             // because defineLocale currently also sets the global locale, we
             // want to undo that for lazy loaded locales
             getSetGlobalLocale(oldLocale);
@@ -4534,7 +4534,7 @@ return hooks;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(254)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(257)(module)))
 
 /***/ }),
 /* 1 */
@@ -26523,7 +26523,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(249);
+	fixUrls = __webpack_require__(252);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -45595,40 +45595,40 @@ module.exports = __webpack_require__.p + "favicon.ico";
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./blocks/event/img/event__default-img.jpg": 217,
-	"./blocks/event/img/glass.jpg": 218,
-	"./blocks/location/location__marker/location__marker.png": 219,
-	"./blocks/market/market__helper/img/helper.jpg": 220,
-	"./blocks/market/market__stuffs/img/1-1.jpg": 221,
-	"./blocks/market/market__stuffs/img/1-10.jpg": 222,
-	"./blocks/market/market__stuffs/img/1-11.jpg": 223,
-	"./blocks/market/market__stuffs/img/1-2.jpg": 224,
-	"./blocks/market/market__stuffs/img/1-3.jpg": 225,
-	"./blocks/market/market__stuffs/img/1-4.jpg": 226,
-	"./blocks/market/market__stuffs/img/1-5.jpg": 227,
-	"./blocks/market/market__stuffs/img/1-6.jpg": 228,
-	"./blocks/market/market__stuffs/img/1-7.jpg": 229,
-	"./blocks/market/market__stuffs/img/1-8.jpg": 230,
-	"./blocks/market/market__stuffs/img/1-9.jpg": 231,
-	"./blocks/market/market__stuffs/img/2-1.jpg": 232,
-	"./blocks/market/market__stuffs/img/2-2.jpg": 233,
-	"./blocks/market/market__stuffs/img/2-3.jpg": 234,
-	"./blocks/market/market__stuffs/img/3-1.jpg": 235,
-	"./blocks/market/market__stuffs/img/3-2.jpg": 236,
-	"./blocks/market/market__stuffs/img/3-3.jpg": 237,
-	"./blocks/messager/img/messager__default-avatar.jpg": 238,
-	"./blocks/news/img/felt.jpeg": 239,
-	"./blocks/news/img/heli.jpg": 240,
-	"./blocks/news/img/news__default-img.jpg": 241,
-	"./blocks/user-profile/img/av1.jpg": 242,
-	"./blocks/user-profile/img/av2.jpg": 243,
-	"./blocks/user-profile/img/av3.jpg": 244,
-	"./blocks/user-profile/img/john.jpg": 245,
-	"./blocks/user-profile/img/user-profile__default-avatar.jpg": 246,
-	"./fav.svg": 250,
-	"./fonts/FontAwesome/fontawesome-webfont.svg": 251,
-	"./fonts/SourceSanPro/SourceSansPro-Light.svg": 252,
-	"./fonts/SourceSanPro/SourceSansPro-Regular.svg": 253,
+	"./blocks/event/img/event__default-img.jpg": 220,
+	"./blocks/event/img/glass.jpg": 221,
+	"./blocks/location/location__marker/location__marker.png": 222,
+	"./blocks/market-helper/img/helper.jpg": 223,
+	"./blocks/market-stuffs/img/1-1.jpg": 224,
+	"./blocks/market-stuffs/img/1-10.jpg": 225,
+	"./blocks/market-stuffs/img/1-11.jpg": 226,
+	"./blocks/market-stuffs/img/1-2.jpg": 227,
+	"./blocks/market-stuffs/img/1-3.jpg": 228,
+	"./blocks/market-stuffs/img/1-4.jpg": 229,
+	"./blocks/market-stuffs/img/1-5.jpg": 230,
+	"./blocks/market-stuffs/img/1-6.jpg": 231,
+	"./blocks/market-stuffs/img/1-7.jpg": 232,
+	"./blocks/market-stuffs/img/1-8.jpg": 233,
+	"./blocks/market-stuffs/img/1-9.jpg": 234,
+	"./blocks/market-stuffs/img/2-1.jpg": 235,
+	"./blocks/market-stuffs/img/2-2.jpg": 236,
+	"./blocks/market-stuffs/img/2-3.jpg": 237,
+	"./blocks/market-stuffs/img/3-1.jpg": 238,
+	"./blocks/market-stuffs/img/3-2.jpg": 239,
+	"./blocks/market-stuffs/img/3-3.jpg": 240,
+	"./blocks/messager/img/messager__default-avatar.jpg": 241,
+	"./blocks/news/img/felt.jpeg": 242,
+	"./blocks/news/img/heli.jpg": 243,
+	"./blocks/news/img/news__default-img.jpg": 244,
+	"./blocks/user-profile/img/av1.jpg": 245,
+	"./blocks/user-profile/img/av2.jpg": 246,
+	"./blocks/user-profile/img/av3.jpg": 247,
+	"./blocks/user-profile/img/john.jpg": 248,
+	"./blocks/user-profile/img/user-profile__default-avatar.jpg": 249,
+	"./fav.svg": 253,
+	"./fonts/FontAwesome/fontawesome-webfont.svg": 254,
+	"./fonts/SourceSanPro/SourceSansPro-Light.svg": 255,
+	"./fonts/SourceSanPro/SourceSansPro-Regular.svg": 256,
 	"./vendor/jquery-ui/images/ui-icons_444444_256x240.png": 2,
 	"./vendor/jquery-ui/images/ui-icons_555555_256x240.png": 5,
 	"./vendor/jquery-ui/images/ui-icons_777620_256x240.png": 6,
@@ -45660,33 +45660,36 @@ webpackContext.id = 133;
 var map = {
 	"./blocks/arrow-button/arrow-button.styl": 188,
 	"./blocks/calendar/calendar.styl": 189,
-	"./blocks/container/container.styl": 190,
-	"./blocks/drop-down/drop-down.styl": 191,
-	"./blocks/event/event.styl": 192,
-	"./blocks/feedback/feedback.styl": 193,
-	"./blocks/location/location.styl": 194,
-	"./blocks/market/market.styl": 195,
-	"./blocks/market/market__header/market__header.styl": 196,
-	"./blocks/market/market__helper/market__helper.styl": 197,
-	"./blocks/market/market__seller/market__seller.styl": 198,
-	"./blocks/market/market__stuffs/market__stuffs.styl": 199,
-	"./blocks/messager/messager.styl": 200,
-	"./blocks/news/news.styl": 201,
-	"./blocks/order/order.styl": 202,
-	"./blocks/percentages/percentages.styl": 203,
-	"./blocks/pie-chart/pie-chart.styl": 204,
-	"./blocks/search/search.styl": 205,
-	"./blocks/seller/seller.styl": 206,
-	"./blocks/slider-continuous/slider-continuous.styl": 207,
-	"./blocks/slider-discret/slider-discret.styl": 208,
-	"./blocks/stages/stages.styl": 209,
-	"./blocks/standart-button/standart-button.styl": 210,
-	"./blocks/stuff/stuff.styl": 211,
-	"./blocks/tick-box/tick-box.styl": 212,
-	"./blocks/toggle/toggle.styl": 213,
-	"./blocks/user-profile/user-profile.styl": 214,
-	"./blocks/video/video.styl": 215,
-	"./style.styl": 216,
+	"./blocks/drop-down/drop-down.styl": 190,
+	"./blocks/event/event.styl": 191,
+	"./blocks/feedback/feedback.styl": 192,
+	"./blocks/location/location.styl": 193,
+	"./blocks/market-header/market-header.styl": 194,
+	"./blocks/market-helper/market-helper.styl": 195,
+	"./blocks/market-seller/market-seller.styl": 196,
+	"./blocks/market-stuffs/market-stuffs.styl": 197,
+	"./blocks/messager/messager.styl": 198,
+	"./blocks/news/news.styl": 199,
+	"./blocks/order-cart/order-cart.styl": 200,
+	"./blocks/percentages/percentages.styl": 201,
+	"./blocks/pie-chart/pie-chart.styl": 202,
+	"./blocks/search/search.styl": 203,
+	"./blocks/seller-messager/seller-messager.styl": 204,
+	"./blocks/seller-stuff/seller-stuff.styl": 205,
+	"./blocks/slider-continuous/slider-continuous.styl": 206,
+	"./blocks/slider-discret/slider-discret.styl": 207,
+	"./blocks/stages/stages.styl": 208,
+	"./blocks/standart-button/standart-button.styl": 209,
+	"./blocks/tick-box/tick-box.styl": 210,
+	"./blocks/toggle/toggle.styl": 211,
+	"./blocks/user-profile/user-profile.styl": 212,
+	"./blocks/video/video.styl": 213,
+	"./pages/main/main.styl": 214,
+	"./pages/market/market.styl": 215,
+	"./pages/order/order.styl": 216,
+	"./pages/seller/seller.styl": 217,
+	"./pages/stuff/stuff.styl": 218,
+	"./style.styl": 219,
 	"./vendor/jquery-rangeslider/rangeslider.css": 126,
 	"./vendor/jquery-ui/jquery-ui.css": 127
 };
@@ -45713,22 +45716,21 @@ webpackContext.id = 134;
 
 var map = {
 	"./app.js": 137,
-	"./blocks/calendar/calendar.js": 255,
-	"./blocks/feedback/feedback.js": 256,
-	"./blocks/location/location.js": 257,
-	"./blocks/market/market__header/market__header.js": 258,
-	"./blocks/market/market__helper/market__helper.js": 259,
-	"./blocks/market/market__stuffs/market__stuff.js": 260,
-	"./blocks/messager/messager.js": 261,
-	"./blocks/percentages/percentages.js": 262,
-	"./blocks/pie-chart/pie-chart.js": 263,
-	"./blocks/search/search.js": 264,
-	"./blocks/seller/seller__messager/seller__messager.js": 265,
-	"./blocks/slider-continuous/slider-continuous.js": 266,
-	"./blocks/slider-discret/slider-discret.js": 267,
-	"./blocks/standart-button/standart-button.js": 268,
-	"./blocks/tick-box/tick-box.js": 269,
-	"./blocks/video/video.js": 270,
+	"./blocks/calendar/calendar.js": 258,
+	"./blocks/feedback/feedback.js": 259,
+	"./blocks/location/location.js": 260,
+	"./blocks/market-helper/market-helper.js": 261,
+	"./blocks/market-stuffs/market-stuff.js": 262,
+	"./blocks/messager/messager.js": 263,
+	"./blocks/percentages/percentages.js": 264,
+	"./blocks/pie-chart/pie-chart.js": 265,
+	"./blocks/search/search.js": 266,
+	"./blocks/seller-messager/seller-messager.js": 267,
+	"./blocks/slider-continuous/slider-continuous.js": 268,
+	"./blocks/slider-discret/slider-discret.js": 269,
+	"./blocks/standart-button/standart-button.js": 270,
+	"./blocks/tick-box/tick-box.js": 271,
+	"./blocks/video/video.js": 272,
 	"./vendor/jquery-easypiechart/jquery.easypiechart.min.js": 128,
 	"./vendor/jquery-precentage/jquery.classyloader.min.js": 129,
 	"./vendor/jquery-rangeslider/rangeslider.min.js": 130,
@@ -45756,7 +45758,7 @@ webpackContext.id = 135;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./blocks/video/files/demo.mp4": 247
+	"./blocks/video/files/demo.mp4": 250
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -58513,192 +58515,210 @@ exports.push([module.i, "/*! jQuery UI - v1.12.1 - 2016-09-14\n* http://jqueryui
 
 /***/ }),
 /* 217 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "img/event__default-img.jpg";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 218 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "img/glass.jpg";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 219 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "img/location__marker.png";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/helper.jpg";
+module.exports = __webpack_require__.p + "img/event__default-img.jpg";
 
 /***/ }),
 /* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-1.jpg";
+module.exports = __webpack_require__.p + "img/glass.jpg";
 
 /***/ }),
 /* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-10.jpg";
+module.exports = __webpack_require__.p + "img/location__marker.png";
 
 /***/ }),
 /* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-11.jpg";
+module.exports = __webpack_require__.p + "img/helper.jpg";
 
 /***/ }),
 /* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-2.jpg";
+module.exports = __webpack_require__.p + "img/1-1.jpg";
 
 /***/ }),
 /* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-3.jpg";
+module.exports = __webpack_require__.p + "img/1-10.jpg";
 
 /***/ }),
 /* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-4.jpg";
+module.exports = __webpack_require__.p + "img/1-11.jpg";
 
 /***/ }),
 /* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-5.jpg";
+module.exports = __webpack_require__.p + "img/1-2.jpg";
 
 /***/ }),
 /* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-6.jpg";
+module.exports = __webpack_require__.p + "img/1-3.jpg";
 
 /***/ }),
 /* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-7.jpg";
+module.exports = __webpack_require__.p + "img/1-4.jpg";
 
 /***/ }),
 /* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-8.jpg";
+module.exports = __webpack_require__.p + "img/1-5.jpg";
 
 /***/ }),
 /* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/1-9.jpg";
+module.exports = __webpack_require__.p + "img/1-6.jpg";
 
 /***/ }),
 /* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/2-1.jpg";
+module.exports = __webpack_require__.p + "img/1-7.jpg";
 
 /***/ }),
 /* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/2-2.jpg";
+module.exports = __webpack_require__.p + "img/1-8.jpg";
 
 /***/ }),
 /* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/2-3.jpg";
+module.exports = __webpack_require__.p + "img/1-9.jpg";
 
 /***/ }),
 /* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/3-1.jpg";
+module.exports = __webpack_require__.p + "img/2-1.jpg";
 
 /***/ }),
 /* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/3-2.jpg";
+module.exports = __webpack_require__.p + "img/2-2.jpg";
 
 /***/ }),
 /* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/3-3.jpg";
+module.exports = __webpack_require__.p + "img/2-3.jpg";
 
 /***/ }),
 /* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/messager__default-avatar.jpg";
+module.exports = __webpack_require__.p + "img/3-1.jpg";
 
 /***/ }),
 /* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/felt.jpeg";
+module.exports = __webpack_require__.p + "img/3-2.jpg";
 
 /***/ }),
 /* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/heli.jpg";
+module.exports = __webpack_require__.p + "img/3-3.jpg";
 
 /***/ }),
 /* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/news__default-img.jpg";
+module.exports = __webpack_require__.p + "img/messager__default-avatar.jpg";
 
 /***/ }),
 /* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/av1.jpg";
+module.exports = __webpack_require__.p + "img/felt.jpeg";
 
 /***/ }),
 /* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/av2.jpg";
+module.exports = __webpack_require__.p + "img/heli.jpg";
 
 /***/ }),
 /* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/av3.jpg";
+module.exports = __webpack_require__.p + "img/news__default-img.jpg";
 
 /***/ }),
 /* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/john.jpg";
+module.exports = __webpack_require__.p + "img/av1.jpg";
 
 /***/ }),
 /* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/user-profile__default-avatar.jpg";
+module.exports = __webpack_require__.p + "img/av2.jpg";
 
 /***/ }),
 /* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "video/demo.mp4";
+module.exports = __webpack_require__.p + "img/av3.jpg";
 
 /***/ }),
 /* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/john.jpg";
+
+/***/ }),
+/* 249 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/user-profile__default-avatar.jpg";
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "video/demo.mp4";
+
+/***/ }),
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -58947,11 +58967,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 248;
+webpackContext.id = 251;
 
 
 /***/ }),
-/* 249 */
+/* 252 */
 /***/ (function(module, exports) {
 
 
@@ -59046,31 +59066,31 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 250 */
+/* 253 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJpbWcvZmF2LnN2ZyI7"
 
 /***/ }),
-/* 251 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/fontawesome-webfont.svg";
 
 /***/ }),
-/* 252 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/SourceSansPro-Light.svg";
 
 /***/ }),
-/* 253 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/SourceSansPro-Regular.svg";
 
 /***/ }),
-/* 254 */
+/* 257 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -59098,7 +59118,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 255 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function() {
@@ -59122,7 +59142,7 @@ module.exports = function(module) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 256 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
@@ -59173,7 +59193,7 @@ module.exports = function(module) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 257 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
@@ -59201,34 +59221,27 @@ module.exports = function(module) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 258 */
-/***/ (function(module, exports) {
-
-
-
-
-/***/ }),
-/* 259 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
 $(function() {
-    $('.js-market__helper-link').on('click', function() {
-        $('.market__helper').css('display','flex')
-        $('.market__helper').draggable();
+    $('.js-market-helper__link').on('click', function() {
+        $('.market-helper').css('display','flex')
+        $('.market-helper').draggable();
     })
 
-    $('.js-market__helper_close').on('click', function() {
-        $('.market__helper').css('display','none');
+    $('.js-market-helper_close').on('click', function() {
+        $('.market-helper').css('display','none');
     })
 });
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 260 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59240,13 +59253,13 @@ $(function () {
     var animationSpeed = 500;
     var pause = 1500;
 
-    $('.js-market__stuff-container').each(function () {
+    $('.js-market-stuff__container').each(function () {
 
         var currentSlide = 1;
 
-        var $slider = $('.market__stuff-slider', $(this));
-        var $sliderContainer = $slider.find('.market__slides');
-        var $slides = $sliderContainer.find('.market__slide');
+        var $slider = $('.market-stuff__slider', $(this));
+        var $sliderContainer = $slider.find('.market-stuff__slides');
+        var $slides = $sliderContainer.find('.market-stuff__slide');
 
         function moveNextSlide() {
             (function () {
@@ -59297,7 +59310,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 261 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
@@ -59324,7 +59337,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 262 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {    $(function () {
@@ -59348,7 +59361,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 263 */
+/* 265 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59397,7 +59410,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 264 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
@@ -59420,13 +59433,13 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 265 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
 
-    var $messager = $('.js-seller__messager .messager');
-    var $close = $('.js-seller__messager_hide');
+    var $messager = $('.js-seller-messager .messager');
+    var $close = $('.js-seller-messager_hide');
 
     $messager.css('display', 'none');
 
@@ -59443,7 +59456,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 266 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
@@ -59487,7 +59500,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 267 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
@@ -59521,7 +59534,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 268 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
@@ -59575,7 +59588,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 269 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function() {
@@ -59586,7 +59599,7 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 270 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {

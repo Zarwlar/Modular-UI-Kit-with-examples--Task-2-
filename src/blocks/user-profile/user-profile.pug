@@ -2,7 +2,7 @@ mixin user-profile(options)
     if !options
         - options = {}
     .user-profile
-        img(class= 'user-profile__avatar' src= options.imgsrc ? '.\\blocks\\user-profile\\img\\' + options.imgsrc : '.\\blocks\\user-profile\\img\\user-profile__default-avatar.jpg' alt='avatar')
+        img(class= 'user-profile__avatar' src= options.imgsrc ? options.imgsrc : '..\\..\\blocks\\user-profile\\img\\user-profile__default-avatar.jpg' alt='avatar')
         if (typeof(options.theme) === 'undefined' && typeof(options.imgsrc) !== 'undefined')
             .user-profile__info.user-profile__info_active
                 +links(options)

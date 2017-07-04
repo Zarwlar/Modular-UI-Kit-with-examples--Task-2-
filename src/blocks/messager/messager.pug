@@ -8,7 +8,7 @@ mixin messager(options)
             .messager__friend_name(class= options.theme_name ? "messager_theme-name_" + options.theme_name : '')= options.name ? options.name : 'Sarah Brown'
             .messager__friend-information(class= options.theme_info ? "messager_theme-info_" + options.theme_info : '')
                 .messager__vertical-position
-                    img(src= options.photo ? options.photo : '.\\blocks\\messager\\img\\messager__default-avatar.jpg', alt='avatar',
+                    img(src= options.photo ? options.photo : '..\\..\\blocks\\messager\\img\\messager__default-avatar.jpg', alt='avatar',
                     class='messager__friend-information_photo')
         .messager__actions
             a(class="messager__actions_message", href="#")

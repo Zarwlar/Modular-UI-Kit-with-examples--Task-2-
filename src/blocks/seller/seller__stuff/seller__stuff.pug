@@ -1,8 +1,0 @@
-include ../../standart-button/standart-button.pug
-
-mixin seller__stuff(options)
-    .seller__stuff
-        img.seller__stuff-img(src= options.imgsrc)
-        a.seller__stuff-name(href=options.name)= options.name
-        div.seller__stuff-price= options.price + ' ₽'
-        +standart-button({type: 'normal', size: 'normal', text: 'купить', theme: 'buy'})

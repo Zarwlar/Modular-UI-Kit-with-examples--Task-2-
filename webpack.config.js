@@ -79,27 +79,27 @@ module.exports = {
         new HtmlWebpackPlugin({
             chunks: ['app'],
             filename: 'main.html',
-        template: './src/main.pug'
+        template: './src/pages/main/main.pug'
     }),
     new HtmlWebpackPlugin({
         chunks: ['app'],
         filename: 'market.html',
-        template: './src/market.pug'
+        template: './src/pages/market/market.pug'
     }),
     new HtmlWebpackPlugin({
         chunks: ['app'],
         filename: 'stuff.html',
-        template: './src/stuff.pug'
+        template: './src/pages/stuff/stuff.pug'
     }),
     new HtmlWebpackPlugin({
         chunks: ['app'],
         filename: 'seller.html',
-        template: './src/seller.pug'
+        template: './src/pages/seller/seller.pug'
     }),
     new HtmlWebpackPlugin({
         chunks: ['app'],
         filename: 'order.html',
-        template: './src/order.pug'
+        template: './src/pages/order/order.pug'
     }),
    new ExtractTextPlugin({
             filename: 'app.css'
