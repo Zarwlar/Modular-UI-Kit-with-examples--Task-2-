@@ -4,7 +4,6 @@ $(function () {
 
     var width = 180;
     var animationSpeed = 500;
-    var pause = 1500;
 
     $('.js-market-stuff__container').each(function () {
 

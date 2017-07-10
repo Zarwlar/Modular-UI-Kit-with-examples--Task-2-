@@ -16,18 +16,18 @@ $(function () {
 
                 if (regex.test($input_name.val())) {
                     $input_validation
-                    .addClass(`js-feedback__validation_ok`).addClass('feedback__validation_ok')
-                    .removeClass(`js-feedback__validation_error`).removeClass('feedback__validation_error')
-                    .html(message.ok);
+                        .addClass(`js-feedback__validation_ok`).addClass('feedback__validation_ok')
+                        .removeClass(`js-feedback__validation_error`).removeClass('feedback__validation_error')
+                        .html(message.ok);
                 } else
                 if ($input_name.val() === '') {
                     $input_validation
-                    .removeClass(`feedback__validation_error feedback__validation_ok js-feedback__validation_error js-feedback__validation_ok`);
+                        .removeClass(`feedback__validation_error feedback__validation_ok js-feedback__validation_error js-feedback__validation_ok`);
                 } else {
                     $input_validation
-                    .addClass(`js-feedback__validation_error`).addClass(`feedback__validation_error`)
-                    .removeClass(`js-feedback__validation_ok`).addClass(`feedback__validation_ok`)
-                    .html(message.error);
+                        .addClass(`js-feedback__validation_error`).addClass(`feedback__validation_error`)
+                        .removeClass(`js-feedback__validation_ok`).addClass(`feedback__validation_ok`)
+                        .html(message.error);
                 }
             }, 600);
         });

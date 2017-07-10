@@ -1,7 +1,6 @@
 $(function () {
     var $r = $('.js-slider-discret');
 
-
     $r.rangeslider({
         polyfill: false,
         fillClass: 'rangeslider-discret',

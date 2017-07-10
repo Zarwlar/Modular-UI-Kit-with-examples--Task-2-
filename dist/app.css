@@ -767,6 +767,8 @@
 }
 .seller-stuff__name {
   margin: 3% 0;
+  max-width: 180px;
+  text-align: center;
 }
 .rangeslider-continuous {
   display: block;

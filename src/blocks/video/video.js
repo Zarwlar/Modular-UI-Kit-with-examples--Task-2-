@@ -53,7 +53,7 @@ $(function () {
 
 
                 // Width of the video
-                $videoWidth = $this.width();
+                var $videoWidth = $this.width();
                 $that.width($videoWidth + 'px');
 
                 // Set width of the player based on previously noted settings
@@ -66,27 +66,15 @@ $(function () {
                 // Video information
                 var $spc = $(this)[0], // Specific video
                     $duration = $spc.duration, // Video Duration
-                    $volume = $spc.volume, // Video volume
                     currentTime;
 
                 // Some other misc variables to check when things are happening
                 var $mclicking = false,
-                    $vclicking = false,
-                    $vidhover = false,
-                    $volhover = false,
                     $playing = false,
-                    $drop = false,
                     $begin = false,
-                    $draggingProgess = false,
-                    $storevol,
                     x = 0,
-                    y = 0,
-                    vtime = 0,
-                    updProgWidth = 0,
-                    volume = 0;
+                    updProgWidth = 0;
 
-                // Setting the width, etc of the player
-                var $volume = $spc.volume;
 
                 // So the user cant select text in the player
                 $that.bind('selectstart', function () {
@@ -113,8 +101,8 @@ $(function () {
 
                         while (i--) {
                             // Max and min buffers
-                            $maxBuffer = buffered.end(i);
-                            $minBuffer = buffered.start(i);
+                            var $maxBuffer = buffered.end(i),
+                                $minBuffer = buffered.start(i);
 
                             // The offset and width of buffered area				
                             var bufferOffset = ($minBuffer / $duration) * 100;
@@ -267,8 +255,6 @@ $(function () {
                     // For the progress bar controls
                     if ($mclicking == true) {
 
-                        // Dragging is happening
-                        $draggingProgress = true;
                         // The thing we're going to apply to the CSS (changes based on conditional statements);
                         var progMove = 0;
                         // Width of the progress button (a little button at the end of the progress bar)
@@ -312,26 +298,12 @@ $(function () {
 
                 })
 
-                // When the video ends the play button becomes a pause button
-                $spc.addEventListener('ended', function () {
-
-                    $playing = false;
-
-                    // If the user is not dragging
-                    if ($draggingProgress == false) {
-                        $that.find('.video__play-pause').addClass('video_play').removeClass('video_pause');
-                    }
-
-                });
-
                 // If the user lets go of the mouse, clicking is false for both volume and progress.
                 // Also the video will begin playing if it was playing before the drag process began.
                 // We're also running the bufferLength function
-                $('body, html').bind('mouseup', function (e) {
+                $('body, html').bind('mouseup', function () {
 
                     $mclicking = false;
-                    $vclicking = false;
-                    $draggingProgress = false;
 
                     if ($playing == true) {
                         $spc.play();

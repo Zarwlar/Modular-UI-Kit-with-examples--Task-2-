@@ -8,7 +8,7 @@ mixin order-cart(options)
         each option in options
             tr
                 td #{option.name}
-                td #[img(src=option.imgsrc height='70' width='80')]
+                td #[img(src=option.imgsrc height='70' width='80', alt="stuff")]
                 td #{option.price}
             - sum = +option.price + sum
         tr

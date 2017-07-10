@@ -8,7 +8,7 @@ mixin market-stuffs(options)
                 each option in options
                     li.market-stuff__slide
                         .market-stuff
-                            img.market-stuff__img(src= option.imgsrc)
+                            img.market-stuff__img(src= option.imgsrc alt="stuff")
                             a.market-stuff__name(href=option.name)= option.name
                             div.market-stuff__price= option.price + ' ₽'
                             +standart-button({type: 'normal', size: 'normal', text: 'купить', theme: 'buy'})

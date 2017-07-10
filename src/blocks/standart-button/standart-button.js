@@ -31,17 +31,17 @@ $(function () {
         }, 1000);
 
     }).on('mousedown', function (event) {
-                $(this).addClass('standart-button_pressed');
-            })
+        $(this).addClass('standart-button_pressed');
+    })
         .on('mouseup', function (event) {
-                $(this).removeClass('standart-button_pressed');
-            })
-            .on('click', function (event) {
-                    if ($(this).hasClass('standart-button_inverted')) {
-                            $(this).removeClass('standart-button_inverted');
-                    }
-                    else {
-                        $(this).addClass('standart-button_inverted');
-                    }
-    });
+            $(this).removeClass('standart-button_pressed');
+        })
+        .on('click', function (event) {
+            if ($(this).hasClass('standart-button_inverted')) {
+                $(this).removeClass('standart-button_inverted');
+            }
+            else {
+                $(this).addClass('standart-button_inverted');
+            }
+        });
 });

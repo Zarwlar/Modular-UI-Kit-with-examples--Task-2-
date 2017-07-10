@@ -9,13 +9,13 @@ $(function () {
         var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
 
         if ($valueBubble.length) {
-                if (value <= 3) {
-                    $valueBubble[0].style.left = Math.ceil(position - 10/value) + 'px';
-                } else
-                if (value >= context.max - 3) {
-                    $valueBubble[0].style.left = Math.ceil(position + 10) + 'px';
-                } else {
-                    $valueBubble[0].style.left = Math.ceil(position) + 'px';
+            if (value <= 3) {
+                $valueBubble[0].style.left = Math.ceil(position - 10/value) + 'px';
+            } else
+            if (value >= context.max - 3) {
+                $valueBubble[0].style.left = Math.ceil(position + 10) + 'px';
+            } else {
+                $valueBubble[0].style.left = Math.ceil(position) + 'px';
             }
 
             $valueBubble[0].innerHTML = value
