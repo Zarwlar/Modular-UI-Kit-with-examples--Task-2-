@@ -246,6 +246,7 @@
 .event__day {
   font-size: 4.25rem;
   padding-right: 8%;
+  text-transform: capitalize;
 }
 .event__month {
   font-size: 1.8rem;
@@ -258,9 +259,6 @@
   font-family: LatoWebBlack, 'Arial';
   text-transform: uppercase;
   font-size: 0.85rem;
-}
-.event__date {
-  text-transform: capitalize;
 }
 .event__description {
   font-family: LatoWeb, 'Arial';
