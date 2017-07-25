@@ -1,6 +1,6 @@
 # Flat UI
 
-    [Link](https://zarwlar.github.io/Site_2/dist/index)
+[Site](https://zarwlar.github.io/Site_2/dist/index)
 
 ## Run
 
