@@ -1,0 +1,116 @@
+.seller
+    display: flex;
+    flex-wrap: wrap;
+
+    & > *:first-child
+        margin: 2% auto;
+
+    & > *:last-child
+        margin-bottom: 2%;
+
+    &__events
+        flex-basis: 100%;
+        justify-content: space-around;
+        display: flex;
+        padding: 1% 0 1%;
+
+
+        & > *
+            margin-left: 3%;
+            margin-right: 3%;
+
+        & > *:first-child
+            margin-left: 3%;
+            margin-right: 0;
+
+        & > *:last-child
+            margin-right: 3%;
+            margin-left: 0;
+
+    &__text
+        flex-basis: 100%;
+        text-align: center;
+        font-family: LatoWebBlack, 'Arial';
+        text-transform: uppercase;
+        font-size: 1.2rem;
+
+    &__stuffs
+        padding: 2% 0 2%;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-around;
+
+.seller__stuffs:last-of-type
+        padding-bottom: 0;
+
+
+.seller__comments-body {
+    display: flex;
+    flex-wrap:  wrap;
+    margin: 0 auto;
+    flex-basis: 51%;
+}
+
+.seller__comments-item {
+    background: #E5E5E5;
+    padding: 5px 10px;
+    margin: 1rem 0 2rem;
+    border-radius: 10px;
+}
+
+.seller__seller__comments-body li {
+    margin-bottom: 20px;
+}
+
+.seller__comments-title {
+    padding:  10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.seller__comments-list {
+    list-style-type: none;
+    width: 100%;
+}
+
+.seller__comments-item h3 {
+    position: relative;
+    font-family: SourceSansPro-Regular, 'Arial';
+    border-width:  10px;
+    font-size: 1rem;
+    border-right-color:  #E5E5E5;
+}
+
+.seller__comments-item h3 {
+    position:  relative;
+    margin-top:  0;
+    padding:  0 55px 5px 0;
+    border-bottom:  2px solid rgba(0, 0, 0, .2);
+}
+
+.seller__comments-item a {
+    font-size:  14px;
+    position:  absolute;
+    top:  5px;
+    right: 0;
+    transition:  opacity .3s linear;
+    text-decoration: none;
+    letter-spacing:  1px;
+    opacity: .7;
+    color:  #fff;
+    will-change: transform;
+}
+
+.seller__comments-item a:hover {
+    opacity: 1;
+}
+
+.seller__comments-comment {
+    padding: 0.4rem;
+    font-family: SourceSansPro-Regular, 'Arial';
+}
+
+.seller__comments-form {
+    flex-basis: 51%;
+    margin: 0 auto;
+}

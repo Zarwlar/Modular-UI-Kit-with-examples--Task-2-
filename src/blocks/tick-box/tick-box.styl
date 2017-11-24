@@ -2,28 +2,30 @@ $text-color = #c0c0c0;
 $background-color = #E5E5E5;
 
 .tick-box
-	width: 1.5rem;
-	height: 1.5rem;
-	border-radius: 50%;
-	background: $background-color;
-	color: $text-color;
-	text-align: center;
-	font-size: 1rem;
-	line-height: 1.6rem;
-	cursor: pointer;
-	transition: background .15s ease-in,
-							color .15s ease-in;
-	font-family: FontAwesome;
-	display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: $background-color;
+    color: $text-color;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    cursor: pointer;
+    transition: background .15s ease-in,
+                            color .15s ease-in;
+    font-family: FontAwesome;
+    display: inline-block;
 
-	&:after
-		content: '\f00c';
+    &:after
+        content: '\f00c';
 
-	&__mark-active
-		background: #4eb7a8;
-		color: #fff;
-		transition: background .15s ease-in,
-								color .15s ease-in;
-		&:after
-			content: '\f00c';
+    &__mark-active
+        background: #4eb7a8;
+        color: #fff;
+        transition: background .15s ease-in,
+                                color .15s ease-in;
+        &:after
+            content: '\f00c';
 
+    &_theme_premium-order&__mark-active
+        background-color: #D69259;

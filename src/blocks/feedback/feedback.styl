@@ -7,63 +7,63 @@ $input-background-color = #E5E5E5;
 
 .feedback
 
-	&__name, &__email
-		display: flex;	
-	&__email
-		margin-top: 0.75rem;
-	&__validation
-		position: relative;
-		font-family: LatoWebBlack, 'Arial';
-		font-size: 0.7rem;
-		color: $validation-color;
-		border-radius: 4px;
-		margin-left: 0.5rem;
-		text-transform: uppercase;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-width: 4.5rem;
-		display: none;
-		&_ok, &_error
-			display: flex;
-		&_ok
-			background-color: $validation-ok;
-			&:after
-								border-top: 1rem solid $validation-ok;
-		&_error
-			background-color: $validation-error;
-			&:after
-								border-top: 1rem solid $validation-error;
-		&:after
-			position: absolute;
-			display: block;
-			content: "";
-			width: 0;
-			height: 0;
-			border-left: 0.8rem solid transparent;
-			border-right: 0.8rem solid transparent;
-			transform: rotate(90deg) translateX(-0.85rem);
-			right: 3.5rem;
+    &__name, &__email
+        display: flex;	
+    &__email
+        margin-top: 0.75rem;
+    &__validation
+        position: relative;
+        font-family: LatoWebBlack, 'Arial';
+        font-size: 0.7rem;
+        color: $validation-color;
+        border-radius: 4px;
+        margin-left: 0.5rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 4.5rem;
+        display: none;
+        &_ok, &_error
+            display: flex;
+        &_ok
+            background-color: $validation-ok;
+            &:after
+                                border-top: 1rem solid $validation-ok;
+        &_error
+            background-color: $validation-error;
+            &:after
+                                border-top: 1rem solid $validation-error;
+        &:after
+            position: absolute;
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 0.8rem solid transparent;
+            border-right: 0.8rem solid transparent;
+            transform: rotate(90deg) translateX(-0.85rem);
+            right: 3.5rem;
 
-	&__submit
-		margin-top: 0.6rem;
-		text-align: right;
+    &__submit
+        margin-top: 0.6rem;
+        text-align: right;
 
-	&__input, &__textarea
-		display: block;
-		width: 100%;
-		color: $input-color;
-		border-radius: 4px;
-		font-family: SourceSansPro-Regular, 'Arial';
-		background-color: $input-background-color;
-		padding: 0.35rem 0.85rem;
-		border: none;
-		outline: none;
+    &__input, &__textarea
+        display: block;
+        width: 100%;
+        color: $input-color;
+        border-radius: 4px;
+        font-family: SourceSansPro-Regular, 'Arial';
+        background-color: $input-background-color;
+        padding: 0.35rem 0.85rem;
+        border: none;
+        outline: none;
 
-	&__textarea
-		width 100%;
-		resize: none;
-		padding-top: 0.6rem;
-		margin-top: 0.8rem;
-		min-height: 5.4rem;
-		box-sizing: border-box;
+    &__textarea
+        width 100%;
+        resize: none;
+        padding-top: 0.6rem;
+        margin-top: 0.8rem;
+        min-height: 5.4rem;
+        box-sizing: border-box;

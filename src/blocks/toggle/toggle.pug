@@ -1,5 +1,7 @@
-mixin toggle(on, off, state)
-	label.toggle
-		input(type="checkbox" class="toggle__input" checked=state ? true : false)
-		span(class="toggle__label" data-on=on ? on : 'on' data-off=off ? off : 'off')
-		span.toggle__handle
+mixin toggle(options)
+    if !options
+        - options = {}
+    label.toggle
+        input(type="checkbox", class="toggle__input", class=options.theme ? 'toggle_theme_' + options.theme : '', checked=options.state ? options.state : false)
+        span(class="toggle__label" data-on=options.on ? options.on : 'on' data-off=options.off ? options.off : 'off')
+        span.toggle__handle

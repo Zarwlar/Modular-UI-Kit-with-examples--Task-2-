@@ -1,73 +1,37 @@
-$stages-text-color = #A4A4A4;
-$complete-active-background = #E75735;
-$complete-active-color = #FFF;
-
-$inactive-color = #E5E5E5;
+$stages-bkg-color = #e5e5e5;
+$stages-color = #A4A4A4;
+$active-background = #E75735;
+$active-color = #FFF;
 
 .stages
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	color: $stages-text-color;
+    display: flex;
+    justify-content: space-between;
+
+    &__step
+            background: $stages-bkg-color;
+            color: $stages-color;
+            border-radius: 50%;
+            min-width: 1.8rem;
+            min-height: 1.8rem;
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.8rem;
+            font-family: LatoWebBlack, 'Arial';
+
+    &__step_active
+        background: $active-background;
+        color: $active-color;
+
+    &__line
+            background: $stages-bkg-color;
+            display: block;
+            width: 100%;
+            height: 0.5rem;
+            align-self: center;
+
+    &__line_active
+        background: $active-background;
 
 
-	&__stage
-		position: relative;
-		display: table-cell;
-		text-align: center;
-		font-size: 0.8em;
-
-
-		&:before
-			content: attr(data-step);
-			display: block;
-			margin: 0 auto;
-			background: $inactive-color;
-			width: 2.5em;
-			height: 2.5em;
-			text-align: center;
-			margin-bottom: 0.25em;
-			line-height: 2.5em;
-			border-radius: 100%;
-			position: relative;
-			z-index: 5;
-			font-family: LatoWebBlack, 'Arial';
-
-		&:after
-			content: '';
-			position: absolute;
-			display: block;
-			background: $inactive-color;
-			width: 100%;
-			height: 0.5em;
-			top: 1em;
-			left: 50%;
-			margin-left: 1.5em\9;
-			z-index: -1;
-
-
-		&:last-child:after
-			display: none;
-
-
-		&.stages_complete
-			color: $complete-active-background;
-
-
-		&.stages_complete:before, &.stages_complete:after
-			color: $complete-active-color;
-			background: $complete-active-background;
-
-
-		&.stages_active
-			color: $complete-active-background;
-
-
-		&.stages_active:before
-			color: $complete-active-color;
-			background: $complete-active-background;
-
-
+    &__theme_order
+        background: #D69259;

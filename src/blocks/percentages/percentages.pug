@@ -1,4 +1,4 @@
 mixin percentages(percent)
-		span(class="percentages" data-percent= percent)
-				span.percentages__percent
-
+        - if (typeof(percent) === 'undefined')
+                - percent = 50
+        canvas(class="percentages" class="js-percentages" data-value=percent)

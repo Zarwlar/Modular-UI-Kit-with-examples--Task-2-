@@ -1,9 +1,10 @@
 mixin news(options)
-	if !options
-		- options = {}
-	.news
-		img.news__photo(src= options.imgsrc ? options.imgsrc : ".\\blocks\\news\\img\\news__default-img.jpg")
-		.news__text(class= options.bkg ? options.bkg : '')
-			.news__title= options.title ? options.title : 'Title'
-			.news__date= options.date ? options.date : 'Date'
-			.news__description= options.description ? options.description : 'Description'
+    if !options
+        - options = {}
+    .news
+        .news__photo-frame
+            img.news__photo(src= options.imgsrc ? options.imgsrc : "../../blocks/news/img/news__default-img.jpg" alt='news')
+        .news__text(class= options.theme ? "news_theme_" + options.theme : '')
+            .news__title= options.title ? options.title : 'Title'
+            .news__date= options.date ? options.date : 'Date'
+            .news__description= options.description ? options.description : 'Description'

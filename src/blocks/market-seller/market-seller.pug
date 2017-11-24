@@ -1,0 +1,10 @@
+include ../user-profile/user-profile.pug
+include ../percentages/percentages.pug
+
+mixin market-seller(options)
+        .market-seller
+            +user-profile({imgsrc: options.imgsrc, name: options.name, proffesion: options.city, theme: options.theme
+            })
+            .market-seller__reputation
+                .market-seller__reputation-text Репутация
+                +percentages(options.rep ? options.rep : 0)

@@ -1,0 +1,21 @@
+stuff_width = 180px;
+
+.seller-stuff
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid black;
+    outline-offset: 10px;
+    display: flex;
+    justify-content: center;
+
+    & > *
+            font-family: LatoWebBlack, 'Arial'
+
+    &__img
+        width: stuff_width;
+        height: 150px;
+
+    &__name
+        margin: 3% 0;
+        max-width: stuff_width;
+        text-align: center;

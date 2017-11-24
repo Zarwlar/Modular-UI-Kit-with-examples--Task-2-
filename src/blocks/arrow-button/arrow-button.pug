@@ -1,8 +1,8 @@
 mixin arrow-button(options)
-	if !options
-		- options = {}
-	a(class= options.state ? 'arrow-button arrow-button_' + options.state : 'arrow-button arrow-button_inactive'
-			class=options.color ? options.color : '')
-		span(class= options.direction ? 'arrow-button__arrow arrow-button__arrow_' + options.direction : 'arrow-button__arrow arrow-button__arrow_left'
-			class=options.color ? options.color : ''
-		)
+    if !options
+        - options = {}
+    a(class= options.state ? 'arrow-button arrow-button_' + options.state : 'arrow-button arrow-button_inactive'
+            class=options.color ? "arrow-button_" + options.color : '')
+        span(class= options.direction ? 'arrow-button__arrow arrow-button__arrow_' + options.direction : 'arrow-button__arrow arrow-button__arrow_left'
+            class=options.color ? "arrow-button_" + options.color : ''
+        )

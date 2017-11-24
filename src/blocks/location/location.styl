@@ -3,48 +3,49 @@ $banner-text-color = #FFF;
 
 .location
 
-	&__map
-		height: 12.3rem;
-		min-width: 34rem;
+    &__map
+        height: 12.3rem;
 
-	&__banner
-		display: flex;
-		background-color: $banner-background-color;
-		font-family: LatoWebLight, 'Arial';
-		color: $banner-text-color ;
+    &__banner
+        display: flex;
+        background-color: $banner-background-color;
+        font-family: LatoWebLight, 'Arial';
+        color: $banner-text-color ;
 
-		& > *:last-child
-			padding-right: 5%;
+        & > *:last-child
+            padding-right: 5%;
 
-		& > *:first-child
-			padding-left: 5%;
+        & > *:first-child
+            padding-left: 5%;
 
-		& > *
-			padding: 3% 2%;
+        & > *
+            padding: 3% 2%;
 
-	&__phrase
-		font-size: 1.9rem;
-		flex-shrink: 0;
+    &__phrase
+        font-size: 1.9rem;
+        flex-shrink: 0;
 
-	&__adress
-		text-transform: uppercase;
-		font-family: LatoWebBlack, 'Arial';
-		font-size: 0.85rem;
-		text-align: left;
-		flex-basis: 100%;
-		min-width: 0;
-		align-self: center;
+    &__adress
+        text-transform: uppercase;
+        font-family: LatoWebBlack, 'Arial';
+        font-size: 0.85rem;
+        text-align: left;
+        flex-basis: 100%;
+        min-width: 0;
+        align-self: center;
 
-	&__icon
-		font-family: FontAwesome;
-		font-size: 1.8rem;
-		flex-basis: 0;
+    &__icon
+        font-family: FontAwesome;
+        font-size: 1.8rem;
+        flex-basis: 0;
 
-		&_crosshairs::before
-			display block
-			content '\f05b'
+        &_crosshairs::before
+            display block
+            content '\f05b'
 
-		&_marker::before
-			display block
-			content '\f041'
+        &_marker::before
+            display block
+            content '\f041'
 
+    &__banner_theme_stuff
+        background-color: #D18545;

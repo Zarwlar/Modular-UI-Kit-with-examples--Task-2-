@@ -2,49 +2,54 @@ $event-background-color = #E75735;
 $text-color = #FFF;
 
 .event
-	display: flex;
-	height: 13.3rem;
-	max-width: 18rem;
+    display: flex;
+    height: 13.3rem;
 
-	&__photo
-		background: $event-background-color;
-		width: 33%;
-		object-fit: cover;
+    &__photo-frame
+        width: 35%;
+        background: $event-background-color;
 
-	&__text
-		display: flex;
-		flex-direction: column;
-		padding: 4.5% 7% 1.5%;
-		background-color: $event-background-color;
-		color: $text-color;
+    &__photo
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
 
-	&__date
-		display: inline-flex;
-		font-family: LatoWebLight, 'Arial';
-		padding-bottom: 4%;
-		align-items: baseline;
+    &__text
+        display: flex;
+        flex-direction: column;
+        padding: 4.5% 7% 1.5%;
+        background-color: $event-background-color;
+        color: $text-color;
+        width: 65%;
 
-	&__day
-		font-size: 4.25rem;
-		padding-right: 8%;
+    &__date
+        display: inline-flex;
+        font-family: LatoWebLight, 'Arial';
+        padding-bottom: 4%;
+        align-items: baseline;
 
-	&__month
-		font-size: 1.8rem;
+    &__day
+        font-size: 4.25rem;
+        padding-right: 8%;
+        text-transform: capitalize;
 
-	&__button
-		text-align: center;
-		margin-top: 10%;
+    &__month
+        font-size: 1.8rem;
 
-	&__title
-		font-family: LatoWebBlack, 'Arial';
-		text-transform: uppercase;
-		font-size: 0.85rem;
+    &__button
+        text-align: center;
+        margin-top: 10%;
 
-	&__date
-		text-transform: capitalize;
+    &__title
+        font-family: LatoWebBlack, 'Arial';
+        text-transform: uppercase;
+        font-size: 0.85rem;
 
-	&__description
-		font-family: LatoWeb, 'Arial';
-		overflow: hidden;
-		font-size: 0.75rem;
-		max-height: 1.8rem;
+    &__description
+        font-family: LatoWeb, 'Arial';
+        overflow: hidden;
+        font-size: 0.75rem;
+        max-height: 1.8rem;
+
+    &_theme_black
+        background-color: black;

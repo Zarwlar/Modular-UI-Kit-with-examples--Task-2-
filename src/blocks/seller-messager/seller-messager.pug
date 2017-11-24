@@ -1,0 +1,12 @@
+include ../messager/messager.pug
+
+mixin seller-messager(options)
+    .js-seller-messager.seller-messager
+        .js-seller-messager_hide.seller-messager_hide chat
+        +messager({
+            theme_name: options.theme_name,
+            theme_info: options.theme_info,
+            name: options.name,
+            photo: options.photo,
+            theme: options.theme_button
+        })
